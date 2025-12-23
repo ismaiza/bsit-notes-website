@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating System Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #fdfdfd;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            margin-bottom: 15px;
+        }
+        code, pre {
+            background-color: #eaeaea;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .important {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #2c3e50;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operating System (OS) Notes</h1>
+
+    <h2>1. Introduction</h2>
+    <p>An <span class="important">Operating System (OS)</span> is software that acts as an interface between computer hardware and the user. It manages hardware resources and provides services for programs.</p>
+
+    <h2>2. Functions of OS</h2>
+    <ul>
+        <li>Process Management</li>
+        <li>Memory Management</li>
+        <li>File Management</li>
+        <li>Device Management</li>
+        <li>Security and Protection</li>
+        <li>User Interface (CLI or GUI)</li>
+    </ul>
+
+    <h2>3. Types of Operating Systems</h2>
+    <ul>
+        <li><strong>Batch OS:</strong> Executes jobs in batches without user interaction.</li>
+        <li><strong>Time-Sharing OS:</strong> Shares CPU time among multiple users.</li>
+        <li><strong>Distributed OS:</strong> Manages a group of independent computers.</li>
+        <li><strong>Real-Time OS:</strong> Processes tasks within strict timing constraints.</li>
+        <li><strong>Network OS:</strong> Provides services over a network.</li>
+        <li><strong>Mobile OS:</strong> Designed for smartphones and tablets.</li>
+    </ul>
+
+    <h2>4. Process Management</h2>
+    <p>A <span class="important">process</span> is a program in execution.</p>
+    <ul>
+        <li><strong>Process States:</strong> New → Ready → Running → Waiting → Terminated</li>
+        <li><strong>PCB (Process Control Block):</strong> Stores process info: PID, state, CPU registers, memory info.</li>
+        <li><strong>Scheduling:</strong> Determines which process runs next.</li>
+    </ul>
+
+    <h3>4.1 CPU Scheduling Algorithms</h3>
+    <ul>
+        <li>First Come First Serve (FCFS)</li>
+        <li>Shortest Job Next (SJN / SJF)</li>
+        <li>Round Robin (RR)</li>
+        <li>Priority Scheduling</li>
+    </ul>
+
+    <h2>5. Memory Management</h2>
+    <ul>
+        <li><strong>Contiguous Allocation:</strong> Memory allocated in continuous blocks.</li>
+        <li><strong>Paging:</strong> Divides memory into fixed-size pages.</li>
+        <li><strong>Segmentation:</strong> Divides memory based on logical segments.</li>
+        <li><strong>Virtual Memory:</strong> Uses disk as an extension of RAM.</li>
+    </ul>
+
+    <h2>6. File Systems</h2>
+    <ul>
+        <li><strong>File:</strong> Collection of related data stored on disk.</li>
+        <li><strong>Directory Structure:</strong> Single-level, Two-level, Hierarchical.</li>
+        <li><strong>File Allocation Methods:</strong> Contiguous, Linked, Indexed.</li>
+    </ul>
+
+    <h2>7. Deadlocks</h2>
+    <p>Deadlock occurs when processes wait indefinitely for resources.</p>
+    <ul>
+        <li>Necessary Conditions: Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait</li>
+        <li>Methods to handle deadlocks: Prevention, Avoidance, Detection, Recovery</li>
+    </ul>
+
+    <h2>8. Important Terms</h2>
+    <ul>
+        <li><strong>Kernel:</strong> Core part of OS managing hardware.</li>
+        <li><strong>Interrupt:</strong> Signal to CPU indicating event.</li>
+        <li><strong>Context Switch:</strong> Saving and loading process states.</li>
+        <li><strong>Thrashing:</strong> Excessive paging causing low performance.</li>
+    </ul>
+
+    <h2>10. Summary Table</h2>
+    <table>
+        <tr>
+            <th>Topic</th>
+            <th>Key Points</th>
+        </tr>
+        <tr>
+            <td>Process</td>
+            <td>Program in execution, managed by PCB</td>
+        </tr>
+        <tr>
+            <td>Scheduling</td>
+            <td>FCFS, SJF, RR, Priority</td>
+        </tr>
+        <tr>
+            <td>Memory</td>
+            <td>Contiguous, Paging, Segmentation, Virtual Memory</td>
+        </tr>
+        <tr>
+            <td>File System</td>
+            <td>Allocation: Contiguous, Linked, Indexed; Directory structure</td>
+        </tr>
+        <tr>
+            <td>Deadlock</td>
+            <td>Conditions: Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait</td>
+        </tr>
+    </table>
+
+</body>
+</html>

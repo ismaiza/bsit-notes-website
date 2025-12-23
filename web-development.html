@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #fdfdfd;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            margin-bottom: 15px;
+        }
+        code, pre {
+            background-color: #eaeaea;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .important {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #2c3e50;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Development Notes</h1>
+
+    <h2>1. Introduction</h2>
+    <p><span class="important">Web Development</span> is the process of creating websites and web applications that run on the internet. It involves designing, building, and maintaining web pages using various technologies.</p>
+
+    <h2>2. Types of Web Development</h2>
+    <ul>
+        <li><strong>Frontend Development:</strong> Deals with the visual part of the website that users interact with (HTML, CSS, JavaScript).</li>
+        <li><strong>Backend Development:</strong> Handles server-side logic, databases, and application functionality (PHP, Python, Node.js, Java).</li>
+        <li><strong>Full Stack Development:</strong> Combination of frontend and backend development.</li>
+    </ul>
+
+    <h2>3. HTML (HyperText Markup Language)</h2>
+    <ul>
+        <li>Used to structure web content.</li>
+        <li>Basic tags:
+            <ul>
+                <li><code>&lt;h1&gt; to &lt;h6&gt;</code> – Headings</li>
+                <li><code>&lt;p&gt;</code> – Paragraph</li>
+                <li><code>&lt;a&gt;</code> – Link</li>
+                <li><code>&lt;img&gt;</code> – Image</li>
+                <li><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code> – Lists</li>
+            </ul>
+        </li>
+        <li>Example:</li>
+    </ul>
+    <pre><code>&lt;h1&gt;My Website&lt;/h1&gt;
+&lt;p&gt;Welcome to my website!&lt;/p&gt;
+&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code></pre>
+
+    <h2>4. CSS (Cascading Style Sheets)</h2>
+    <ul>
+        <li>Used to style HTML elements.</li>
+        <li>Selectors: tag, class, id</li>
+        <li>Example:</li>
+    </ul>
+    <pre><code>p {
+    color: blue;
+    font-size: 16px;
+}
+
+.button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+}</code></pre>
+
+    <h2>5. JavaScript</h2>
+    <ul>
+        <li>Adds interactivity to web pages.</li>
+        <li>Common uses: form validation, dynamic content, animations.</li>
+        <li>Example:</li>
+    </ul>
+    <pre><code>function greet() {
+    alert("Hello, welcome!");
+}</code></pre>
+
+    <h2>6. Responsive Design</h2>
+    <ul>
+        <li>Makes websites work on different devices (desktop, tablet, mobile).</li>
+        <li>Techniques:
+            <ul>
+                <li>Media Queries in CSS</li>
+                <li>Flexible grids and layouts</li>
+                <li>Responsive images</li>
+            </ul>
+        </li>
+        <li>Example:</li>
+    </ul>
+    <pre><code>@media (max-width: 600px) {
+    body {
+        background-color: lightgray;
+    }
+}</code></pre>
+
+    <h2>7. Web Hosting & Deployment</h2>
+    <ul>
+        <li><strong>Web Hosting:</strong> Service that stores your website files on a server.</li>
+        <li><strong>Domain Name:</strong> Human-readable website address (example.com).</li>
+        <li><strong>Deployment:</strong> Publishing website online using FTP, Git, or hosting platforms like GitHub Pages, Netlify, or Vercel.</li>
+    </ul>
+
+    <h2>8. Important Terms</h2>
+    <ul>
+        <li><strong>Frontend:</strong> Client-side of a website.</li>
+        <li><strong>Backend:</strong> Server-side of a website.</li>
+        <li><strong>Full Stack:</strong> Combination of frontend + backend development.</li>
+        <li><strong>DOM:</strong> Document Object Model representing HTML elements.</li>
+        <li><strong>API:</strong> Application Programming Interface for communication between systems.</li>
+    </ul>
+
+    <h2>10. Summary Table</h2>
+    <table>
+        <tr>
+            <th>Topic</th>
+            <th>Key Points</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Structure web content, headings, paragraphs, links, images</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Style elements, selectors, colors, fonts, layout</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Add interactivity, validation, animations, dynamic content</td>
+        </tr>
+        <tr>
+            <td>Responsive Design</td>
+            <td>Media queries, flexible grids, responsive images</td>
+        </tr>
+        <tr>
+            <td>Hosting & Deployment</td>
+            <td>Domain, hosting, FTP, GitHub Pages, Netlify</td>
+        </tr>
+    </table>
+</body>
+</html>

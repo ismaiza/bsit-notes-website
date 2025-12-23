@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structure Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #fdfdfd;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            margin-bottom: 15px;
+        }
+        code, pre {
+            background-color: #eaeaea;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .important {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #2c3e50;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Structure Notes</h1>
+
+    <h2>1. Introduction</h2>
+    <p>A <span class="important">Data Structure</span> is a way to organize, store, and manage data efficiently for easy access and modification. Choosing the right data structure affects algorithm performance and memory usage.</p>
+
+    <h2>2. Types of Data Structures</h2>
+
+    <h3>2.1 Linear Data Structures</h3>
+    <p>Elements are arranged sequentially. Examples:</p>
+    <ul>
+        <li><strong>Array:</strong> Collection of elements stored at contiguous memory locations.</li>
+        <li><strong>Linked List:</strong> Collection of nodes where each node contains data and a pointer to the next node.</li>
+        <li><strong>Stack:</strong> Follows LIFO (Last In First Out). Used in recursion, undo mechanisms.</li>
+        <li><strong>Queue:</strong> Follows FIFO (First In First Out). Used in scheduling, buffering.</li>
+    </ul>
+
+    <h3>2.2 Non-Linear Data Structures</h3>
+    <p>Elements are not in sequence and are connected through relationships.</p>
+    <ul>
+        <li><strong>Tree:</strong> Hierarchical structure with root and child nodes. Example: Binary Tree, Binary Search Tree (BST).</li>
+        <li><strong>Graph:</strong> Set of vertices connected by edges. Can be directed or undirected, weighted or unweighted.</li>
+    </ul>
+
+    <h2>3. Common Operations</h2>
+    <ul>
+        <li><strong>Insertion:</strong> Add element to the structure.</li>
+        <li><strong>Deletion:</strong> Remove element from the structure.</li>
+        <li><strong>Traversal:</strong> Visit all elements (Inorder, Preorder, Postorder for trees).</li>
+        <li><strong>Searching:</strong> Find a specific element.</li>
+        <li><strong>Sorting:</strong> Arrange elements in order.</li>
+    </ul>
+
+    <h2>4. Examples</h2>
+
+    <h3>4.1 Stack (Array Implementation)</h3>
+    <pre><code>
+stack = []
+stack.push(10)
+stack.push(20)
+stack.pop()  # removes 20
+    </code></pre>
+
+    <h3>4.2 Queue (Array Implementation)</h3>
+    <pre><code>
+queue = []
+queue.push(10)
+queue.push(20)
+queue.pop()  # removes 10
+    </code></pre>
+
+    <h3>4.3 Linked List (Singly)</h3>
+    <p>Node structure:</p>
+    <pre><code>
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+    </code></pre>
+
+    <h2>5. Tree Example</h2>
+    <p>Binary Tree Structure:</p>
+    <pre><code>
+        10
+       /  \
+     20    30
+    /  \
+   40  50
+    </code></pre>
+
+    <h2>6. Graph Example</h2>
+    <p>Directed Graph (Adjacency List):</p>
+    <pre><code>
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D'],
+    'C': ['D'],
+    'D': []
+}
+    </code></pre>
+
+    <h2>7. Time Complexity Table</h2>
+    <table>
+        <tr>
+            <th>Data Structure</th>
+            <th>Access</th>
+            <th>Search</th>
+            <th>Insertion</th>
+            <th>Deletion</th>
+        </tr>
+        <tr>
+            <td>Array</td>
+            <td>O(1)</td>
+            <td>O(n)</td>
+            <td>O(n)</td>
+            <td>O(n)</td>
+        </tr>
+        <tr>
+            <td>Linked List</td>
+            <td>O(n)</td>
+            <td>O(n)</td>
+            <td>O(1)</td>
+            <td>O(1)</td>
+        </tr>
+        <tr>
+            <td>Stack</td>
+            <td>O(n)</td>
+            <td>O(n)</td>
+            <td>O(1)</td>
+            <td>O(1)</td>
+        </tr>
+        <tr>
+            <td>Queue</td>
+            <td>O(n)</td>
+            <td>O(n)</td>
+            <td>O(1)</td>
+            <td>O(1)</td>
+        </tr>
+        <tr>
+            <td>Binary Search Tree</td>
+            <td>O(log n)</td>
+            <td>O(log n)</td>
+            <td>O(log n)</td>
+            <td>O(log n)</td>
+        </tr>
+    </table>
+
+    <h2>8. Exam Tips</h2>
+    <ul>
+        <li>Memorize key operations and their time complexities.</li>
+        <li>Understand differences between linear and non-linear structures.</li>
+        <li>Practice tree and graph traversals (DFS, BFS).</li>
+        <li>Try small coding examples for each structure.</li>
+    </ul>
+
+    <h2>9. Conclusion</h2>
+    <p>Data structures are the backbone of efficient programming. Knowing how and when to use each type will make coding easier and optimize performance.</p>
+</body>
+</html>

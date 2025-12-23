@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Logic Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #fdfdfd;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #2c3e50;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+        .important {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        pre {
+            background-color: #eaeaea;
+            padding: 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Digital Logic Design</h1>
+
+<h2>1. Introduction to Digital Logic Design</h2>
+<p>
+<span class="important">Digital Logic Design</span> deals with the design and analysis of digital circuits using logic gates and binary systems.
+</p>
+
+<h2>2. Analog vs Digital Signals</h2>
+<table>
+    <tr>
+        <th>Analog</th>
+        <th>Digital</th>
+    </tr>
+    <tr>
+        <td>Continuous values</td>
+        <td>Discrete values (0 and 1)</td>
+    </tr>
+    <tr>
+        <td>More noise sensitive</td>
+        <td>Less noise sensitive</td>
+    </tr>
+</table>
+
+<h2>3. Number Systems</h2>
+<ul>
+    <li>Binary (Base 2)</li>
+    <li>Decimal (Base 10)</li>
+    <li>Octal (Base 8)</li>
+    <li>Hexadecimal (Base 16)</li>
+</ul>
+
+<h2>4. Boolean Algebra</h2>
+<p>
+Boolean Algebra is a mathematical system used to analyze and simplify digital circuits.
+</p>
+
+<h3>Basic Boolean Operations</h3>
+<ul>
+    <li>AND (·)</li>
+    <li>OR (+)</li>
+    <li>NOT (‾)</li>
+</ul>
+
+<h3>Boolean Laws</h3>
+<ul>
+    <li>Identity Law</li>
+    <li>Null Law</li>
+    <li>Idempotent Law</li>
+    <li>Complement Law</li>
+    <li>De Morgan’s Theorem</li>
+</ul>
+
+<h2>5. Logic Gates</h2>
+<ul>
+    <li>AND Gate</li>
+    <li>OR Gate</li>
+    <li>NOT Gate</li>
+    <li>NAND Gate</li>
+    <li>NOR Gate</li>
+    <li>XOR Gate</li>
+    <li>XNOR Gate</li>
+</ul>
+
+<h2>6. Truth Tables</h2>
+<table>
+    <tr>
+        <th>A</th>
+        <th>B</th>
+        <th>AND</th>
+        <th>OR</th>
+        <th>XOR</th>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+    </tr>
+</table>
+
+<h2>7. Universal Gates</h2>
+<ul>
+    <li>NAND Gate</li>
+    <li>NOR Gate</li>
+</ul>
+<p>Universal gates can be used to implement any Boolean function.</p>
+
+<h2>8. Combinational Circuits</h2>
+<ul>
+    <li>Half Adder</li>
+    <li>Full Adder</li>
+    <li>Multiplexer</li>
+    <li>Demultiplexer</li>
+    <li>Encoder</li>
+    <li>Decoder</li>
+</ul>
+
+<h3>Half Adder</h3>
+<pre>
+Sum = A XOR B
+Carry = A AND B
+</pre>
+
+<h2>9. Sequential Circuits</h2>
+<ul>
+    <li>Flip-Flops</li>
+    <li>Registers</li>
+    <li>Counters</li>
+</ul>
+
+<h3>Types of Flip-Flops</h3>
+<ul>
+    <li>SR Flip-Flop</li>
+    <li>JK Flip-Flop</li>
+    <li>D Flip-Flop</li>
+    <li>T Flip-Flop</li>
+</ul>
+
+<h2>10. Registers</h2>
+<ul>
+    <li>Shift Register</li>
+    <li>Parallel Register</li>
+</ul>
+
+<h2>11. Counters</h2>
+<ul>
+    <li>Asynchronous Counter</li>
+    <li>Synchronous Counter</li>
+</ul>
+
+<h2>12. Applications of Digital Logic Design</h2>
+<ul>
+    <li>Computers and CPUs</li>
+    <li>Mobile phones</li>
+    <li>Digital clocks</li>
+    <li>Embedded systems</li>
+</ul>
+
+<h2>13. Advantages of Digital Systems</h2>
+<ul>
+    <li>High reliability</li>
+    <li>Easy storage</li>
+    <li>Programmable</li>
+    <li>High speed</li>
+</ul>
+
+<h2>14. Exam Tips</h2>
+<ul>
+    <li>Practice truth tables</li>
+    <li>Learn Boolean laws</li>
+    <li>Understand combinational vs sequential circuits</li>
+    <li>Know universal gates</li>
+</ul>
+
+</body>
+</html>
