@@ -15,18 +15,18 @@ of objects. Objects contain data and methods that operate on the data.
 
 <h2>Core Principles of OOP</h2>
 
-<h3>1. Encapsulation</h3>
+<h3>. Encapsulation</h3>
 <p>
 Encapsulation is the bundling of data and methods that operate on that data
 into a single unit called a class.
 </p>
 
-<h3>2. Abstraction</h3>
+<h3>. Abstraction</h3>
 <p>
 Abstraction hides implementation details and shows only essential features.
 </p>
 
-<h3>3. Inheritance</h3>
+<h3>. Inheritance</h3>
 <p>
 Inheritance allows a class to acquire properties and methods of another class.
 <h3>a. Types of Inheritance</h3> 
@@ -36,7 +36,7 @@ Inheritance allows a class to acquire properties and methods of another class.
  <li> hybrid inheritance</li>
 
 
-<h3>4. Polymorphism</h3>
+<h3>. Polymorphism</h3>
 <p>
 Polymorphism allows one interface to be used for different data types.
 
@@ -47,21 +47,193 @@ Polymorphism allows one interface to be used for different data types.
   within the same class
  <h3>b. Dynamic Polymorphism</h3>:
     also know as runtime polymorphism is achieve through method overiding and interface implementation.
-</p>
-<h2>3. Advantages of OOP</h2>
+  <h3>Object</h3>
+<p>
+  Object are the basics run-time entities in an object oriented system.They may represent a person,a place or a item that
+  the program must handle.
+  <h2>Class</h2>
+<p>
+  A group of object that share common properties for data part and some program part are collectively called class.
+  <h2>Benefits of OOP<h2>
+  <p>
+    . it helps faster development of software
+    . it easy to maintain
+    . multiple instances of object can co-exist without any interferance
+    . can be easily upgraded from small to large systems
+    . inheritance eliminates redundant code 
+    <h2>Application of OOP</h2>
+  <p>
+    . Real-Time system
+    . Object oriented databases
+    . Al and expert systems
+    . Simulation and modeling
+    
+<h2>. Advantages of OOP</h2>
 <p>
 <li>OOP improves code reusability</li>
 <li>security and maintainability</li>
 <li>It makes large software systems easier to manage</li>
 </p>
 
-<h2>4. OOP Concepts Example</h2>
+<h2>. Arithmetic,Condition and Logical Operator</h2>
 <p>
-A class is a blueprint, while an object is an instance of a class.
-For example, a "Car" is a class, and "Toyota" is an object.
+  An operator is a symbol that performs an operation on one or more operands,producing result
+ <h2> Arithmetic Operators</h2> : are used to perform mathematical operation on numerical operands (+ - * % ++ )
+  <h2>Condition Operators</h2> : are used to perform comparisons and make decision based on condition(== > < <= >=)
+  <h2>Logical Operators</h2> : are used to perform logical operations on Boolen operands AND(&&) OR(||) NOT(!)
+
+ <h2>if.....Else Statement</h2> 
+  <p>
+    if condition Then
+        'Statement to execute if condition is True
+    Else 
+         'Statemnt to execute if condition is False
+    <h2>1. if Statement</h2>
+<p>
+The <strong>if statement</strong> is used to execute a block of code
+when a condition is true.
+</p>
+
+<pre>
+if (condition) {
+    // code executes if condition is true
+}
+</pre>
+
+<h3>Example:</h3>
+<pre>
+int age = 20;
+
+if (age >= 18) {
+    System.out.println("You are eligible to vote");
+}
+</pre>
+
+<hr>
+
+<h2>2. if – else Statement</h2>
+<p>
+The <strong>if–else statement</strong> executes one block if the condition
+is true and another block if it is false.
+</p>
+
+<h3>Example:</h3>
+<pre>
+int number = 5;
+
+if (number % 2 == 0) {
+    System.out.println("Even number");
+} else {
+    System.out.println("Odd number");
+}
+</pre>
+
+<hr>
+
+<h2>3. while Loop</h2>
+<p>
+The <strong>while loop</strong> executes a block of code repeatedly
+as long as the condition is true.
+</p>
+
+<pre>
+while (condition) {
+    // repeated code
+}
+</pre>
+
+<h3>Example:</h3>
+<pre>
+int i = 1;
+
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+</pre>
+
+<p class="tip">Note: The condition is checked before the loop executes.</p>
+
+<hr>
+
+<h2>4. do–while Loop</h2>
+<p>
+The <strong>do–while loop</strong> executes the code at least once,
+then checks the condition.
+</p>
+
+<pre>
+do {
+    // code executes
+} while (condition);
+</pre>
+
+<h3>Example:</h3>
+<pre>
+int i = 1;
+
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+</pre>
+
+<p class="tip">Difference: do–while runs at least once even if condition is false.</p>
+
+<hr>
+
+<h2>5. switch Statement</h2>
+<p>
+The <strong>switch statement</strong> is used to select one block
+from many options.
+</p>
+
+<h3>Example:</h3>
+<pre>
+int day = 3;
+
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    case 3:
+        System.out.println("Wednesday");
+        break;
+    default:
+        System.out.println("Invalid day");
+}
+</pre>
+
+<hr>
+
+<h2>6. Loops in OOP</h2>
+<p>
+Loops are used to execute a block of code multiple times.
+Common loops include:
+</p>
+
+<ul>
+    <li>for loop</li>
+    <li>while loop</li>
+    <li>do–while loop</li>
+</ul>
+
+<h3>for Loop Example:</h3>
+<pre>
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+</pre>
+
+<hr>
+
 </p>
 </body>
 </html>
+
 
 
 
