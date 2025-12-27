@@ -49,12 +49,152 @@
 </head>
 <body>
 
-<h1>Digital Logic Design</h1>
+ Digital Logic Design</h2>
 
-<h2>1. Introduction to Digital Logic Design</h2>
+<h3>1. Introduction</h3>
 <p>
-<span class="important">Digital Logic Design</span> deals with the design and analysis of digital circuits using logic gates and binary systems.
+Digital Logic Design is the study of digital systems that use
+<strong>binary values (0 and 1)</strong>. It forms the foundation of
+computer hardware and digital electronics.
 </p>
+
+<h3>2. Analog vs Digital Signals</h3>
+<table border="1" cellpadding="5">
+<tr>
+<th>Analog</th>
+<th>Digital</th>
+</tr>
+<tr>
+<td>Continuous values</td>
+<td>Discrete values (0 and 1)</td>
+</tr>
+<tr>
+<td>More noise sensitive</td>
+<td>Less noise sensitive</td>
+</tr>
+</table>
+
+<h3>. Binary Number System</h3>
+<p>
+The binary number system is base 2 and uses only two digits:
+<strong>0 and 1</strong>.
+</p>
+
+<p><strong>Example:</strong></p>
+<pre>
+Binary: 1010
+Decimal: (1×8) + (0×4) + (1×2) + (0×1) = 10
+</pre>
+
+<h3>. Bits and Bytes (Memory Calculation)</h3>
+
+<ul>
+<li>1 bit = 0 or 1</li>
+<li>1 Byte = 8 bits</li>
+<li>1 KB = 1024 Bytes</li>
+<li>1 MB = 1024 KB</li>
+<li>1 GB = 1024 MB</li>
+</ul>
+
+<p><strong>Example 1:</strong> How many bits are in 4 KB?</p>
+<pre>
+4 KB = 4 × 1024 × 8
+= 32768 bits
+</pre>
+
+<p><strong>Example 2:</strong> How many bits are needed to address 256 locations?</p>
+<pre>
+256 = 2⁸
+Answer: 8 bits
+</pre>
+
+<h3>. Boolean Algebra</h3>
+<p>
+Boolean Algebra is used to analyze and simplify digital circuits.
+It works with two values: 0 (False) and 1 (True).
+</p>
+
+<h4>Basic Boolean Operators</h4>
+<ul>
+<li>AND (·)</li>
+<li>OR (+)</li>
+<li>NOT (')</li>
+</ul>
+
+<h3>. Logic Gates</h3>
+
+<h4>AND Gate</h4>
+<p>Output is 1 only when both inputs are 1.</p>
+
+<table border="1" cellpadding="5">
+<tr><th>A</th><th>B</th><th>Output</th></tr>
+<tr><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+</table>
+
+<h4>OR Gate</h4>
+<p>Output is 1 if any input is 1.</p>
+
+<h4>NOT Gate</h4>
+<p>Inverts the input value.</p>
+
+<h4>NAND Gate</h4>
+<p>
+NAND is the inverse of AND gate.
+It is a <strong>universal gate</strong>.
+</p>
+
+<h4>NOR Gate</h4>
+<p>
+NOR is the inverse of OR gate.
+It is also a <strong>universal gate</strong>.
+</p>
+
+<h4>XOR Gate</h4>
+<p>
+Output is 1 when inputs are different.
+</p>
+
+<h3>. Universal Gates</h3>
+<ul>
+<li>NAND Gate</li>
+<li>NOR Gate</li>
+</ul>
+<p>
+Universal gates can be used to implement any digital circuit.
+</p>
+
+<h3>. Combinational Circuits</h3>
+<p>
+Combinational circuits depend only on present inputs.
+</p>
+<ul>
+<li>Half Adder</li>
+<li>Full Adder</li>
+<li>Multiplexer</li>
+<li>Decoder</li>
+</ul>
+
+<h3>. Sequential Circuits</h3>
+<p>
+Sequential circuits depend on present input and previous output.
+</p>
+<ul>
+<li>Flip-Flops</li>
+<li>Counters</li>
+<li>Registers</li>
+</ul>
+
+<h3>. Applications of Digital Logic</h3>
+<ul>
+<li>Computers</li>
+<li>Digital clocks</li>
+<li>Mobile phones</li>
+<li>Embedded systems</li>
+<ul>
+  
 
 <h2>2. Analog vs Digital Signals</h2>
 <table>
@@ -72,7 +212,7 @@
     </tr>
 </table>
 
-<h2>3. Number Systems</h2>
+<h2>. Number Systems</h2>
 <ul>
     <li>Binary (Base 2)</li>
     <li>Decimal (Base 10)</li>
@@ -80,7 +220,7 @@
     <li>Hexadecimal (Base 16)</li>
 </ul>
 
-<h2>4. Boolean Algebra</h2>
+<h2>. Boolean Algebra</h2>
 <p>
 Boolean Algebra is a mathematical system used to analyze and simplify digital circuits.
 </p>
@@ -189,19 +329,19 @@ Carry = A AND B
     <li>T Flip-Flop</li>
 </ul>
 
-<h2>10. Registers</h2>
+<h2>. Registers</h2>
 <ul>
     <li>Shift Register</li>
     <li>Parallel Register</li>
 </ul>
 
-<h2>11. Counters</h2>
+<h2>. Counters</h2>
 <ul>
     <li>Asynchronous Counter</li>
     <li>Synchronous Counter</li>
 </ul>
 
-<h2>12. Applications of Digital Logic Design</h2>
+<h2>. Applications of Digital Logic Design</h2>
 <ul>
     <li>Computers and CPUs</li>
     <li>Mobile phones</li>
@@ -209,21 +349,15 @@ Carry = A AND B
     <li>Embedded systems</li>
 </ul>
 
-<h2>13. Advantages of Digital Systems</h2>
+<h2>. Advantages of Digital Systems</h2>
 <ul>
     <li>High reliability</li>
     <li>Easy storage</li>
     <li>Programmable</li>
     <li>High speed</li>
 </ul>
-
-<h2>14. Exam Tips</h2>
-<ul>
-    <li>Practice truth tables</li>
-    <li>Learn Boolean laws</li>
-    <li>Understand combinational vs sequential circuits</li>
-    <li>Know universal gates</li>
-</ul>
+    
 
 </body>
+
 </html>
