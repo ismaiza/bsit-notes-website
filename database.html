@@ -52,6 +52,13 @@ i
 
 An index improves the speed of data retrieval.
 
+   <h2>Real-Life uses of Database</h2>
+  <ul>
+    <li>Banking system</li>
+    <li>Hospital system</li>
+    <li>Online shopping</li>
+  </ul>
+
 <h2>Advantages:</h2>
 </ul>
 
@@ -87,7 +94,53 @@ Examples:
 <li>Cassandra</li>
 
 <li>Firebase</li>
-
+ <h2>Structure Query Language</h2>
+  <ul>
+    <li>Data Defination Language</li>
+    <li>Data Manipulation Language</li>
+    <li>Data Control Language</li>
+    <li>Transaction Control Language</li>
+  </ul>  
+  <h2>DDL Commands</h2>
+  <p>
+    Used to define database structure
+  </p>
+<h3>Example</h3>
+  <pre>
+    Create Table city(
+      city_id INT PRIMARY KEY,
+      city_name VARCHAR(50),
+      coutry VARCHAR(50),
+      population INT
+    );
+  </pre>
+  <h2>DML Commands</h2>
+  <P>
+    Used to manipulate data
+  </P>
+  <h3>Example</h3>
+  <pre>
+           INSERT
+    INSERT INTO city Values (1,'Miami','USA',470000);
+            UPDATE
+    UPDATE city
+    SET population = 480000
+    WHERE city_name = 'Miami'
+          Delete
+    DELETE FROM city
+    WHERE city_name = 'Miami';
+    <h2>Select Statement</h2>
+    <p>
+      The select statement is used to retrieve data from a database
+    </p>
+    <h3>Example</h3>
+    <pre>
+      SELECT *
+      FROM city
+      WHERE city_name = 'Miami'
+           
+    </pre>
+  </pre>
 <h2>Advantages:</h2>
 </ul>
 
@@ -119,5 +172,6 @@ Examples:
     <td>Supports normalization</td>
   </tr>
 </table>
+
 
 </ul>
