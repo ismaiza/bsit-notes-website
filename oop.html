@@ -37,76 +37,137 @@ using <strong>control structures</strong>.
 </p>
 
 <hr>
+    <h2>. Key Features of OOP</h2>
+    <p>
+    <li> Encapsulation </li> 
+    <li> Abstraction </li> 
+     <li> Inheritance </li>   
+     <li> Polymorphism </li>   
+    </p>
+<h2>. Class</h2>
+ <p>
+  A class is a blueprint or template for creating objects
+  it defines:
+             <li> Variables(data members)</li>
+             <li> Methods(function)</li> 
+ </p>
+    <h3> Example of Class</h3>
+    <pre>
+        class Student{
+             String name;
+             int age;
+             void study(){
+                  System.out.println("Student is studying");
+        }
+     }   
+    </pre>
 
-<h2>1. if Statement</h2>
-<p>
-The <strong>if statement</strong> is used to execute a block of code
-when a condition is true.
-</p>
+    <hr>
+  <h2> Object</h2>
+   <p> An object is an instance of a class
+     
+   </p>   
+    <h2> Encapsulation</h2>
+    <p>
+     Encapsulation means wrapping data and methods together in a single unit(class)and protecting
+     data from direct access   
+    </p>
+    <h2> Abstraction</h2>
+    <p>
+      Abstraction means showing only essential  details and hiding internal implementation 
+    </p>
+    <h2> Inheritance</h2>
+    <p>
+      Inheritance allows one class to reuse properties and methods of another class  
+    </p>
+     <h2> Polymorphism</h2>
+    <p>
+     Polymorphism means many forms.The same methods name behaves differently   
+    </p>
+    <h3> Example</h3>
+    <pre>
+        Class Calculator {
+             int add(int a, int b){
+                 return a + b;
+        }
+        int add(int a, int b, int c){
+             return a + b + c;
+        }
+      }  
+        
+    </pre>
+    <h3> Control Structures in OOP</h3>
+    <p>
+    
+    <h2>. if Statement</h2>
+    <p>
+    The <strong>if statement</strong> is used to execute a block of code
+    when a condition is true.
+    </p>
 
-<pre>
-if (condition) {
+   <pre>
+    if (condition) {
     // code executes if condition is true
-}
-</pre>
+ }
+  </pre>
 
-<h3>Example:</h3>
-<pre>
-int age = 20;
+   <h3>Example:</h3>
+   <pre>
+   int age = 20;
 
-if (age >= 18) {
+   if (age >= 18) {
     System.out.println("You are eligible to vote");
 }
-</pre>
+  </pre>
 
-<hr>
+  <hr>
 
-<h2>2. if – else Statement</h2>
-<p>
-The <strong>if–else statement</strong> executes one block if the condition
-is true and another block if it is false.
-</p>
+  <h2>. if – else Statement</h2>
+  <p>
+   The <strong>if–else statement</strong> executes one block if the condition
+   is true and another block if it is false.
+   </p>
 
-<h3>Example:</h3>
-<pre>
-int number = 5;
+   <h3>Example:</h3>
+   <pre>
+   int number = 5;
 
-if (number % 2 == 0) {
+   if (number % 2 == 0) {
     System.out.println("Even number");
 } else {
     System.out.println("Odd number");
 }
-</pre>
+  </pre>
 
-<hr>
+   <hr>
 
-<h2>3. while Loop</h2>
-<p>
-The <strong>while loop</strong> executes a block of code repeatedly
-as long as the condition is true.
-</p>
+  <h2>. while Loop</h2>
+  <p>
+  The <strong>while loop</strong> executes a block of code repeatedly
+  as long as the condition is true.
+  </p>
 
-<pre>
-while (condition) {
+  <pre>
+  while (condition) {
     // repeated code
 }
-</pre>
+  </pre>
 
-<h3>Example:</h3>
-<pre>
+  <h3>Example:</h3>
+  <pre>
 int i = 1;
 
 while (i <= 5) {
     System.out.println(i);
     i++;
 }
-</pre>
+  </pre>
 
 <p class="tip">Note: The condition is checked before the loop executes.</p>
 
 <hr>
 
-<h2>4. do–while Loop</h2>
+<h2>. do–while Loop</h2>
 <p>
 The <strong>do–while loop</strong> executes the code at least once,
 then checks the condition.
@@ -132,7 +193,7 @@ do {
 
 <hr>
 
-<h2>5. switch Statement</h2>
+<h2>. switch Statement</h2>
 <p>
 The <strong>switch statement</strong> is used to select one block
 from many options.
@@ -159,7 +220,7 @@ switch (day) {
 
 <hr>
 
-<h2>6. Loops in OOP</h2>
+<h2>. Loops in OOP</h2>
 <p>
 Loops are used to execute a block of code multiple times.
 Common loops include:
@@ -180,18 +241,27 @@ for (int i = 1; i <= 5; i++) {
 
 <hr>
 
-<h2>Exam Tips</h2>
+<h2>Advantage of OOP</h2>
 <ul>
-    <li>Know the difference between while and do–while</li>
-    <li>Practice switch-case syntax</li>
-    <li>Understand loop conditions clearly</li>
-    <li>Write neat code examples in exams</li>
+    <li>Code reusabily</li>
+    <li>Easy maintenance</li>
+    <li>Easy debugging</li>
+    <li>Better security</li>
 </ul>
+  <h2>Disadvantage of OOP</h2>
+<ul>
+    <li>More memory usage</li>
+    <li>slower than procedural programming</li>
+    <li>complex for small programs</li>
+    </ul>
+  
+    
 
-<p><strong>End of OOP Control Structures Notes</strong></p>
+<p><strong> OOP Short Notes</strong></p>
 
 </body>
 </html>
+
 
 
 
