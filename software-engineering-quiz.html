@@ -1,1 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OOP Quiz</title>
+<style>
+body { font-family: Arial; padding: 20px; }
+.question { margin-bottom: 18px; }
+.correct { color: green; font-weight: bold; }
+.wrong { color: red; font-weight: bold; }
+button { padding: 10px 20px; font-size: 16px; }
+</style>
+</head>
 
+<body>
+  h1>Software Engineering Hard Quiz (40 Questions)</h1>
+
+<form>
+
+<!-- Q1 -->
+<div class="question">
+<p>1. Which SDLC model best handles frequent requirement changes?</p>
+<label><input type="radio" name="q1"> Waterfall</label>
+<label><input type="radio" name="q1"> V-Model</label>
+<label><input type="radio" name="q1"> Agile</label>
+<label><input type="radio" name="q1"> Big Bang</label>
+</div>
+
+<!-- Q2 -->
+<div class="question">
+<p>2. Which UML diagram represents object interactions over time?</p>
+<label><input type="radio" name="q2"> Class Diagram</label>
+<label><input type="radio" name="q2"> Use Case Diagram</label>
+<label><input type="radio" name="q2"> Sequence Diagram</label>
+<label><input type="radio" name="q2"> Component Diagram</label>
+</div>
+
+<!-- Q3 -->
+<div class="question">
+<p>3. What does cohesion measure?</p>
+<label><input type="radio" name="q3"> Dependency between modules</label>
+<label><input type="radio" name="q3"> Internal relatedness of a module</label>
+<label><input type="radio" name="q3"> Code complexity</label>
+<label><input type="radio" name="q3"> Execution speed</label>
+</div>
+
+<!-- Q4 -->
+<div class="question">
+<p>4. Which testing ensures changes do not break existing functionality?</p>
+<label><input type="radio" name="q4"> Unit testing</label>
+<label><input type="radio" name="q4"> Regression testing</label>
+<label><input type="radio" name="q4"> System testing</label>
+<label><input type="radio" name="q4"> Acceptance testing</label>
+</div>
+
+<!-- Q5 -->
+<div class="question">
+<p>5. Which design principle promotes loose coupling?</p>
+<label><input type="radio" name="q5"> DRY</label>
+<label><input type="radio" name="q5"> KISS</label>
+<label><input type="radio" name="q5"> Dependency Inversion</label>
+<label><input type="radio" name="q5"> YAGNI</label>
+</div>
+
+<!-- Q6 -->
+<div class="question">
+<p>6. What does COCOMO estimate?</p>
+<label><input type="radio" name="q6"> Lines of code</label>
+<label><input type="radio" name="q6"> Project cost and effort</label>
+<label><input type="radio" name="q6"> Test coverage</label>
+<label><input type="radio" name="q6"> Risk probability</label>
+</div>
+
+<!-- Q7 -->
+<div class="question">
+<p>7. Which is NOT a functional requirement?</p>
+<label><input type="radio" name="q7"> User authentication</label>
+<label><input type="radio" name="q7"> Response time</label>
+<label><input type="radio" name="q7"> Data validation</label>
+<label><input type="radio" name="q7"> Report generation</label>
+</div>
+
+<!-- Q8 -->
+<div class="question">
+<p>8. What does black-box testing focus on?</p>
+<label><input type="radio" name="q8"> Internal logic</label>
+<label><input type="radio" name="q8"> Code structure</label>
+<label><input type="radio" name="q8"> Input-output behavior</label>
+<label><input type="radio" name="q8"> Algorithms</label>
+</div>
+
+<!-- Q9 -->
+<div class="question">
+<p>9. Which metric measures program complexity?</p>
+<label><input type="radio" name="q9"> Halstead</label>
+<label><input type="radio" name="q9"> Cyclomatic Complexity</label>
+<label><input type="radio" name="q9"> LOC</label>
+<label><input type="radio" name="q9"> Function Points</label>
+</div>
+
+<!-- Q10 -->
+<div class="question">
+<p>10. What is refactoring?</p>
+<label><input type="radio" name="q10"> Adding new features</label>
+<label><input type="radio" name="q10"> Fixing bugs</label>
+<label><input type="radio" name="q10"> Improving code without changing behavior</label>
+<label><input type="radio" name="q10"> Optimizing database</label>
+</div>
+ <!-- Q11 -->
+<div class="question">
+<p>11. Which UML diagram shows system functionality from a user perspective?</p>
+<label><input type="radio" name="q11"> Class Diagram</label>
+<label><input type="radio" name="q11"> Use Case Diagram</label>
+<label><input type="radio" name="q11"> Activity Diagram</label>
+<label><input type="radio" name="q11"> State Diagram</label>
+</div>
+
+<!-- Q12 -->
+<div class="question">
+<p>12. Which testing is performed by end users?</p>
+<label><input type="radio" name="q12"> Unit Testing</label>
+<label><input type="radio" name="q12"> Integration Testing</label>
+<label><input type="radio" name="q12"> Acceptance Testing</label>
+<label><input type="radio" name="q12"> System Testing</label>
+</div>
+
+<!-- Q13 -->
+<div class="question">
+<p>13. What does coupling indicate?</p>
+<label><input type="radio" name="q13"> Module size</label>
+<label><input type="radio" name="q13"> Dependency between modules</label>
+<label><input type="radio" name="q13"> Code readability</label>
+<label><input type="radio" name="q13"> Execution time</label>
+</div>
+
+<!-- Q14 -->
+<div class="question">
+<p>14. Which is a non-functional requirement?</p>
+<label><input type="radio" name="q14"> Login</label>
+<label><input type="radio" name="q14"> Search feature</label>
+<label><input type="radio" name="q14"> Performance</label>
+<label><input type="radio" name="q14"> Payment processing</label>
+</div>
+
+<!-- Q15 -->
+<div class="question">
+<p>15. What does Scrum use to track progress?</p>
+<label><input type="radio" name="q15"> Gantt Chart</label>
+<label><input type="radio" name="q15"> Burn-down Chart</label>
+<label><input type="radio" name="q15"> PERT Chart</label>
+<label><input type="radio" name="q15"> Flow Diagram</label>
+</div>
+
+<!-- Q16 -->
+<div class="question">
+<p>16. Which model is also called linear sequential model?</p>
+<label><input type="radio" name="q16"> Agile</label>
+<label><input type="radio" name="q16"> Spiral</label>
+<label><input type="radio" name="q16"> Waterfall</label>
+<label><input type="radio" name="q16"> RAD</label>
+</div>
+
+<!-- Q17 -->
+<div class="question">
+<p>17. What is the main goal of risk management?</p>
+<label><input type="radio" name="q17"> Increase cost</label>
+<label><input type="radio" name="q17"> Identify and reduce risks</label>
+<label><input type="radio" name="q17"> Delay project</label>
+<label><input type="radio" name="q17"> Improve UI</label>
+</div>
+
+<!-- Q18 -->
+<div class="question">
+<p>18. Which testing focuses on individual components?</p>
+<label><input type="radio" name="q18"> System</label>
+<label><input type="radio" name="q18"> Integration</label>
+<label><input type="radio" name="q18"> Unit</label>
+<label><input type="radio" name="q18"> Acceptance</label>
+</div>
+
+<!-- Q19 -->
+<div class="question">
+<p>19. What does SRS stand for?</p>
+<label><input type="radio" name="q19"> Software Requirement Specification</label>
+<label><input type="radio" name="q19"> System Resource Sheet</label>
+<label><input type="radio" name="q19"> Software Risk Strategy</label>
+<label><input type="radio" name="q19"> System Requirement Solution</label>
+</div>
+
+<!-- Q20 -->
+<div class="question">
+<p>20. Which diagram shows workflow?</p>
+<label><input type="radio" name="q20"> Activity Diagram</label>
+<label><input type="radio" name="q20"> Class Diagram</label>
+<label><input type="radio" name="q20"> Component Diagram</label>
+<label><input type="radio" name="q20"> Object Diagram</label>
+</div>
+
+<!-- Q21 -->
+<div class="question">
+<p>21. Which metric measures decision paths?</p>
+<label><input type="radio" name="q21"> LOC</label>
+<label><input type="radio" name="q21"> Function Points</label>
+<label><input type="radio" name="q21"> Cyclomatic Complexity</label>
+<label><input type="radio" name="q21"> Halstead</label>
+</div>
+
+<!-- Q22 -->
+<div class="question">
+<p>22. What is software maintenance?</p>
+<label><input type="radio" name="q22"> Writing code</label>
+<label><input type="radio" name="q22"> Modifying software after delivery</label>
+<label><input type="radio" name="q22"> Testing only</label>
+<label><input type="radio" name="q22"> Requirement gathering</label>
+</div>
+
+<!-- Q23 -->
+<div class="question">
+<p>23. Which is NOT an Agile principle?</p>
+<label><input type="radio" name="q23"> Customer collaboration</label>
+<label><input type="radio" name="q23"> Responding to change</label>
+<label><input type="radio" name="q23"> Comprehensive documentation</label>
+<label><input type="radio" name="q23"> Working software</label>
+</div>
+
+<!-- Q24 -->
+<div class="question">
+<p>24. What is a software bug?</p>
+<label><input type="radio" name="q24"> Feature</label>
+<label><input type="radio" name="q24"> Error or defect</label>
+<label><input type="radio" name="q24"> Requirement</label>
+<label><input type="radio" name="q24"> Design</label>
+</div>
+
+<!-- Q25 -->
+<div class="question">
+<p>25. Which testing uses actual user environment?</p>
+<label><input type="radio" name="q25"> Alpha</label>
+<label><input type="radio" name="q25"> Beta</label>
+<label><input type="radio" name="q25"> Unit</label>
+<label><input type="radio" name="q25"> Integration</label>
+</div>
+
+<!-- Q26 -->
+<div class="question">
+<p>26. What does RAD stand for?</p>
+<label><input type="radio" name="q26"> Rapid Application Development</label>
+<label><input type="radio" name="q26"> Random Access Development</label>
+<label><input type="radio" name="q26"> Real-time Application Design</label>
+<label><input type="radio" name="q26"> Rapid Agile Deployment</label>
+</div>
+
+<!-- Q27 -->
+<div class="question">
+<p>27. What is the output of requirement analysis?</p>
+<label><input type="radio" name="q27"> Code</label>
+<label><input type="radio" name="q27"> SRS Document</label>
+<label><input type="radio" name="q27"> Test Case</label>
+<label><input type="radio" name="q27"> UML Diagram</label>
+</div>
+
+<!-- Q28 -->
+<div class="question">
+<p>28. Which model emphasizes risk analysis?</p>
+<label><input type="radio" name="q28"> Waterfall</label>
+<label><input type="radio" name="q28"> Spiral</label>
+<label><input type="radio" name="q28"> V-Model</label>
+<label><input type="radio" name="q28"> Prototype</label>
+</div>
+
+<!-- Q29 -->
+<div class="question">
+<p>29. What does version control manage?</p>
+<label><input type="radio" name="q29"> Hardware</label>
+<label><input type="radio" name="q29"> Software changes</label>
+<label><input type="radio" name="q29"> Network</label>
+<label><input type="radio" name="q29"> Database only</label>
+</div>
+
+<!-- Q30 -->
+<div class="question">
+<p>30. Which testing ensures software meets requirements?</p>
+<label><input type="radio" name="q30"> Verification</label>
+<label><input type="radio" name="q30"> Validation</label>
+<label><input type="radio" name="q30"> Debugging</label>
+<label><input type="radio" name="q30"> Refactoring</label>
+</div>
+
+<!-- Q31 -->
+<div class="question">
+<p>31. What is software architecture?</p>
+<label><input type="radio" name="q31"> Code style</label>
+<label><input type="radio" name="q31"> High-level system structure</label>
+<label><input type="radio" name="q31"> Testing strategy</label>
+<label><input type="radio" name="q31"> Database schema</label>
+</div>
+
+<!-- Q32 -->
+<div class="question">
+<p>32. Which phase finds defects?</p>
+<label><input type="radio" name="q32"> Coding</label>
+<label><input type="radio" name="q32"> Testing</label>
+<label><input type="radio" name="q32"> Design</label>
+<label><input type="radio" name="q32"> Requirement</label>
+</div>
+
+<!-- Q33 -->
+<div class="question">
+<p>33. What is technical debt?</p>
+<label><input type="radio" name="q33"> Financial loss</label>
+<label><input type="radio" name="q33"> Cost of quick and poor design</label>
+<label><input type="radio" name="q33"> Hardware failure</label>
+<label><input type="radio" name="q33"> Testing cost</label>
+</div>
+
+<!-- Q34 -->
+<div class="question">
+<p>34. Which tool tracks project schedule?</p>
+<label><input type="radio" name="q34"> UML</label>
+<label><input type="radio" name="q34"> Gantt Chart</label>
+<label><input type="radio" name="q34"> DFD</label>
+<label><input type="radio" name="q34"> ER Diagram</label>
+</div>
+
+<!-- Q35 -->
+<div class="question">
+<p>35. What does ISO focus on?</p>
+<label><input type="radio" name="q35"> Programming</label>
+<label><input type="radio" name="q35"> Quality standards</label>
+<label><input type="radio" name="q35"> Security only</label>
+<label><input type="radio" name="q35"> Cost estimation</label>
+</div>
+
+<!-- Q36 -->
+<div class="question">
+<p>36. Which maintenance improves performance?</p>
+<label><input type="radio" name="q36"> Corrective</label>
+<label><input type="radio" name="q36"> Adaptive</label>
+<label><input type="radio" name="q36"> Perfective</label>
+<label><input type="radio" name="q36"> Preventive</label>
+</div>
+
+<!-- Q37 -->
+<div class="question">
+<p>37. What is continuous integration?</p>
+<label><input type="radio" name="q37"> Manual testing</label>
+<label><input type="radio" name="q37"> Frequent code integration</label>
+<label><input type="radio" name="q37"> Deployment only</label>
+<label><input type="radio" name="q37"> Requirement gathering</label>
+</div>
+
+<!-- Q38 -->
+<div class="question">
+<p>38. Which diagram shows data flow?</p>
+<label><input type="radio" name="q38"> ER Diagram</label>
+<label><input type="radio" name="q38"> DFD</label>
+<label><input type="radio" name="q38"> UML Class</label>
+<label><input type="radio" name="q38"> State Diagram</label>
+</div>
+
+<!-- Q39 -->
+<div class="question">
+<p>39. What is pair programming?</p>
+<label><input type="radio" name="q39"> Solo coding</label>
+<label><input type="radio" name="q39"> Two programmers working together</label>
+<label><input type="radio" name="q39"> Debugging only</label>
+<label><input type="radio" name="q39"> Code review</label>
+</div>
+
+<!-- Q40 -->
+<div class="question">
+<p>40. Which architecture style emphasizes independent services?</p>
+<label><input type="radio" name="q40"> Layered</label>
+<label><input type="radio" name="q40"> Monolithic</label>
+<label><input type="radio" name="q40"> Microservices</label>
+<label><input type="radio" name="q40"> Client-Server</label>
+</div> 
+</body>
+  
+  
