@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <title>MIS Quiz</title>
 
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .question { margin-bottom: 15px; }
+        .correct { color: green; font-weight: bold; }
+        .wrong { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h1>Management Information Systems – Hard Quiz (40 Questions)</h1>
+<p>Select the correct answer and click Submit.</p>
+
+<form id="quizForm">
+
+<!-- QUESTIONS -->
+<script>
+const questions = [
+  ["MIS mainly supports which level of management?", "Top", "Middle", "Operational", "Clerical", "B"],
+  ["TPS is mainly used for?", "Decision making", "Strategic planning", "Daily transactions", "Forecasting", "C"],
+  ["Which system supports semi-structured decisions?", "TPS", "MIS", "DSS", "ESS", "C"],
+  ["ESS is mainly designed for?", "Clerks", "Middle managers", "Executives", "Supervisors", "C"],
+  ["Which is NOT a component of MIS?", "People", "Procedures", "Hardware", "Emotions", "D"],
+  ["MIS reports are usually?", "Real-time", "Highly summarized", "Unstructured", "Random", "B"],
+  ["A database in MIS is best described as?", "Raw data", "Organized data", "Programs", "Networks", "B"],
+  ["Which system focuses on long-term planning?", "TPS", "MIS", "ESS", "OAS", "C"],
+  ["DSS uses which type of data?", "Only internal", "Only external", "Both internal and external", "None", "C"],
+  ["Which MIS output is periodic?", "Exception report", "Ad-hoc report", "Scheduled report", "Query", "C"],
+
+  ["ERP integrates?", "One department", "All business processes", "Only finance", "Only HR", "B"],
+  ["Which is an example of TPS?", "Payroll system", "Executive dashboard", "Forecast system", "Simulation", "A"],
+  ["MIS improves?", "Hardware speed", "Decision quality", "Employee emotions", "Network cables", "B"],
+  ["Information must be accurate to be?", "Useful", "Expensive", "Complex", "Encrypted", "A"],
+  ["Which is NOT a quality of good information?", "Timely", "Relevant", "Accurate", "Duplicated", "D"],
+  ["DSS mainly helps in?", "Routine decisions", "Strategic only", "Non-routine decisions", "Clerical work", "C"],
+  ["Which level uses summarized reports?", "Operational", "Middle", "Top", "Clerical", "C"],
+  ["MIS primarily converts?", "Information to data", "Data to information", "Programs to data", "Users to systems", "B"],
+  ["OAS is mainly used for?", "Decision making", "Office productivity", "Strategy", "Forecasting", "B"],
+  ["Which is NOT an MIS type?", "TPS", "DSS", "ESS", "CPU", "D"],
+
+  ["Which system supports executives?", "MIS", "TPS", "ESS", "OAS", "C"],
+  ["MIS reports are usually?", "Highly detailed", "Highly summarized", "Unstructured", "Informal", "B"],
+  ["Which uses models and simulations?", "MIS", "DSS", "TPS", "OAS", "B"],
+  ["A feedback mechanism helps MIS to?", "Fail", "Improve performance", "Delete data", "Reduce users", "B"],
+  ["Which is an external information source?", "Sales record", "Customer database", "Government report", "Payroll", "C"],
+  ["Data becomes information when it is?", "Stored", "Processed", "Deleted", "Encrypted", "B"],
+  ["Which system records sales transactions?", "DSS", "MIS", "TPS", "ESS", "C"],
+  ["Which MIS characteristic focuses on future?", "Historical", "Predictive", "Operational", "Routine", "B"],
+  ["Which supports top-level decisions?", "TPS", "MIS", "ESS", "OAS", "C"],
+  ["Which is NOT a benefit of MIS?", "Better decisions", "Improved efficiency", "Higher cost always", "Timely reports", "C"],
+
+  ["MIS helps organizations to?", "Lose data", "Gain competitive advantage", "Increase errors", "Reduce information", "B"],
+  ["Which is a structured decision?", "Hiring CEO", "Daily inventory reorder", "Market expansion", "Merger", "B"],
+  ["Which system supports structured decisions?", "DSS", "MIS", "TPS", "ESS", "C"],
+  ["Which MIS tool uses charts and graphs?", "Dashboard", "Compiler", "Router", "Firewall", "A"],
+  ["Which focuses on exception reporting?", "TPS", "MIS", "OAS", "ESS", "B"],
+  ["MIS is a combination of?", "People, data, procedures", "Only computers", "Only software", "Only networks", "A"],
+  ["Which is the brain of MIS?", "Hardware", "Software", "People", "Database", "C"],
+  ["Which MIS element stores data?", "People", "Procedures", "Database", "Reports", "C"]
+];
+
+let html = "";
+questions.forEach((q, i) => {
+  html += `<p>${i+1}. ${q[0]}</p>
+  <input type="radio" name="q${i}" value="A"> A. ${q[1]}<br>
+  <input type="radio" name="q${i}" value="B"> B. ${q[2]}<br>
+  <input type="radio" name="q${i}" value="C"> C. ${q[3]}<br>
+  <input type="radio" name="q${i}" value="D"> D. ${q[4]}<br><br>`;
+});
+document.write(html);
+</script>
+
+<button type="button" onclick="checkAnswers()">Submit Quiz</button>
+</form>
+
+<h2 id="result"></h2>
+
+<script>
+function checkAnswers() {
+  let score = 0;
+  questions.forEach((q, i) => {
+    const answer = document.querySelector(input[name="q${i}"]:checked);
+    if (answer && answer.value === q[5]) score++;
+  });
+  document.getElementById("result").innerHTML =
+    "You scored " + score + " out of 40";
+}
+</script>
+
+</body>
+</html>
