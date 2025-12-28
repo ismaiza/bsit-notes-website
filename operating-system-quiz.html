@@ -1,1 +1,111 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Operating System Quiz</title>
+<style>
+body { font-family: Arial; padding: 20px; }
+.question { margin-bottom: 18px; }
+.correct { color: green; font-weight: bold; }
+.wrong { color: red; font-weight: bold; }
+button { padding: 10px 20px; font-size: 16px; }
+</style>
+</head>
 
+<body>
+
+<h1>Operating System Quiz (40 Questions)</h1>
+
+<form id="quizForm">
+
+<script>
+const questions = [
+["What is an Operating System?", "Hardware", "System Software", "Application Software", "Utility", "b"],
+["Main function of OS?", "Write programs", "Manage hardware", "Design hardware", "Compile code", "b"],
+["Which is not an OS?", "Windows", "Linux", "Oracle", "macOS", "c"],
+["OS acts as interface between?", "User & hardware", "CPU & memory", "Software & software", "Disk & RAM", "a"],
+["Which manages CPU?", "File system", "Memory manager", "Process scheduler", "Device driver", "c"],
+["Process is?", "Program in execution", "Program in memory", "Thread", "CPU task", "a"],
+["Thread is?", "Heavyweight process", "Lightweight process", "CPU", "OS", "b"],
+["Which state is NOT valid?", "New", "Ready", "Waiting", "Destroyed", "d"],
+["Which scheduling is preemptive?", "FCFS", "SJF", "Priority", "Round Robin", "d"],
+["FCFS means?", "Fast Come Fast Serve", "First Come First Serve", "First CPU First Serve", "None", "b"],
+
+["Which scheduling is time-sharing?", "FCFS", "Round Robin", "Priority", "SJF", "b"],
+["Starvation occurs in?", "FCFS", "Round Robin", "Priority", "FIFO", "c"],
+["Deadlock requires?", "Mutual exclusion", "Hold & wait", "No preemption", "All", "d"],
+["Deadlock avoidance uses?", "FIFO", "Banker’s algorithm", "Round Robin", "SJF", "b"],
+["Which is NOT deadlock condition?", "Circular wait", "Preemption", "Hold & wait", "Mutual exclusion", "b"],
+["Memory management handles?", "CPU", "RAM", "Disk", "I/O", "b"],
+["Which is volatile memory?", "ROM", "HDD", "SSD", "RAM", "d"],
+["Paging removes?", "External fragmentation", "Internal fragmentation", "Deadlock", "Starvation", "a"],
+["Segmentation is based on?", "Pages", "Blocks", "Logical divisions", "Frames", "c"],
+["Page size is?", "Variable", "Fixed", "Large", "Small", "b"],
+
+["Virtual memory uses?", "RAM only", "Disk only", "RAM + Disk", "Cache only", "c"],
+["Thrashing means?", "High CPU use", "Low memory use", "Excessive paging", "Deadlock", "c"],
+["Which is secondary storage?", "RAM", "Cache", "Register", "Hard disk", "d"],
+["File system manages?", "Processes", "Memory", "Files", "CPU", "c"],
+["Which is NOT file access method?", "Sequential", "Direct", "Random", "Circular", "d"],
+["Directory stores?", "Files", "Programs", "File information", "Memory", "c"],
+["I/O device controlled by?", "Compiler", "OS", "User", "CPU only", "b"],
+["Interrupt is?", "Signal to CPU", "Error", "Process", "Thread", "a"],
+["Context switching is?", "Process execution", "Saving state", "Switching CPU", "Loading OS", "b"],
+["Kernel is?", "User program", "Hardware", "Core of OS", "Application", "c"],
+
+["Which OS supports multitasking?", "DOS", "Windows", "Single task OS", "Batch OS", "b"],
+["Real-time OS used in?", "Games", "Banking", "Air traffic control", "Word processing", "c"],
+["Batch OS processes?", "One job", "Multiple jobs in batch", "User input", "GUI", "b"],
+["Time-sharing OS aims at?", "Response time", "CPU speed", "Memory size", "Storage", "a"],
+["Which OS is open source?", "Windows", "macOS", "Linux", "DOS", "c"],
+["Which manages devices?", "Scheduler", "Device driver", "Kernel", "Shell", "b"],
+["Shell is?", "Hardware", "User interface", "Kernel", "CPU", "b"],
+["Which executes user commands?", "Kernel", "Shell", "Driver", "BIOS", "b"],
+["Which OS part is always resident?", "Shell", "Kernel", "Application", "Driver", "b"]
+];
+
+questions.forEach((q, i) => {
+document.write(`
+<div class="question">
+<p>${i+1}. ${q[0]}</p>
+<label><input type="radio" name="q${i}" value="a"> ${q[1]}</label><br>
+<label><input type="radio" name="q${i}" value="b"> ${q[2]}</label><br>
+<label><input type="radio" name="q${i}" value="c"> ${q[3]}</label><br>
+<label><input type="radio" name="q${i}" value="d"> ${q[4]}</label><br>
+<span id="r${i}"></span>
+</div>
+`);
+});
+</script>
+
+<button type="button" onclick="checkQuiz()">Submit Quiz</button>
+<h2 id="result"></h2>
+
+</form>
+
+<script>
+function checkQuiz() {
+let score = 0;
+
+questions.forEach((q, i) => {
+let selected = document.querySelector(input[name="q${i}"]:checked);
+let r = document.getElementById(r${i});
+
+if (selected && selected.value === q[5]) {
+score++;
+r.innerHTML = " ✓ Correct";
+r.className = "correct";
+} else {
+r.innerHTML = " ✗ Wrong";
+r.className = "wrong";
+}
+});
+
+let status = score >= 20 ? "PASS 🎉" : "FAIL ❌";
+document.getElementById("result").innerHTML =
+You scored ${score} out of 40 — ${status};
+}
+</script>
+
+</body>
+</html>
