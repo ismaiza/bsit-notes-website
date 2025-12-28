@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OOP Quiz</title>
+<style>
+body { font-family: Arial; padding: 20px; }
+.question { margin-bottom: 18px; }
+.correct { color: green; font-weight: bold; }
+.wrong { color: red; font-weight: bold; }
+button { padding: 10px 20px; font-size: 16px; }
+</style>
+</head>
 
+<body>
+
+<h1>Object-Oriented Programming Quiz (40 Questions)</h1>
+
+<form id="quizForm">
+
+<!-- QUESTIONS -->
+<script>
+const questions = [
+["OOP stands for?", "Object Oriented Programming", "Open Object Program", "Optional Object Process", "Only One Program", "a"],
+["Which is NOT an OOP principle?", "Encapsulation", "Inheritance", "Compilation", "Polymorphism", "c"],
+["Which concept binds data and methods?", "Abstraction", "Encapsulation", "Inheritance", "Polymorphism", "b"],
+["Which allows same method name different behavior?", "Encapsulation", "Abstraction", "Polymorphism", "Inheritance", "c"],
+["Parent class is also called?", "Child class", "Base class", "Derived class", "Object class", "b"],
+["Which keyword creates object in Java?", "class", "new", "object", "create", "b"],
+["Which hides implementation details?", "Encapsulation", "Abstraction", "Inheritance", "Overloading", "b"],
+["Which supports code reusability?", "Inheritance", "Abstraction", "Compilation", "Iteration", "a"],
+["Method with same name but different parameters?", "Overriding", "Overloading", "Inheritance", "Encapsulation", "b"],
+["Run-time polymorphism achieved by?", "Overloading", "Overriding", "Encapsulation", "Constructor", "b"],
+
+["Constructor purpose?", "Destroy object", "Initialize object", "Call method", "Free memory", "b"],
+["Destructor does what?", "Create object", "Destroy object", "Initialize data", "Compile class", "b"],
+["Which access modifier is most restrictive?", "public", "private", "protected", "default", "b"],
+["Which allows access within package & subclasses?", "private", "public", "protected", "protected", "d"],
+["Instance variable belongs to?", "Class", "Object", "Method", "Package", "b"],
+["Static variable belongs to?", "Object", "Method", "Class", "Constructor", "c"],
+["Which keyword refers to current object?", "this", "super", "self", "object", "a"],
+["Which calls parent constructor?", "this()", "parent()", "super()", "base()", "c"],
+["Interface contains?", "Only variables", "Only methods", "Abstract methods", "Concrete methods", "c"],
+["Abstract class can have?", "No methods", "Only abstract", "Both abstract & concrete", "Only static", "c"],
+
+["Multiple inheritance supported via?", "Classes", "Objects", "Interfaces", "Methods", "c"],
+["Which cannot be instantiated?", "Class", "Object", "Abstract class", "Constructor", "c"],
+["Which OOP feature improves security?", "Inheritance", "Encapsulation", "Polymorphism", "Abstraction", "b"],
+["Which is early binding?", "Overriding", "Overloading", "Inheritance", "Abstraction", "b"],
+["Which is late binding?", "Overloading", "Compilation", "Overriding", "Constructor", "c"],
+["Object is instance of?", "Method", "Variable", "Class", "Package", "c"],
+["Class is?", "Blueprint", "Object", "Method", "Variable", "a"],
+["Which keyword prevents inheritance?", "static", "final", "private", "const", "b"],
+["Which prevents method overriding?", "static", "final", "abstract", "protected", "b"],
+["Which supports dynamic binding?", "Inheritance", "Polymorphism", "Encapsulation", "Abstraction", "b"],
+
+["Which keyword creates subclass?", "this", "extends", "implements", "inherits", "b"],
+["Which keyword used with interface?", "extends", "implements", "inherits", "uses", "b"],
+["Which language is purely OOP?", "C", "Java", "Smalltalk", "Python", "c"],
+["Which allows same function name?", "Overloading", "Encapsulation", "Inheritance", "Compilation", "a"],
+["Which concept reduces complexity?", "Encapsulation", "Abstraction", "Inheritance", "Polymorphism", "b"],
+["Which stores object data?", "Method", "Variable", "Attribute", "Function", "c"],
+["Which runs automatically when object created?", "Method", "Constructor", "Destructor", "Loop", "b"],
+["Which term means “many forms”?", "Inheritance", "Abstraction", "Encapsulation", "Polymorphism", "d"]
+];
+
+questions.forEach((q, i) => {
+document.write(`
+<div class="question">
+<p>${i+1}. ${q[0]}</p>
+<label><input type="radio" name="q${i}" value="a"> ${q[1]}</label><br>
+<label><input type="radio" name="q${i}" value="b"> ${q[2]}</label><br>
+<label><input type="radio" name="q${i}" value="c"> ${q[3]}</label><br>
+<label><input type="radio" name="q${i}" value="d"> ${q[4]}</label><br>
+<span id="r${i}"></span>
+</div>
+`);
+});
+</script>
+
+<button type="button" onclick="checkQuiz()">Submit Quiz</button>
+<h2 id="result"></h2>
+
+</form>
+
+<script>
+function checkQuiz() {
+let score = 0;
+
+questions.forEach((q, i) => {
+let selected = document.querySelector(input[name="q${i}"]:checked);
+let r = document.getElementById(r${i});
+
+if (selected && selected.value === q[5]) {
+score++;
+r.innerHTML = " ✓ Correct";
+r.className = "correct";
+} else {
+r.innerHTML = " ✗ Wrong";
+r.className = "wrong";
+}
+});
+
+let status = score >= 20 ? "PASS 🎉" : "FAIL ❌";
+document.getElementById("result").innerHTML =
+You scored ${score} out of 40 — ${status};
+}
+</script>
+
+</body>
+</html>
