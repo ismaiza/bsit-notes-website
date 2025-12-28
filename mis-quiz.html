@@ -73,24 +73,30 @@ questions.forEach((q, i) => {
   <input type="radio" name="q${i}" value="D"> D. ${q[4]}<br><br>`;
 });
 document.write(html);
-</script>
-
-<button type="button" onclick="checkAnswers()">Submit Quiz</button>
-</form>
-
-<h2 id="result"></h2>
-
 <script>
-function checkAnswers() {
-  let score = 0;
-  questions.forEach((q, i) => {
-    const answer = document.querySelector(input[name="q${i}"]:checked);
-    if (answer && answer.value === q[5]) score++;
-  });
-  document.getElementById("result").innerHTML =
-    "You scored " + score + " out of 40";
+function checkQuiz() {
+    let score = 0;
+
+    questions.forEach((q, i) => {
+        let selected = document.querySelector(input[name="q${i}"]:checked);
+        let r = document.getElementById(r${i});
+
+        if (selected && selected.value === q[4]) {
+            score++;
+            r.innerHTML = "✔ Correct";
+            r.style.color = "green";
+        } else {
+            r.innerHTML = "✖ Wrong";
+            r.style.color = "red";
+        }
+    });
+
+    document.getElementById("result").innerHTML =
+        "Your Score: " + score + "/" + questions.length;
 }
 </script>
-
 </body>
 </html>
+
+
+
