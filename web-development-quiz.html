@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-    <title>MIS Quiz</title>
+    <title>Web Development Quiz</title>
 
     <style>
         body { font-family: Arial; padding: 20px; }
@@ -333,5 +333,37 @@ b) CSS<br>
 c) JavaScript<br>
 d) SQL
 </div>
+   </script>
+
+<button type="button" onclick="checkQuiz()">Submit Quiz</button>
+<h2 id="result"></h2>
+
+</form>
+
+<script>
+function checkQuiz() {
+let score = 0;
+
+questions.forEach((q, i) => {
+let selected = document.querySelector(input[name="q${i}"]:checked);
+let r = document.getElementById(r${i});
+
+if (selected && selected.value === q[5]) {
+score++;
+r.innerHTML = " ✓ Correct";
+r.className = "correct";
+} else {
+r.innerHTML = " ✗ Wrong";
+r.className = "wrong";
+}
+});
+
+let status = score >= 20 ? "PASS 🎉" : "FAIL ❌";
+document.getElementById("result").innerHTML =
+You scored ${score} out of 40 — ${status};
+}
+</script>
+
 </body>
+</html>
 
