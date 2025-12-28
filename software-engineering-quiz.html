@@ -375,6 +375,39 @@ button { padding: 10px 20px; font-size: 16px; }
 <label><input type="radio" name="q40"> Microservices</label>
 <label><input type="radio" name="q40"> Client-Server</label>
 </div> 
+  </script>
+
+<button type="button" onclick="checkQuiz()">Submit Quiz</button>
+<h2 id="result"></h2>
+
+</form>
+
+<script>
+function checkQuiz() {
+let score = 0;
+
+questions.forEach((q, i) => {
+let selected = document.querySelector(input[name="q${i}"]:checked);
+let r = document.getElementById(r${i});
+
+if (selected && selected.value === q[5]) {
+score++;
+r.innerHTML = " ✓ Correct";
+r.className = "correct";
+} else {
+r.innerHTML = " ✗ Wrong";
+r.className = "wrong";
+}
+});
+
+let status = score >= 20 ? "PASS 🎉" : "FAIL ❌";
+document.getElementById("result").innerHTML =
+You scored ${score} out of 40 — ${status};
+}
+</script>
+
+</body>
+</html>
 </body>
   
   
