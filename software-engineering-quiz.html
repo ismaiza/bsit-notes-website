@@ -381,33 +381,32 @@ button { padding: 10px 20px; font-size: 16px; }
 <h2 id="result"></h2>
 
 </form>
-
-<script>
+ <script>
 function checkQuiz() {
-let score = 0;
+    let score = 0;
 
-questions.forEach((q, i) => {
-let selected = document.querySelector(input[name="q${i}"]:checked);
-let r = document.getElementById(r${i});
+    questions.forEach((q, i) => {
+        let selected = document.querySelector(input[name="q${i}"]:checked);
+        let r = document.getElementById(r${i});
 
-if (selected && selected.value === q[5]) {
-score++;
-r.innerHTML = " ✓ Correct";
-r.className = "correct";
-} else {
-r.innerHTML = " ✗ Wrong";
-r.className = "wrong";
-}
-});
+        if (selected && selected.value === q[4]) {
+            score++;
+            r.innerHTML = "✔ Correct";
+            r.style.color = "green";
+        } else {
+            r.innerHTML = "✖ Wrong";
+            r.style.color = "red";
+        }
+    });
 
-let status = score >= 20 ? "PASS 🎉" : "FAIL ❌";
-document.getElementById("result").innerHTML =
-You scored ${score} out of 40 — ${status};
+    document.getElementById("result").innerHTML =
+        "Your Score: " + score + "/" + questions.length;
 }
 </script>
-
 </body>
 </html>
-</body>
-  
-  
+
+
+
+
+
