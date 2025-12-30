@@ -76,3 +76,33 @@ body { font-family: Arial; padding: 20px; }
 <label><input type="radio" name="q7" value="A"> DDoS</label><br>
 <label><input type="radio" name="q7" value="B"> Cross-site scripting</label><br>
 </html>
+<button type="button" onclick="submitQuiz()">Submit Quiz</button>
+</form>
+
+
+<p id="result"></p>
+
+
+<script>
+const answers = {
+q1: "A", q2: "B", q3: "C", q4: "B", q5: "C", q6: "A",
+q7: "C", q8: "A", q9: "B", q10: "A", q11: "B", q12: "B"
+};
+
+
+function submitQuiz() {
+let score = 0;
+for (let q in answers) {
+const selected = document.querySelector('input[name="' + q + '"]:checked');
+if (selected && selected.value === answers[q]) {
+score++;
+}
+}
+const totalQuestions = Object.keys(answers).length;
+document.getElementById("result").innerText = "You scored " + score + " / " + totalQuestions;
+}
+</script>
+
+
+</body>
+</html>
