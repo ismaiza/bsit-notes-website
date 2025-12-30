@@ -164,6 +164,77 @@ body { font-family: Arial; padding: 20px; }
   <label><input type="radio" name="q25" value="C"> Blocks viruses</label><br>
   <label><input type="radio" name="q25" value="D"> Monitors network traffic</label>
 </div>
+  <div class="question">
+  <p>26. What is a DNS spoofing attack?</p>
+  <label><input type="radio" name="q26" value="A"> Altering DNS records to redirect traffic</label><br>
+  <label><input type="radio" name="q26" value="B"> Brute-forcing DNS passwords</label><br>
+  <label><input type="radio" name="q26" value="C"> Encrypting DNS traffic</label><br>
+  <label><input type="radio" name="q26" value="D"> Blocking DNS queries</label>
+</div>
+
+<div class="question">
+  <p>27. Which type of malware hides itself to avoid detection?</p>
+  <label><input type="radio" name="q27" value="A"> Rootkit</label><br>
+  <label><input type="radio" name="q27" value="B"> Worm</label><br>
+  <label><input type="radio" name="q27" value="C"> Ransomware</label><br>
+  <label><input type="radio" name="q27" value="D"> Adware</label>
+</div>
+
+<div class="question">
+  <p>28. What is the purpose of a honeypot in Cyber Security?</p>
+  <label><input type="radio" name="q28" value="A"> To trap attackers and study their behavior</label><br>
+  <label><input type="radio" name="q28" value="B"> To speed up network traffic</label><br>
+  <label><input type="radio" name="q28" value="C"> To encrypt sensitive files</label><br>
+  <label><input type="radio" name="q28" value="D"> To block spam emails</label>
+</div>
+
+<div class="question">
+  <p>29. Which attack is used to obtain user credentials by impersonating a legitimate site?</p>
+  <label><input type="radio" name="q29" value="A"> Phishing</label><br>
+  <label><input type="radio" name="q29" value="B"> DDoS</label><br>
+  <label><input type="radio" name="q29" value="C"> SQL Injection</label><br>
+  <label><input type="radio" name="q29" value="D"> XSS</label>
+</div>
+
+<div class="question">
+  <p>30. Which cyber attack targets the supply chain to compromise software?</p>
+  <label><input type="radio" name="q30" value="A"> Watering hole attack</label><br>
+  <label><input type="radio" name="q30" value="B"> Supply chain attack</label><br>
+  <label><input type="radio" name="q30" value="C"> Ransomware</label><br>
+  <label><input type="radio" name="q30" value="D"> MITM attack</label>
+</div>
+
+<div class="question">
+  <p>31. What does the principle of least privilege mean?</p>
+  <label><input type="radio" name="q31" value="A"> Give users only the access they need to perform their tasks</label><br>
+  <label><input type="radio" name="q31" value="B"> Give all users admin access</label><br>
+  <label><input type="radio" name="q31" value="C"> Allow unlimited access to developers</label><br>
+  <label><input type="radio" name="q31" value="D"> Disable all user access</label>
+</div>
+
+<div class="question">
+  <p>32. What is the main purpose of SSL/TLS?</p>
+  <label><input type="radio" name="q32" value="A"> To scan for viruses</label><br>
+  <label><input type="radio" name="q32" value="B"> To encrypt data in transit</label><br>
+  <label><input type="radio" name="q32" value="C"> To backup servers</label><br>
+  <label><input type="radio" name="q32" value="D"> To monitor network traffic</label>
+</div>
+
+<div class="question">
+  <p>33. What is spear phishing?</p>
+  <label><input type="radio" name="q33" value="A"> Targeted phishing at specific individuals or organizations</label><br>
+  <label><input type="radio" name="q33" value="B"> Mass email spam</label><br>
+  <label><input type="radio" name="q33" value="C"> Intercepting email traffic</label><br>
+  <label><input type="radio" name="q33" value="D"> Malware injection via USB</label>
+</div>
+
+<div class="question">
+  <p>34. Which attack involves tricking users to install malicious software disguised as legitimate?</p>
+  <label><input type="radio" name="q34" value="A"> Trojan</label><br>
+  <label><input type="radio" name="q34" value="B"> Worm</label><br>
+  <label><input type="radio" name="q34" value="C"> Keylogger</label><br>
+  <label><input type="radio" name="q34" value="D"> Rootkit</label>
+</div>
 
 <button type="button" onclick="submitQuiz()">Submit Quiz</button>
 </form>
@@ -174,7 +245,8 @@ body { font-family: Arial; padding: 20px; }
 const answers = {
   q1: "A", q2: "B", q3: "C", q4: "B", q5: "C", q6: "A",
   q7: "C", q8: "A", q9: "B", q10: "A", q11: "B", q12: "B"
-  q19: "D",q20: "A",q21: "C",q22  "B",q23: "A",q24: "B",q25: "B";
+  q19: "D",q20: "A",q21: "C",q22  "B",q23: "A",q24: "B",q25: "B",
+  q26: "A",q27: "A",q28: "A",q29: q30: "B",q31: "A",q32: "B",q33: "A",q34: "A"
 };
 
 function submitQuiz() {
