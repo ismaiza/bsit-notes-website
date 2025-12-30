@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>System Analysis and Design</title>
+<style>
+body { font-family: Arial; padding: 20px; }
+.question { margin-bottom: 18px; }
+.correct { color: green; font-weight: bold; }
+.wrong { color: red; font-weight: bold; }
+button { padding: 10px 20px; font-size: 16px; }
+</style>
+</head>
+
+<body>
+
+
+
+  <script>
+const questions = [
+{q:"System Analysis and Design mainly focuses on:",a:["Coding","Understanding user requirements","Testing only","Maintenance"],c:1},
+{q:"A system is defined as:",a:["A program","A group of unrelated elements","Interrelated components","A database"],c:2},
+{q:"System analyst role includes:",a:["Programming only","Requirement gathering","Hardware repair","Network installation"],c:1},
+{q:"SDLC stands for:",a:["System Data Life Cycle","Software Development Life Cycle","System Design Logic Control","System Development Life Cycle"],c:3},
+{q:"Which phase comes first in SDLC?",a:["Analysis","Design","Planning","Testing"],c:2},
+{q:"Feasibility study is conducted during:",a:["Design","Testing","Analysis","Maintenance"],c:2},
+{q:"Technical feasibility checks:",a:["Cost","User acceptance","Technology availability","Schedule"],c:2},
+{q:"Economic feasibility focuses on:",a:["Technology","Cost-benefit","Time","Users"],c:1},
+{q:"Operational feasibility checks:",a:["Budget","User acceptance","Hardware","Schedule"],c:1},
+{q:"Schedule feasibility deals with:",a:["Time frame","Cost","Technology","Users"],c:0},
+
+{q:"Functional requirements describe:",a:["System constraints","What system should do","Performance","Security"],c:1},
+{q:"Non-functional requirements include:",a:["Processes","Inputs","Performance","Outputs"],c:2},
+{q:"Which is NOT a requirement gathering technique?",a:["Interview","Questionnaire","Observation","Compilation"],c:3},
+{q:"Interview technique is useful for:",a:["Large groups","Detailed information","Speed","Low cost"],c:1},
+{q:"Questionnaires are best for:",a:["Few users","Many users","Managers only","Developers"],c:1},
+{q:"DFD stands for:",a:["Data File Diagram","Data Flow Diagram","Design Flow Diagram","Database Flow Diagram"],c:1},
+{q:"DFD shows:",a:["Program logic","Data movement","Database structure","User interface"],c:1},
+{q:"Which is NOT a DFD component?",a:["Process","Data store","Decision","External entity"],c:2},
+{q:"Context diagram is also called:",a:["Level 1 DFD","Logical DFD","Physical DFD","Level 0 DFD"],c:3},
+{q:"DFD Level 1 shows:",a:["Whole system","Detailed processes","Only inputs","Only outputs"],c:1},
+
+{q:"ERD stands for:",a:["Entity Relationship Diagram","Entity Record Diagram","External Relation Diagram","Entity Resource Diagram"],c:0},
+{q:"ERD shows:",a:["Data flow","Relationships","Processes","Programs"],c:1},
+{q:"An entity represents:",a:["Action","Object","Process","Function"],c:1},
+{q:"Attribute describes:",a:["Entity property","Process","Data flow","Relationship"],c:0},
+{q:"Primary key in ERD is:",a:["Duplicate","Unique identifier","Foreign key","Optional"],c:1},
+{q:"System design phase converts:",a:["Requirements into code","Requirements into blueprint","Code into system","Data into info"],c:1},
+{q:"Logical design focuses on:",a:["How system works","What system does","Hardware","Software"],c:1},
+{q:"Physical design focuses on:",a:["What system does","How system is built","User needs","DFD"],c:1},
+{q:"Prototyping helps in:",a:["Coding","User feedback","Testing only","Maintenance"],c:1},
+{q:"Prototyping is best when:",a:["Requirements unclear","System simple","Time limited","Cost high"],c:0},
+
+{q:"System testing checks:",a:["Modules","Whole system","Single function","Code syntax"],c:1},
+{q:"User Acceptance Testing ensures:",a:["System correctness","User satisfaction","Security","Speed"],c:1},
+{q:"Direct changeover means:",a:["Old and new run together","Immediate replacement","Pilot testing","Phased replacement"],c:1},
+{q:"Parallel changeover means:",a:["Immediate switch","Old + new run together","Pilot use","Phase wise"],c:1},
+{q:"Pilot changeover means:",a:["Entire organization","Single location","Old system only","Direct switch"],c:1},
+{q:"Maintenance done to fix errors is:",a:["Adaptive","Perfective","Corrective","Preventive"],c:2},
+{q:"Adaptive maintenance is done to:",a:["Fix bugs","Add features","Adapt to environment","Prevent failure"],c:2},
+{q:"Documentation is important because:",a:["Costs money","Helps future maintenance","Slows development","Avoids users"],c:1},
+{q:"System Analysis and Design improves:",a:["Code only","User satisfaction","Hardware","Network"],c:1},
+{q:"Main goal of SAD is:",a:["Fast coding","User-oriented system","Cheap system","Complex system"],c:1}
+];
+
+const quizDiv = document.getElementById("quiz");
+
+questions.forEach((item, i) => {
+  let html = `<div class="question">
+  <p>${i+1}. ${item.q}</p>`;
+  item.a.forEach((opt, j) => {
+    html += `<label>
+      <input type="radio" name="q${i}" value="${j}"> ${opt}
+    </label><br>`;
+  });
+  html += `</div>`;
+  quizDiv.innerHTML += html;
+});
+
+function checkQuiz() {
+  let score = 0;
+  questions.forEach((item, i) => {
+    const sel = document.querySelector(\`input[name="q\${i}"]:checked\`);
+    if (sel && parseInt(sel.value) === item.c) score++;
+  });
+  document.getElementById("score").innerHTML =
+    \`You scored \${score} out of 40\`;
+}
+</script>
 
