@@ -109,6 +109,61 @@ body { font-family: Arial; padding: 20px; }
 <label><input type="radio" name="q12" value="C"> ECC</label><br>
 <label><input type="radio" name="q12" value="D"> DSA</label>
 </div>
+  <div class="question">
+  <p>19. Which protocol is commonly used for secure email transmission?</p>
+  <label><input type="radio" name="q19" value="A"> SMTP</label><br>
+  <label><input type="radio" name="q19" value="B"> POP3</label><br>
+  <label><input type="radio" name="q19" value="C"> IMAP</label><br>
+  <label><input type="radio" name="q19" value="D"> SMTPS</label>
+</div>
+
+<div class="question">
+  <p>20. What is a man-in-the-middle (MITM) attack?</p>
+  <label><input type="radio" name="q20" value="A"> Intercepting communication between two parties</label><br>
+  <label><input type="radio" name="q20" value="B"> Hacking a firewall</label><br>
+  <label><input type="radio" name="q20" value="C"> Stealing passwords via phishing</label><br>
+  <label><input type="radio" name="q20" value="D"> Overloading a server with requests</label>
+</div>
+
+<div class="question">
+  <p>21. Which is considered strong password practice?</p>
+  <label><input type="radio" name="q21" value="A"> Using "password123" for all accounts</label><br>
+  <label><input type="radio" name="q21" value="B"> Reusing passwords on multiple sites</label><br>
+  <label><input type="radio" name="q21" value="C"> Using a mix of letters, numbers, and symbols</label><br>
+  <label><input type="radio" name="q21" value="D"> Writing passwords on a sticky note</label>
+</div>
+
+<div class="question">
+  <p>22. What is the primary function of IDS (Intrusion Detection System)?</p>
+  <label><input type="radio" name="q22" value="A"> Encrypting sensitive data</label><br>
+  <label><input type="radio" name="q22" value="B"> Detecting suspicious activity in a network</label><br>
+  <label><input type="radio" name="q22" value="C"> Blocking malware automatically</label><br>
+  <label><input type="radio" name="q22" value="D"> Scanning for viruses on a PC</label>
+</div>
+
+<div class="question">
+  <p>23. What is cross-site scripting (XSS)?</p>
+  <label><input type="radio" name="q23" value="A"> Injecting malicious scripts into web pages viewed by other users</label><br>
+  <label><input type="radio" name="q23" value="B"> Sending spam emails</label><br>
+  <label><input type="radio" name="q23" value="C"> Scanning network ports</label><br>
+  <label><input type="radio" name="q23" value="D"> Encrypting user data</label>
+</div>
+
+<div class="question">
+  <p>24. Which attack exploits weak authentication on network devices?</p>
+  <label><input type="radio" name="q24" value="A"> SQL Injection</label><br>
+  <label><input type="radio" name="q24" value="B"> Brute-force attack</label><br>
+  <label><input type="radio" name="q24" value="C"> Denial-of-Service</label><br>
+  <label><input type="radio" name="q24" value="D"> Phishing</label>
+</div>
+
+<div class="question">
+  <p>25. What does VPN (Virtual Private Network) primarily do?</p>
+  <label><input type="radio" name="q25" value="A"> Increases bandwidth</label><br>
+  <label><input type="radio" name="q25" value="B"> Provides secure communication over public networks</label><br>
+  <label><input type="radio" name="q25" value="C"> Blocks viruses</label><br>
+  <label><input type="radio" name="q25" value="D"> Monitors network traffic</label>
+</div>
 
 <button type="button" onclick="submitQuiz()">Submit Quiz</button>
 </form>
@@ -119,6 +174,7 @@ body { font-family: Arial; padding: 20px; }
 const answers = {
   q1: "A", q2: "B", q3: "C", q4: "B", q5: "C", q6: "A",
   q7: "C", q8: "A", q9: "B", q10: "A", q11: "B", q12: "B"
+  q19: "D",q20: "A",q21: "C",q22  "B",q23: "A",q24: "B",q25: "B";
 };
 
 function submitQuiz() {
