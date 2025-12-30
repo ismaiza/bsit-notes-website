@@ -235,6 +235,53 @@ body { font-family: Arial; padding: 20px; }
   <label><input type="radio" name="q34" value="C"> Keylogger</label><br>
   <label><input type="radio" name="q34" value="D"> Rootkit</label>
 </div>
+ <div class="question">
+  <p>35. What is a watering hole attack?</p>
+  <label><input type="radio" name="q35" value="A"> Infecting websites frequently visited by target users</label><br>
+  <label><input type="radio" name="q35" value="B"> Flooding a server with traffic</label><br>
+  <label><input type="radio" name="q35" value="C"> Stealing passwords via email</label><br>
+  <label><input type="radio" name="q35" value="D"> Encrypting files for ransom</label>
+</div>
+
+<div class="question">
+  <p>36. Which attack uses multiple compromised devices to overwhelm a target?</p>
+  <label><input type="radio" name="q36" value="A"> DDoS</label><br>
+  <label><input type="radio" name="q36" value="B"> MITM</label><br>
+  <label><input type="radio" name="q36" value="C"> SQL Injection</label><br>
+  <label><input type="radio" name="q36" value="D"> Cross-site scripting</label>
+</div>
+
+<div class="question">
+  <p>37. What is privilege escalation?</p>
+  <label><input type="radio" name="q37" value="A"> Gaining higher access rights than allowed</label><br>
+  <label><input type="radio" name="q37" value="B"> Logging in with correct credentials</label><br>
+  <label><input type="radio" name="q37" value="C"> Installing antivirus</label><br>
+  <label><input type="radio" name="q37" value="D"> Encrypting files</label>
+</div>
+
+<div class="question">
+  <p>38. What is the main risk of using outdated software?</p>
+  <label><input type="radio" name="q38" value="A"> Higher vulnerability to attacks</label><br>
+  <label><input type="radio" name="q38" value="B"> Faster performance</label><br>
+  <label><input type="radio" name="q38" value="C"> Better encryption</label><br>
+  <label><input type="radio" name="q38" value="D"> Automatic backups</label>
+</div>
+
+<div class="question">
+  <p>39. Which tool is commonly used for network penetration testing?</p>
+  <label><input type="radio" name="q39" value="A"> Wireshark</label><br>
+  <label><input type="radio" name="q39" value="B"> Nmap</label><br>
+  <label><input type="radio" name="q39" value="C"> Metasploit</label><br>
+  <label><input type="radio" name="q39" value="D"> All of the above</label>
+</div>
+
+<div class="question">
+  <p>40. What is data exfiltration?</p>
+  <label><input type="radio" name="q40" value="A"> Encrypting files for security</label><br>
+  <label><input type="radio" name="q40" value="B"> Unauthorized transfer of sensitive data</label><br>
+  <label><input type="radio" name="q40" value="C"> Backing up files to cloud</label><br>
+  <label><input type="radio" name="q40" value="D"> Updating antivirus software</label>
+</div> 
 
 <button type="button" onclick="submitQuiz()">Submit Quiz</button>
 </form>
@@ -244,9 +291,10 @@ body { font-family: Arial; padding: 20px; }
 <script>
 const answers = {
   q1: "A", q2: "B", q3: "C", q4: "B", q5: "C", q6: "A",
-  q7: "C", q8: "A", q9: "B", q10: "A", q11: "B", q12: "B"
-  q19: "D",q20: "A",q21: "C",q22  "B",q23: "A",q24: "B",q25: "B",
-  q26: "A",q27: "A",q28: "A",q29: q30: "B",q31: "A",q32: "B",q33: "A",q34: "A"
+  q7: "C", q8: "A", q9: "B", q10: "A", q11: "B", q12: "B",
+  q19: "D",q20: "A",q21: "C",q22: "B",q23: "A",q24: "B",q25: "B",
+  q26: "A",q27: "A",q28: "A",q29: q30: "B",q31: "A",q32: "B",q33: "A",q34: "A",
+  q35: "A",q36:  "A",q37: "A",q38:  "A",q39: "D",q40: "B"
 };
 
 function submitQuiz() {
