@@ -1,1 +1,43 @@
+<script>
+const questions = [
+  {q:"1. What is the base of binary number system?", a:"2", o:["2","8","10","16"]},
+  {q:"2. AND gate output when inputs are 1 and 0?", a:"0", o:["1","0","High","Low"]},
+  {q:"3. NOT gate is called?", a:"Inverter", o:["Buffer","Inverter","Adder","Encoder"]}
+];
 
+const quizDiv = document.getElementById("quiz");
+
+questions.forEach((x, i) => {
+  let html = `<p><b>${x.q}</b><br>`;
+  x.o.forEach(opt => {
+    html += `
+      <label>
+        <input type="radio" name="q${i}" value="${opt}">
+        ${opt}
+      </label><br>`;
+  });
+  html += `<span id="r${i}"></span></p>`;
+  quizDiv.innerHTML += html;
+});
+
+function checkQuiz() {
+  let score = 0;
+
+  questions.forEach((x, i) => {
+    let ans = document.querySelector(`input[name="q${i}"]:checked`);
+    let res = document.getElementById("r" + i);
+
+    if (ans && ans.value === x.a) {
+      score++;
+      res.innerHTML = " ✓";
+      res.style.color = "green";
+    } else {
+      res.innerHTML = " ✗ (Correct: " + x.a + ")";
+      res.style.color = "red";
+    }
+  });
+
+  document.getElementById("score").innerHTML =
+    `Score: ${score}/${questions.length}`;
+}
+</script>
