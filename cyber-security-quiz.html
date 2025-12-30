@@ -6,21 +6,16 @@
 
 <style>
 body { font-family: Arial; padding: 20px; }
-.question { margin-bottom: 18px; }
-.correct { color: green; font-weight: bold; }
-.wrong { color: red; font-weight: bold; }
-button { padding: 10px 20px; font-size: 16px; }
+.question { margin-bottom: 15px; }
 </style>
 </head>
 
 <body>
 
-<h2>Cyber Security – Hard Quiz (40 Questions)</h2>
-
-<!-- QUESTIONS START -->
+<h2>Cyber Security Quiz</h2>
 
 <div class="question">
-<p>1. What does CIA stand for in Cyber Security?</p>
+<p>1. What does CIA stand for?</p>
 <label><input type="radio" name="q1" value="A"> Confidentiality, Integrity, Availability</label><br>
 <label><input type="radio" name="q1" value="B"> Control, Inspection, Access</label><br>
 <label><input type="radio" name="q1" value="C"> Cyber, Internet, Application</label><br>
@@ -28,191 +23,37 @@ button { padding: 10px 20px; font-size: 16px; }
 </div>
 
 <div class="question">
-<p>2. Which attack involves tricking users into revealing information?</p>
-<label><input type="radio" name="q2" value="A"> Phishing</label><br>
-<label><input type="radio" name="q2" value="B"> DDoS</label><br>
-<label><input type="radio" name="q2" value="C"> Spoofing</label><br>
-<label><input type="radio" name="q2" value="D"> Sniffing</label>
+<p>2. Which is a type of malware?</p>
+<label><input type="radio" name="q2" value="A"> Firewall</label><br>
+<label><input type="radio" name="q2" value="B"> Trojan</label><br>
+<label><input type="radio" name="q2" value="C"> VPN</label><br>
+<label><input type="radio" name="q2" value="D"> Router</label>
 </div>
 
-<div class="question">
-<p>3. What is the strongest form of authentication?</p>
-<label><input type="radio" name="q3" value="A"> Password</label><br>
-<label><input type="radio" name="q3" value="B"> Token</label><br>
-<label><input type="radio" name="q3" value="C"> Biometrics</label><br>
-<label><input type="radio" name="q3" value="D"> Username</label>
-</div>
+<button onclick="submitQuiz()">Submit Quiz</button>
 
-<div class="question">
-<p>4. Which malware encrypts files and demands payment?</p>
-<label><input type="radio" name="q4" value="A"> Worm</label><br>
-<label><input type="radio" name="q4" value="B"> Trojan</label><br>
-<label><input type="radio" name="q4" value="C"> Spyware</label><br>
-<label><input type="radio" name="q4" value="D"> Ransomware</label>
-</div>
+<p id="result"></p>
 
-<div class="question">
-<p>5. What does HTTPS provide?</p>
-<label><input type="radio" name="q5" value="A"> Encryption</label><br>
-<label><input type="radio" name="q5" value="B"> Authentication</label><br>
-<label><input type="radio" name="q5" value="C"> Data Integrity</label><br>
-<label><input type="radio" name="q5" value="D"> All of the above</label>
-</div>
-  <div class="question">
-<p>6. Which security control prevents unauthorized physical access?</p>
-<label><input type="radio" name="q6" value="A"> Firewall</label><br>
-<label><input type="radio" name="q6" value="B"> Biometric scanner</label><br>
-<label><input type="radio" name="q6" value="C"> Antivirus</label><br>
-<label><input type="radio" name="q6" value="D"> IDS</label>
-</div>
-
-<div class="question">
-<p>7. What type of malware disguises itself as legitimate software?</p>
-<label><input type="radio" name="q7" value="A"> Trojan</label><br>
-<label><input type="radio" name="q7" value="B"> Worm</label><br>
-<label><input type="radio" name="q7" value="C"> Virus</label><br>
-<label><input type="radio" name="q7" value="D"> Spyware</label>
-</div>
-
-<div class="question">
-<p>8. What is the purpose of hashing?</p>
-<label><input type="radio" name="q8" value="A"> Encryption</label><br>
-<label><input type="radio" name="q8" value="B"> Compression</label><br>
-<label><input type="radio" name="q8" value="C"> Data integrity</label><br>
-<label><input type="radio" name="q8" value="D"> Authentication</label>
-</div>
-
-<div class="question">
-<p>9. Which attack floods a server with traffic?</p>
-<label><input type="radio" name="q9" value="A"> Spoofing</label><br>
-<label><input type="radio" name="q9" value="B"> Sniffing</label><br>
-<label><input type="radio" name="q9" value="C"> Phishing</label><br>
-<label><input type="radio" name="q9" value="D"> DDoS</label>
-</div>
-
-<div class="question">
-<p>10. Which protocol secures email communication?</p>
-<label><input type="radio" name="q10" value="A"> SSL/TLS</label><br>
-<label><input type="radio" name="q10" value="B"> FTP</label><br>
-<label><input type="radio" name="q10" value="C"> HTTP</label><br>
-<label><input type="radio" name="q10" value="D"> SMTP</label>
-</div>
-
-<div class="question">
-<p>11. What does IDS stand for?</p>
-<label><input type="radio" name="q11" value="A"> Internal Defense System</label><br>
-<label><input type="radio" name="q11" value="B"> Internet Detection Service</label><br>
-<label><input type="radio" name="q11" value="C"> Intrusion Detection System</label><br>
-<label><input type="radio" name="q11" value="D"> Information Defense Software</label>
-</div>
-
-<div class="question">
-<p>12. Which attack modifies data during transmission?</p>
-<label><input type="radio" name="q12" value="A"> Replay attack</label><br>
-<label><input type="radio" name="q12" value="B"> Man-in-the-middle</label><br>
-<label><input type="radio" name="q12" value="C"> Phishing</label><br>
-<label><input type="radio" name="q12" value="D"> Brute force</label>
-</div>
-
-<div class="question">
-<p>13. What is least privilege?</p>
-<label><input type="radio" name="q13" value="A"> Maximum access</label><br>
-<label><input type="radio" name="q13" value="B"> Temporary access</label><br>
-<label><input type="radio" name="q13" value="C"> Guest access</label><br>
-<label><input type="radio" name="q13" value="D"> Minimum required access</label>
-</div>
-
-<div class="question">
-<p>14. Which is NOT a type of malware?</p>
-<label><input type="radio" name="q14" value="A"> Firewall</label><br>
-<label><input type="radio" name="q14" value="B"> Virus</label><br>
-<label><input type="radio" name="q14" value="C"> Worm</label><br>
-<label><input type="radio" name="q14" value="D"> Trojan</label>
-</div>
-
-<div class="question">
-<p>15. What does VPN provide?</p>
-<label><input type="radio" name="q15" value="A"> Faster speed</label><br>
-<label><input type="radio" name="q15" value="B"> Free internet</label><br>
-<label><input type="radio" name="q15" value="C"> Secure communication</label><br>
-<label><input type="radio" name="q15" value="D"> Email protection</label>
-</div>
-
-
-<div class="question">
-<p>16. What attack uses many passwords?</p>
-<label><input type="radio" name="q16" value="A"> Spoofing</label><br>
-<label><input type="radio" name="q16" value="B"> Brute force</label><br>
-<label><input type="radio" name="q16" value="C"> Phishing</label><br>
-<label><input type="radio" name="q16" value="D"> Sniffing</label>
-</div>
-
-<div class="question">
-<p>17. Which is an example of social engineering?</p>
-<label><input type="radio" name="q17" value="A"> Phishing email</label><br>
-<label><input type="radio" name="q17" value="B"> Firewall</label><br>
-<label><input type="radio" name="q17" value="C"> Antivirus</label><br>
-<label><input type="radio" name="q17" value="D"> Encryption</label>
-</div>
-
-<div class="question">
-<p>18. What ensures data cannot be changed?</p>
-<label><input type="radio" name="q18" value="A"> Confidentiality</label><br>
-<label><input type="radio" name="q18" value="B"> Availability</label><br>
-<label><input type="radio" name="q18" value="C"> Authentication</label><br>
-<label><input type="radio" name="q18" value="D"> Integrity</label>
-</div>
-
-<div class="question">
-<p>19. Which tool monitors network traffic?</p>
-<label><input type="radio" name="q19" value="A"> Compiler</label><br>
-<label><input type="radio" name="q19" value="B"> Firewall</label><br>
-<label><input type="radio" name="q19" value="C"> IDS</label><br>
-<label><input type="radio" name="q19" value="D"> OS</label>
-</div>
-
-<div class="question">
-<p>20. What is encryption?</p>
-<label><input type="radio" name="q20" value="A"> Copying data</label><br>
-<label><input type="radio" name="q20" value="B"> Converting data into unreadable form</label><br>
-<label><input type="radio" name="q20" value="C"> Deleting data</label><br>
-<label><input type="radio" name="q20" value="D"> Compressing data</label>
-</div>
-  <script>
-/* ANSWERS KEY */
-const answers = {
-q1:"A", q2:"A", q3:"C", q4:"D", q5:"D",
-q6:"B", q7:"A", q8:"C", q9:"D", q10:"A",
-q11:"C", q12:"B", q13:"D", q14:"A", q15:"C",
-q16:"B", q17:"A", q18:"D", q19:"C", q20:"B","
-};
-
+<script>
 function submitQuiz() {
   let score = 0;
 
-  for (let i = 1; i <= 40; i++) {
-    let q = document.querySelector('input[name="q'+i+'"]:checked');
-    if (q && q.value === answers["q"+i]) {
+  const answers = {
+    q1: "A",
+    q2: "B"
+  };
+
+  for (let q in answers) {
+    const selected = document.querySelector('input[name="' + q + '"]:checked');
+    if (selected && selected.value === answers[q]) {
       score++;
-      q.parentElement.classList.add("correct");
-    } else if (q) {
-      q.parentElement.classList.add("wrong");
     }
   }
 
-  let status = score >= 20 ? "PASS ✓" : "FAIL ✗";
-  document.getElementById("result").innerHTML =
-    "You scored " + score + " / 40 — " + status;
+  document.getElementById("result").innerText =
+    "You scored " + score + " / 2";
 }
 </script>
 
-<button onclick="submitQuiz()">Submit Quiz</button>
-<p id="result"></p>
-
 </body>
 </html>
-
-<!-- QUESTIONS 20 END
-
-
-  
