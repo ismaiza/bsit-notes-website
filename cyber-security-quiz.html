@@ -134,7 +134,66 @@ button { padding: 10px 20px; font-size: 16px; }
 <label><input type="radio" name="q20" value="A"> Intercepting communication between two parties</label><br>
 <label><input type="radio" name="q20" value="B"> Blocking network traffic</label><br>
 <label><input type="radio" name="q20" value="C"> Encrypting data</label><br>
-<label><input type="radio" name="q20" value="D"> Virus scanning</label></div>  
+<label><input type="radio" name="q20" value="D"> Virus scanning</label></div>
+<div class="question"><p>21. Which security control is preventive?</p>
+<label><input type="radio" name="q21" value="A"> Firewall</label><br>
+<label><input type="radio" name="q21" value="B"> Audit log</label><br>
+<label><input type="radio" name="q21" value="C"> IDS alert</label><br>
+<label><input type="radio" name="q21" value="D"> Incident report</label></div>
+
+<div class="question"><p>22. What is the primary goal of ethical hacking?</p>
+<label><input type="radio" name="q22" value="A"> Steal data</label><br>
+<label><input type="radio" name="q22" value="B"> Identify vulnerabilities</label><br>
+<label><input type="radio" name="q22" value="C"> Destroy systems</label><br>
+<label><input type="radio" name="q22" value="D"> Bypass laws</label></div>
+
+<div class="question"><p>23. Which malware spreads without user action?</p>
+<label><input type="radio" name="q23" value="A"> Virus</label><br>
+<label><input type="radio" name="q23" value="B"> Trojan</label><br>
+<label><input type="radio" name="q23" value="C"> Worm</label><br>
+<label><input type="radio" name="q23" value="D"> Spyware</label></div>
+
+<div class="question"><p>24. What is two-factor authentication?</p>
+<label><input type="radio" name="q24" value="A"> Two passwords</label><br>
+<label><input type="radio" name="q24" value="B"> Username and password only</label><br>
+<label><input type="radio" name="q24" value="C"> Two verification methods</label><br>
+<label><input type="radio" name="q24" value="D"> Login twice</label></div>
+
+<div class="question"><p>25. Which protocol secures web traffic?</p>
+<label><input type="radio" name="q25" value="A"> HTTP</label><br>
+<label><input type="radio" name="q25" value="B"> FTP</label><br>
+<label><input type="radio" name="q25" value="C"> HTTPS</label><br>
+<label><input type="radio" name="q25" value="D"> Telnet</label></div>
+
+<div class="question"><p>26. What does hashing provide?</p>
+<label><input type="radio" name="q26" value="A"> Confidentiality</label><br>
+<label><input type="radio" name="q26" value="B"> Integrity</label><br>
+<label><input type="radio" name="q26" value="C"> Availability</label><br>
+<label><input type="radio" name="q26" value="D"> Authentication</label></div>
+
+<div class="question"><p>27. Which attack injects malicious SQL code?</p>
+<label><input type="radio" name="q27" value="A"> Phishing</label><br>
+<label><input type="radio" name="q27" value="B"> SQL Injection</label><br>
+<label><input type="radio" name="q27" value="C"> XSS</label><br>
+<label><input type="radio" name="q27" value="D"> Spoofing</label></div>
+
+<div class="question"><p>28. What is social engineering?</p>
+<label><input type="radio" name="q28" value="A"> Network configuration</label><br>
+<label><input type="radio" name="q28" value="B"> Hardware design</label><br>
+<label><input type="radio" name="q28" value="C"> Manipulating people for information</label><br>
+<label><input type="radio" name="q28" value="D"> Software testing</label></div>
+
+<div class="question"><p>29. Which tool monitors network traffic?</p>
+<label><input type="radio" name="q29" value="A"> Packet sniffer</label><br>
+<label><input type="radio" name="q29" value="B"> Compiler</label><br>
+<label><input type="radio" name="q29" value="C"> Debugger</label><br>
+<label><input type="radio" name="q29" value="D"> Assembler</label></div>
+
+<div class="question"><p>30. What is the main purpose of access control?</p>
+<label><input type="radio" name="q30" value="A"> Improve performance</label><br>
+<label><input type="radio" name="q30" value="B"> Prevent unauthorized access</label><br>
+<label><input type="radio" name="q30" value="C"> Encrypt files</label><br>
+<label><input type="radio" name="q30" value="D"> Monitor logs</label></div>  
 
 <button onclick="submitQuiz()">Submit Quiz</button>
 <p id="result"></p>
@@ -147,13 +206,15 @@ function submitQuiz() {
     q6:"A",q7:"B",q8:"B",q9:"B",q10:"B",
     q11:"A",q12:"B",q13:"D",q14:"A",q15:"C",
     q16:"B",q17:"A",q18:"D",q19:"C",q20:"A",
+    q21:"B",q22:"A",q23:"C",q24:"D",q25:"B",
+    q26:"A",q27:"C",q28:"B",q29:"A",q30:"D",
   };
 
   for (let q in answers) {
     const selected = document.querySelector(`input[name="${q}"]:checked`);
     if (selected && selected.value === answers[q]) score++;
   }
-  document.getElementById("result").innerHTML = "You scored " + score + " / 20";
+  document.getElementById("result").innerHTML = "You scored " + score + " / 30";
 }
 </script>
 
