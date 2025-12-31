@@ -277,7 +277,7 @@ function submitQuiz() {
     const selected = document.querySelector(`input[name="${q}"]:checked`);
     if (selected && selected.value === answers[q]) score++;
   }
-  document.getElementById("result").innerHTML = "You scored " + score + " / 30";
+  document.getElementById("result").innerHTML = "You scored " + score + " / 40";
 }
 </script>
 
