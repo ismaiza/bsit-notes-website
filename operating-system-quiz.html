@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Computer Networking Quiz</title>
+<style>
+body { font-family: Arial, sans-serif; padding: 20px; }
+h2 { color: #333; }
+.question { margin-bottom: 20px; }
+label { display: block; margin: 5px 0; }
+button { padding: 10px 20px; font-size: 16px; }
+#result { margin-top: 20px; font-weight: bold; font-size: 18px; }
+.correct { color: green; font-weight: bold; }
+.wrong { color: red; font-weight: bold; }
+</style>
+</head>
+<body>
+
 <h2>Operating System Quiz (40 Questions)</h2>
 
 <div class="question"><p>1. What is the main function of an operating system?</p>
@@ -60,7 +78,185 @@
 <label><input type="radio" name="q10" value="C"> File Manager</label><br>
 <label><input type="radio" name="q10" value="D"> Security Manager</label></div>
 
+<div class="question"><p>11. What is the purpose of virtual memory?</p>
+<label><input type="radio" name="q11" value="A"> To increase CPU speed</label><br>
+<label><input type="radio" name="q11" value="B"> To extend RAM using disk space</label><br>
+<label><input type="radio" name="q11" value="C"> To store files permanently</label><br>
+<label><input type="radio" name="q11" value="D"> To control hardware devices</label></div>
 
+<div class="question"><p>12. Which OS uses time slicing to allocate CPU?</p>
+<label><input type="radio" name="q12" value="A"> FCFS</label><br>
+<label><input type="radio" name="q12" value="B"> Round Robin</label><br>
+<label><input type="radio" name="q12" value="C"> Priority Scheduling</label><br>
+<label><input type="radio" name="q12" value="D"> Shortest Job First</label></div>
+
+<div class="question"><p>13. Which of the following is NOT an OS type?</p>
+<label><input type="radio" name="q13" value="A"> Real-time OS</label><br>
+<label><input type="radio" name="q13" value="B"> Batch OS</label><br>
+<label><input type="radio" name="q13" value="C"> Multiuser OS</label><br>
+<label><input type="radio" name="q13" value="D"> Compiler OS</label></div>
+
+<div class="question"><p>14. Which of the following is a non-preemptive scheduling algorithm?</p>
+<label><input type="radio" name="q14" value="A"> Round Robin</label><br>
+<label><input type="radio" name="q14" value="B"> FCFS</label><br>
+<label><input type="radio" name="q14" value="C"> Priority (preemptive)</label><br>
+<label><input type="radio" name="q14" value="D"> Shortest Remaining Time First</label></div>
+
+<div class="question"><p>15. What is a process in operating systems?</p>
+<label><input type="radio" name="q15" value="A"> A program in execution</label><br>
+<label><input type="radio" name="q15" value="B"> A hardware device</label><br>
+<label><input type="radio" name="q15" value="C"> A memory unit</label><br>
+<label><input type="radio" name="q15" value="D"> A file</label></div>
+
+<div class="question"><p>16. Which condition occurs when two processes wait indefinitely for resources held by each other?</p>
+<label><input type="radio" name="q16" value="A"> Starvation</label><br>
+<label><input type="radio" name="q16" value="B"> Deadlock</label><br>
+<label><input type="radio" name="q16" value="C"> Livelock</label><br>
+<label><input type="radio" name="q16" value="D"> Thrashing</label></div>
+
+<div class="question"><p>17. Which memory allocation scheme divides memory into fixed-sized partitions?</p>
+<label><input type="radio" name="q17" value="A"> Contiguous allocation</label><br>
+<label><input type="radio" name="q17" value="B"> Paging</label><br>
+<label><input type="radio" name="q17" value="C"> Segmentation</label><br>
+<label><input type="radio" name="q17" value="D"> Virtual memory</label></div>
+
+<div class="question"><p>18. Which of the following is used to prevent process starvation?</p>
+<label><input type="radio" name="q18" value="A"> Aging</label><br>
+<label><input type="radio" name="q18" value="B"> Deadlock detection</label><br>
+<label><input type="radio" name="q18" value="C"> Paging</label><br>
+<label><input type="radio" name="q18" value="D"> Multithreading</label></div>
+
+<div class="question"><p>19. Which of the following is used for inter-process communication (IPC)?</p>
+<label><input type="radio" name="q19" value="A"> Semaphore</label><br>
+<label><input type="radio" name="q19" value="B"> Pipe</label><br>
+<label><input type="radio" name="q19" value="C"> Shared memory</label><br>
+<label><input type="radio" name="q19" value="D"> All of the above</label></div>
+
+<div class="question"><p>20. Which OS service handles the execution of processes?</p>
+<label><input type="radio" name="q20" value="A"> Process management</label><br>
+<label><input type="radio" name="q20" value="B"> Memory management</label><br>
+<label><input type="radio" name="q20" value="C"> File management</label><br>
+<label><input type="radio" name="q20" value="D"> Device management</label></div>  
+
+<div class="question"><p>21. What is the purpose of a file system in an operating system?</p>
+<label><input type="radio" name="q21" value="A"> Manage memory</label><br>
+<label><input type="radio" name="q21" value="B"> Control CPU scheduling</label><br>
+<label><input type="radio" name="q21" value="C"> Organize and store files</label><br>
+<label><input type="radio" name="q21" value="D"> Handle network traffic</label></div>
+
+<div class="question"><p>22. Which OS keeps track of the status of processes?</p>
+<label><input type="radio" name="q22" value="A"> File Manager</label><br>
+<label><input type="radio" name="q22" value="B"> Process Manager</label><br>
+<label><input type="radio" name="q22" value="C"> Memory Manager</label><br>
+<label><input type="radio" name="q22" value="D"> Security Manager</label></div>
+
+<div class="question"><p>23. Which of the following is an example of a real-time operating system?</p>
+<label><input type="radio" name="q23" value="A"> Windows 10</label><br>
+<label><input type="radio" name="q23" value="B"> Linux</label><br>
+<label><input type="radio" name="q23" value="C"> RTOS for embedded systems</label><br>
+<label><input type="radio" name="q23" value="D"> DOS</label></div>
+
+<div class="question"><p>24. Which scheduling algorithm selects the process with the smallest next CPU burst?</p>
+<label><input type="radio" name="q24" value="A"> FCFS</label><br>
+<label><input type="radio" name="q24" value="B"> Round Robin</label><br>
+<label><input type="radio" name="q24" value="C"> Shortest Job First (SJF)</label><br>
+<label><input type="radio" name="q24" value="D"> Priority Scheduling</label></div>
+
+<div class="question"><p>25. What is thrashing in operating systems?</p>
+<label><input type="radio" name="q25" value="A"> Excessive CPU utilization</label><br>
+<label><input type="radio" name="q25" value="B"> Excessive paging causing low performance</label><br>
+<label><input type="radio" name="q25" value="C"> Deadlock condition</label><br>
+<label><input type="radio" name="q25" value="D"> File system corruption</label></div>
+
+<div class="question"><p>26. Which memory management scheme allows non-contiguous allocation?</p>
+<label><input type="radio" name="q26" value="A"> Paging</label><br>
+<label><input type="radio" name="q26" value="B"> Contiguous allocation</label><br>
+<label><input type="radio" name="q26" value="C"> Segmentation</label><br>
+<label><input type="radio" name="q26" value="D"> Both A and C</label></div>
+
+<div class="question"><p>27. Which technique is used to avoid deadlock by ensuring safe resource allocation?</p>
+<label><input type="radio" name="q27" value="A"> Deadlock prevention</label><br>
+<label><input type="radio" name="q27" value="B"> Deadlock avoidance (Banker's Algorithm)</label><br>
+<label><input type="radio" name="q27" value="C"> Deadlock detection</label><br>
+<label><input type="radio" name="q27" value="D"> Starvation</label></div>
+
+<div class="question"><p>28. What does the term "context switching" mean?</p>
+<label><input type="radio" name="q28" value="A"> Switching between threads</label><br>
+<label><input type="radio" name="q28" value="B"> Switching between processes</label><br>
+<label><input type="radio" name="q28" value="C"> Switching CPU modes</label><br>
+<label><input type="radio" name="q28" value="D"> Switching memory segments</label></div>
+
+<div class="question"><p>29. Which OS component handles communication with peripheral devices?</p>
+<label><input type="radio" name="q29" value="A"> Memory Manager</label><br>
+<label><input type="radio" name="q29" value="B"> Device Manager</label><br>
+<label><input type="radio" name="q29" value="C"> Process Manager</label><br>
+<label><input type="radio" name="q29" value="D"> File Manager</label></div>
+
+<div class="question"><p>30. Which OS technique allows multiple users to share system resources?</p>
+<label><input type="radio" name="q30" value="A"> Multiprocessing</label><br>
+<label><input type="radio" name="q30" value="B"> Multiuser system</label><br>
+<label><input type="radio" name="q30" value="C"> Multithreading</label><br>
+<label><input type="radio" name="q30" value="D"> Multilevel queue</label></div>
+
+<div class="question"><p>31. What is the function of a semaphore in OS?</p>
+<label><input type="radio" name="q31" value="A"> Memory allocation</label><br>
+<label><input type="radio" name="q31" value="B"> Process synchronization</label><br>
+<label><input type="radio" name="q31" value="C"> CPU scheduling</label><br>
+<label><input type="radio" name="q31" value="D"> File management</label></div>
+
+<div class="question"><p>32. Which OS supports multiprogramming?</p>
+<label><input type="radio" name="q32" value="A"> Batch OS</label><br>
+<label><input type="radio" name="q32" value="B"> Single-user OS</label><br>
+<label><input type="radio" name="q32" value="C"> Multiuser OS</label><br>
+<label><input type="radio" name="q32" value="D"> Real-time OS</label></div>
+
+<div class="question"><p>33. What is the purpose of a thread?</p>
+<label><input type="radio" name="q33" value="A"> Smallest unit of execution within a process</label><br>
+<label><input type="radio" name="q33" value="B"> Memory allocation unit</label><br>
+<label><input type="radio" name="q33" value="C"> CPU scheduling unit</label><br>
+<label><input type="radio" name="q33" value="D"> Disk allocation unit</label></div>
+
+<div class="question"><p>34. What is a critical section in OS?</p>
+<label><input type="radio" name="q34" value="A"> Code that accesses shared resources</label><br>
+<label><input type="radio" name="q34" value="B"> Code for memory allocation</label><br>
+<label><input type="radio" name="q34" value="C"> Code for process creation</label><br>
+<label><input type="radio" name="q34" value="D"> Code for I/O operations</label></div>
+
+<div class="question"><p>35. Which of the following is a disadvantage of multiprogramming?</p>
+<label><input type="radio" name="q35" value="A"> Increased CPU utilization</label><br>
+<label><input type="radio" name="q35" value="B"> Thrashing due to excessive paging</label><br>
+<label><input type="radio" name="q35" value="C"> Better resource utilization</label><br>
+<label><input type="radio" name="q35" value="D"> Increased throughput</label></div>
+
+<div class="question"><p>36. Which of the following is true about paging?</p>
+<label><input type="radio" name="q36" value="A"> Allows contiguous memory allocation</label><br>
+<label><input type="radio" name="q36" value="B"> Allows non-contiguous memory allocation</label><br>
+<label><input type="radio" name="q36" value="C"> Increases internal fragmentation only</label><br>
+<label><input type="radio" name="q36" value="D"> Is used for file storage</label></div>
+
+<div class="question"><p>37. Which type of OS provides immediate response to inputs?</p>
+<label><input type="radio" name="q37" value="A"> Batch OS</label><br>
+<label><input type="radio" name="q37" value="B"> Real-time OS</label><br>
+<label><input type="radio" name="q37" value="C"> Distributed OS</label><br>
+<label><input type="radio" name="q37" value="D"> Multiuser OS</label></div>
+
+<div class="question"><p>38. Which scheduling algorithm gives each process a fixed time slice?</p>
+<label><input type="radio" name="q38" value="A"> FCFS</label><br>
+<label><input type="radio" name="q38" value="B"> Shortest Job First</label><br>
+<label><input type="radio" name="q38" value="C"> Round Robin</label><br>
+<label><input type="radio" name="q38" value="D"> Priority Scheduling</label></div>
+
+<div class="question"><p>39. Which OS service manages deadlock?</p>
+<label><input type="radio" name="q39" value="A"> Process management</label><br>
+<label><input type="radio" name="q39" value="B"> Memory management</label><br>
+<label><input type="radio" name="q39" value="C"> Deadlock handling service</label><br>
+<label><input type="radio" name="q39" value="D"> Device management</label></div>
+
+<div class="question"><p>40. What is the role of the kernel in an operating system?</p>
+<label><input type="radio" name="q40" value="A"> Interface between user and hardware</label><br>
+<label><input type="radio" name="q40" value="B"> Manages network communication only</label><br>
+<label><input type="radio" name="q40" value="C"> Runs applications only</label><br>
+<label><input type="radio" name="q40" value="D"> Stores files on disk</label></div>
 
 
 
