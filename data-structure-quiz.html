@@ -271,20 +271,16 @@ q36:"B",q37:"B",q38:"B",q39:"D",q40:"A"
 
 };
 
-function checkAnswers(){
-    let score=0;
-    for(let i=1;i<=20;i++){ 
-        const q="q"+i;
-        const selected=document.querySelector('input[name="'+q+'"]:checked');
-        if(selected && selected.value===answers[q]){
-            score++;
-            selected.parentElement.style.color="green";
-        } else if(selected){
-            selected.parentElement.style.color="red";
-        }
-    }
-    document.getElementById("result").textContent="Your score: "+score+"/40"; 
+ for (let q in answers) {
+    const selected = document.querySelector(`input[name="${q}"]:checked`);
+    if (selected && selected.value === answers[q]) score++;
+  }
+  document.getElementById("result").innerHTML = "You scored " + score + " / 40";
 }
+</script>
+
+</body>
+</html>
 </script>
 
 </body>
