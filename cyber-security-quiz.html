@@ -193,7 +193,67 @@ button { padding: 10px 20px; font-size: 16px; }
 <label><input type="radio" name="q30" value="A"> Improve performance</label><br>
 <label><input type="radio" name="q30" value="B"> Prevent unauthorized access</label><br>
 <label><input type="radio" name="q30" value="C"> Encrypt files</label><br>
-<label><input type="radio" name="q30" value="D"> Monitor logs</label></div>  
+<label><input type="radio" name="q30" value="D"> Monitor logs</label></div>
+<div class="question"><p>31. Which device filters traffic based on rules?</p>
+<label><input type="radio" name="q31" value="A"> Switch</label><br>
+<label><input type="radio" name="q31" value="B"> Router</label><br>
+<label><input type="radio" name="q31" value="C"> Firewall</label><br>
+<label><input type="radio" name="q31" value="D"> Hub</label></div>
+
+<div class="question"><p>32. What is malware designed to demand payment?</p>
+<label><input type="radio" name="q32" value="A"> Worm</label><br>
+<label><input type="radio" name="q32" value="B"> Spyware</label><br>
+<label><input type="radio" name="q32" value="C"> Ransomware</label><br>
+<label><input type="radio" name="q32" value="D"> Trojan</label></div>
+
+<div class="question"><p>33. Which attack floods a system with traffic?</p>
+<label><input type="radio" name="q33" value="A"> Phishing</label><br>
+<label><input type="radio" name="q33" value="B"> DoS</label><br>
+<label><input type="radio" name="q33" value="C"> Spoofing</label><br>
+<label><input type="radio" name="q33" value="D"> Sniffing</label></div>
+
+<div class="question"><p>34. What does IDS stand for?</p>
+<label><input type="radio" name="q34" value="A"> Internet Defense System</label><br>
+<label><input type="radio" name="q34" value="B"> Intrusion Detection System</label><br>
+<label><input type="radio" name="q34" value="C"> Internal Data System</label><br>
+<label><input type="radio" name="q34" value="D"> Integrated Defense Software</label></div>
+
+<div class="question"><p>35. Which encryption uses the same key?</p>
+<label><input type="radio" name="q35" value="A"> Asymmetric</label><br>
+<label><input type="radio" name="q35" value="B"> Public-key</label><br>
+<label><input type="radio" name="q35" value="C"> Symmetric</label><br>
+<label><input type="radio" name="q35" value="D"> Hashing</label></div>
+
+<div class="question"><p>36. What is spoofing?</p>
+<label><input type="radio" name="q36" value="A"> Encrypting data</label><br>
+<label><input type="radio" name="q36" value="B"> Impersonating another entity</label><br>
+<label><input type="radio" name="q36" value="C"> Blocking traffic</label><br>
+<label><input type="radio" name="q36" value="D"> Scanning ports</label></div>
+
+<div class="question"><p>37. Which layer does encryption occur in OSI?</p>
+<label><input type="radio" name="q37" value="A"> Network</label><br>
+<label><input type="radio" name="q37" value="B"> Transport</label><br>
+<label><input type="radio" name="q37" value="C"> Presentation</label><br>
+<label><input type="radio" name="q37" value="D"> Data Link</label></div>
+
+<div class="question"><p>38. What is patch management?</p>
+<label><input type="radio" name="q38" value="A"> Writing software</label><br>
+<label><input type="radio" name="q38" value="B"> Updating systems to fix vulnerabilities</label><br>
+<label><input type="radio" name="q38" value="C"> Monitoring users</label><br>
+<label><input type="radio" name="q38" value="D"> Encrypting files</label></div>
+
+<div class="question"><p>39. What does VPN provide?</p>
+<label><input type="radio" name="q39" value="A"> Faster internet</label><br>
+<label><input type="radio" name="q39" value="B"> Secure remote connection</label><br>
+<label><input type="radio" name="q39" value="C"> Free bandwidth</label><br>
+<label><input type="radio" name="q39" value="D"> Antivirus</label></div>
+
+<div class="question"><p>40. What is the primary goal of cyber security?</p>
+<label><input type="radio" name="q40" value="A"> Increase speed</label><br>
+<label><input type="radio" name="q40" value="B"> Protect systems and data</label><br>
+<label><input type="radio" name="q40" value="C"> Improve graphics</label><br>
+<label><input type="radio" name="q40" value="D"> Reduce costs</label></div>
+  
 
 <button onclick="submitQuiz()">Submit Quiz</button>
 <p id="result"></p>
@@ -208,6 +268,9 @@ function submitQuiz() {
     q16:"B",q17:"A",q18:"D",q19:"C",q20:"A",
     q21:"B",q22:"A",q23:"C",q24:"D",q25:"B",
     q26:"A",q27:"C",q28:"B",q29:"A",q30:"D",
+    q31:"B",q32:"C",q33:"A",q34:"D",q35:"B",
+    q36:"A",q37:"C",q38:"B",q39:"D",q40:"A"
+  
   };
 
   for (let q in answers) {
