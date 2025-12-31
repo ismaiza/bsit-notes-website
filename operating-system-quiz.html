@@ -1,110 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Operating System Quiz</title>
-<style>
-body { font-family: Arial; padding: 20px; }
-.question { margin-bottom: 18px; }
-.correct { color: green; font-weight: bold; }
-.wrong { color: red; font-weight: bold; }
-button { padding: 10px 20px; font-size: 16px; }
-</style>
-</head>
+<h2>Operating System Quiz (40 Questions)</h2>
 
-<body>
+<div class="question"><p>1. What is the main function of an operating system?</p>
+<label><input type="radio" name="q1" value="A"> Manage hardware and software resources</label><br>
+<label><input type="radio" name="q1" value="B"> Compile programs</label><br>
+<label><input type="radio" name="q1" value="C"> Run antivirus software</label><br>
+<label><input type="radio" name="q1" value="D"> Design web pages</label></div>
 
-<h1>Operating System Quiz (40 Questions)</h1>
+<div class="question"><p>2. Which of the following is a type of OS?</p>
+<label><input type="radio" name="q2" value="A"> Batch</label><br>
+<label><input type="radio" name="q2" value="B"> Real-time</label><br>
+<label><input type="radio" name="q2" value="C"> Distributed</label><br>
+<label><input type="radio" name="q2" value="D"> All of the above</label></div>
 
-<form id="quizForm">
+<div class="question"><p>3. What does GUI stand for?</p>
+<label><input type="radio" name="q3" value="A"> General User Interface</label><br>
+<label><input type="radio" name="q3" value="B"> Graphical User Interface</label><br>
+<label><input type="radio" name="q3" value="C"> Graph User Internet</label><br>
+<label><input type="radio" name="q3" value="D"> General Utility Interface</label></div>
 
-<script>
-const questions = [
-["What is an Operating System?", "Hardware", "System Software", "Application Software", "Utility", "b"],
-["Main function of OS?", "Write programs", "Manage hardware", "Design hardware", "Compile code", "b"],
-["Which is not an OS?", "Windows", "Linux", "Oracle", "macOS", "c"],
-["OS acts as interface between?", "User & hardware", "CPU & memory", "Software & software", "Disk & RAM", "a"],
-["Which manages CPU?", "File system", "Memory manager", "Process scheduler", "Device driver", "c"],
-["Process is?", "Program in execution", "Program in memory", "Thread", "CPU task", "a"],
-["Thread is?", "Heavyweight process", "Lightweight process", "CPU", "OS", "b"],
-["Which state is NOT valid?", "New", "Ready", "Waiting", "Destroyed", "d"],
-["Which scheduling is preemptive?", "FCFS", "SJF", "Priority", "Round Robin", "d"],
-["FCFS means?", "Fast Come Fast Serve", "First Come First Serve", "First CPU First Serve", "None", "b"],
+<div class="question"><p>4. Which OS is known for multitasking and multiuser support?</p>
+<label><input type="radio" name="q4" value="A"> MS-DOS</label><br>
+<label><input type="radio" name="q4" value="B"> UNIX</label><br>
+<label><input type="radio" name="q4" value="C"> Windows 3.1</label><br>
+<label><input type="radio" name="q4" value="D"> DOS</label></div>
 
-["Which scheduling is time-sharing?", "FCFS", "Round Robin", "Priority", "SJF", "b"],
-["Starvation occurs in?", "FCFS", "Round Robin", "Priority", "FIFO", "c"],
-["Deadlock requires?", "Mutual exclusion", "Hold & wait", "No preemption", "All", "d"],
-["Deadlock avoidance uses?", "FIFO", "Banker’s algorithm", "Round Robin", "SJF", "b"],
-["Which is NOT deadlock condition?", "Circular wait", "Preemption", "Hold & wait", "Mutual exclusion", "b"],
-["Memory management handles?", "CPU", "RAM", "Disk", "I/O", "b"],
-["Which is volatile memory?", "ROM", "HDD", "SSD", "RAM", "d"],
-["Paging removes?", "External fragmentation", "Internal fragmentation", "Deadlock", "Starvation", "a"],
-["Segmentation is based on?", "Pages", "Blocks", "Logical divisions", "Frames", "c"],
-["Page size is?", "Variable", "Fixed", "Large", "Small", "b"],
+<div class="question"><p>5. Which part of the OS manages memory allocation?</p>
+<label><input type="radio" name="q5" value="A"> File Manager</label><br>
+<label><input type="radio" name="q5" value="B"> Memory Manager</label><br>
+<label><input type="radio" name="q5" value="C"> Process Manager</label><br>
+<label><input type="radio" name="q5" value="D"> Device Manager</label></div>
 
-["Virtual memory uses?", "RAM only", "Disk only", "RAM + Disk", "Cache only", "c"],
-["Thrashing means?", "High CPU use", "Low memory use", "Excessive paging", "Deadlock", "c"],
-["Which is secondary storage?", "RAM", "Cache", "Register", "Hard disk", "d"],
-["File system manages?", "Processes", "Memory", "Files", "CPU", "c"],
-["Which is NOT file access method?", "Sequential", "Direct", "Random", "Circular", "d"],
-["Directory stores?", "Files", "Programs", "File information", "Memory", "c"],
-["I/O device controlled by?", "Compiler", "OS", "User", "CPU only", "b"],
-["Interrupt is?", "Signal to CPU", "Error", "Process", "Thread", "a"],
-["Context switching is?", "Process execution", "Saving state", "Switching CPU", "Loading OS", "b"],
-["Kernel is?", "User program", "Hardware", "Core of OS", "Application", "c"],
+<div class="question"><p>6. Which OS feature allows running multiple programs simultaneously?</p>
+<label><input type="radio" name="q6" value="A"> Multithreading</label><br>
+<label><input type="radio" name="q6" value="B"> Multitasking</label><br>
+<label><input type="radio" name="q6" value="C"> Multiprocessing</label><br>
+<label><input type="radio" name="q6" value="D"> Multilevel</label></div>
 
-["Which OS supports multitasking?", "DOS", "Windows", "Single task OS", "Batch OS", "b"],
-["Real-time OS used in?", "Games", "Banking", "Air traffic control", "Word processing", "c"],
-["Batch OS processes?", "One job", "Multiple jobs in batch", "User input", "GUI", "b"],
-["Time-sharing OS aims at?", "Response time", "CPU speed", "Memory size", "Storage", "a"],
-["Which OS is open source?", "Windows", "macOS", "Linux", "DOS", "c"],
-["Which manages devices?", "Scheduler", "Device driver", "Kernel", "Shell", "b"],
-["Shell is?", "Hardware", "User interface", "Kernel", "CPU", "b"],
-["Which executes user commands?", "Kernel", "Shell", "Driver", "BIOS", "b"],
-["Which OS part is always resident?", "Shell", "Kernel", "Application", "Driver", "b"]
-];
+<div class="question"><p>7. Which scheduling algorithm assigns CPU based on priority?</p>
+<label><input type="radio" name="q7" value="A"> FCFS</label><br>
+<label><input type="radio" name="q7" value="B"> Priority Scheduling</label><br>
+<label><input type="radio" name="q7" value="C"> Round Robin</label><br>
+<label><input type="radio" name="q7" value="D"> Shortest Job First</label></div>
 
-questions.forEach((q, i) => {
-document.write(`
-<div class="question">
-<p>${i+1}. ${q[0]}</p>
-<label><input type="radio" name="q${i}" value="a"> ${q[1]}</label><br>
-<label><input type="radio" name="q${i}" value="b"> ${q[2]}</label><br>
-<label><input type="radio" name="q${i}" value="c"> ${q[3]}</label><br>
-<label><input type="radio" name="q${i}" value="d"> ${q[4]}</label><br>
-<span id="r${i}"></span>
-</div>
-`);
-});
-</script>
+<div class="question"><p>8. What does a device driver do?</p>
+<label><input type="radio" name="q8" value="A"> Manages files</label><br>
+<label><input type="radio" name="q8" value="B"> Controls hardware devices</label><br>
+<label><input type="radio" name="q8" value="C"> Handles network communication</label><br>
+<label><input type="radio" name="q8" value="D"> Allocates memory</label></div>
 
-<button type="button" onclick="checkQuiz()">Submit Quiz</button>
-<h2 id="result"></h2>
+<div class="question"><p>9. Which memory is volatile and loses data when power is off?</p>
+<label><input type="radio" name="q9" value="A"> RAM</label><br>
+<label><input type="radio" name="q9" value="B"> ROM</label><br>
+<label><input type="radio" name="q9" value="C"> Cache</label><br>
+<label><input type="radio" name="q9" value="D"> Hard Disk</label></div>
 
-</form>
+<div class="question"><p>10. Which OS component manages CPU execution?</p>
+<label><input type="radio" name="q10" value="A"> Process Manager</label><br>
+<label><input type="radio" name="q10" value="B"> Memory Manager</label><br>
+<label><input type="radio" name="q10" value="C"> File Manager</label><br>
+<label><input type="radio" name="q10" value="D"> Security Manager</label></div>
 
-<script>
-function checkQuiz() {
-let score = 0;
 
-questions.forEach((q, i) => {
-let selected = document.querySelector(input[name="q${i}"]:checked);
-let r = document.getElementById(r${i});
 
-if (selected && selected.value === q[5]) {
-score++;
-r.innerHTML = " ✓ Correct";
-r.className = "correct";
-} else {
-r.innerHTML = " ✗ Wrong";
-r.className = "wrong";
-}
-});
 
-let status = score >= 20 ? "PASS 🎉" : "FAIL ❌";
-document.getElementById("result").innerHTML =
-You scored ${score} out of 40 — ${status};
-}
-</script>
 
-  
+
+
+
+
+
+
+
