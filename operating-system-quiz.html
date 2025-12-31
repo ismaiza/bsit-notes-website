@@ -303,31 +303,4 @@ function checkAnswers(){
 
 
 
-function checkAnswers(){
-    let score=0;
-    for(let i=1;i<=5;i++){ 
-        const q="q"+i;
-        const selected=document.querySelector('input[name="'+q+'"]:checked');
-        if(selected && selected.value===answers[q]){
-            score++;
-            selected.parentElement.style.color="green";
-        } else if(selected){
-            selected.parentElement.style.color="red";
-        }
-    }
-    document.getElementById("result").textContent="Your score: "+score+"/40"; 
-}
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
 
