@@ -3,364 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <title>Cyber Security Quiz</title>
+
 <style>
 body { font-family: Arial; padding: 20px; }
 .question { margin-bottom: 15px; }
+.correct { color: green; font-weight: bold; }
+.wrong { color: red; font-weight: bold; }
+button { padding: 10px 20px; font-size: 16px; }
 </style>
 </head>
+
 <body>
 
-<h2>Cyber Security Quiz</h2>
+<h2>Cyber Security Quiz (40 Questions)</h2>
 
-<form id="quizForm">
-
-<div class="question">
-<p>1. What does CIA stand for in Cyber Security?</p>
+<div class="question"><p>1. What does CIA stand for in Cyber Security?</p>
 <label><input type="radio" name="q1" value="A"> Confidentiality, Integrity, Availability</label><br>
 <label><input type="radio" name="q1" value="B"> Control, Inspection, Access</label><br>
 <label><input type="radio" name="q1" value="C"> Cyber, Internet, Application</label><br>
-<label><input type="radio" name="q1" value="D"> None</label>
-</div>
+<label><input type="radio" name="q1" value="D"> None</label></div>
 
-<div class="question">
-<p>2. Which is a type of malware?</p>
+<div class="question"><p>2. Which is a type of malware?</p>
 <label><input type="radio" name="q2" value="A"> Firewall</label><br>
 <label><input type="radio" name="q2" value="B"> Trojan</label><br>
 <label><input type="radio" name="q2" value="C"> VPN</label><br>
-<label><input type="radio" name="q2" value="D"> Router</label>
-</div>
+<label><input type="radio" name="q2" value="D"> Router</label></div>
 
-<div class="question">
-<p>3. What is a zero-day vulnerability?</p>
-<label><input type="radio" name="q3" value="A"> A patch released by software vendors</label><br>
-<label><input type="radio" name="q3" value="B"> A virus that infects zero computers</label><br>
-<label><input type="radio" name="q3" value="C"> A security flaw unknown to vendors</label><br>
-<label><input type="radio" name="q3" value="D"> A firewall configuration</label>
-</div>
+<div class="question"><p>3. What is ransomware?</p>
+<label><input type="radio" name="q3" value="A"> Antivirus software</label><br>
+<label><input type="radio" name="q3" value="B"> Encrypts files and demands ransom</label><br>
+<label><input type="radio" name="q3" value="C"> Firewall rule</label><br>
+<label><input type="radio" name="q3" value="D"> Backup system</label></div>
 
-<div class="question">
-<p>4. What does phishing aim to steal?</p>
+<div class="question"><p>4. What does phishing aim to steal?</p>
 <label><input type="radio" name="q4" value="A"> Hardware</label><br>
 <label><input type="radio" name="q4" value="B"> User credentials</label><br>
-<label><input type="radio" name="q4" value="C"> Network routers</label><br>
-<label><input type="radio" name="q4" value="D"> Firewall logs</label>
-</div>
+<label><input type="radio" name="q4" value="C"> Routers</label><br>
+<label><input type="radio" name="q4" value="D"> Firewalls</label></div>
 
-<div class="question">
-<p>5. Which protocol is secure for web traffic?</p>
+<div class="question"><p>5. Which protocol is secure for web traffic?</p>
 <label><input type="radio" name="q5" value="A"> HTTP</label><br>
 <label><input type="radio" name="q5" value="B"> FTP</label><br>
 <label><input type="radio" name="q5" value="C"> HTTPS</label><br>
-<label><input type="radio" name="q5" value="D"> Telnet</label>
-</div>
+<label><input type="radio" name="q5" value="D"> Telnet</label></div>
 
-<div class="question">
-<p>6. What is a botnet?</p>
-<label><input type="radio" name="q6" value="A"> A network of infected computers controlled by an attacker</label><br>
-<label><input type="radio" name="q6" value="B"> A type of firewall</label><br>
-<label><input type="radio" name="q6" value="C"> Antivirus software</label><br>
-<label><input type="radio" name="q6" value="D"> A secure VPN connection</label>
-</div>
+<div class="question"><p>6. What is a botnet?</p>
+<label><input type="radio" name="q6" value="A"> Network of infected computers</label><br>
+<label><input type="radio" name="q6" value="B"> Antivirus system</label><br>
+<label><input type="radio" name="q6" value="C"> Secure server</label><br>
+<label><input type="radio" name="q6" value="D"> Firewall rule</label></div>
 
-<div class="question">
-<p>7. Which attack exploits SQL vulnerabilities?</p>
+<div class="question"><p>7. Which attack exploits SQL vulnerabilities?</p>
 <label><input type="radio" name="q7" value="A"> DDoS</label><br>
-<label><input type="radio" name="q7" value="B"> Cross-site scripting</label><br>
-<label><input type="radio" name="q7" value="C"> SQL Injection</label><br>
-<label><input type="radio" name="q7" value="D"> Phishing</label>
-</div>
+<label><input type="radio" name="q7" value="B"> SQL Injection</label><br>
+<label><input type="radio" name="q7" value="C"> Phishing</label><br>
+<label><input type="radio" name="q7" value="D"> XSS</label></div>
 
-<div class="question">
-<p>8. What is ransomware?</p>
-<label><input type="radio" name="q8" value="A"> Software that encrypts files for ransom</label><br>
-<label><input type="radio" name="q8" value="B"> A network scanner</label><br>
-<label><input type="radio" name="q8" value="C"> A type of firewall</label><br>
-<label><input type="radio" name="q8" value="D"> Antivirus program</label>
-</div>
+<div class="question"><p>8. What is MFA?</p>
+<label><input type="radio" name="q8" value="A"> Multiple firewall access</label><br>
+<label><input type="radio" name="q8" value="B"> Multi-factor authentication</label><br>
+<label><input type="radio" name="q8" value="C"> Malware file attack</label><br>
+<label><input type="radio" name="q8" value="D"> Manual firewall access</label></div>
 
-<div class="question">
-<p>9. What is two-factor authentication (2FA)?</p>
-<label><input type="radio" name="q9" value="A"> Logging in using password only</label><br>
-<label><input type="radio" name="q9" value="B"> Logging in using password and another verification</label><br>
-<label><input type="radio" name="q9" value="C"> Logging in using VPN only</label><br>
-<label><input type="radio" name="q9" value="D"> Logging in without credentials</label>
-</div>
+<div class="question"><p>9. What does a firewall do?</p>
+<label><input type="radio" name="q9" value="A"> Encrypts data</label><br>
+<label><input type="radio" name="q9" value="B"> Monitors network traffic</label><br>
+<label><input type="radio" name="q9" value="C"> Deletes malware</label><br>
+<label><input type="radio" name="q9" value="D"> Creates passwords</label></div>
 
-<div class="question">
-<p>10. What does a firewall do?</p>
-<label><input type="radio" name="q10" value="A"> Monitors and controls network traffic</label><br>
-<label><input type="radio" name="q10" value="B"> Encrypts data on disk</label><br>
-<label><input type="radio" name="q10" value="C"> Deletes viruses automatically</label><br>
-<label><input type="radio" name="q10" value="D"> Scans for hardware faults</label>
-</div>
+<div class="question"><p>10. What is social engineering?</p>
+<label><input type="radio" name="q10" value="A"> Network design</label><br>
+<label><input type="radio" name="q10" value="B"> Manipulating people to reveal info</label><br>
+<label><input type="radio" name="q10" value="C"> Hardware hacking</label><br>
+<label><input type="radio" name="q10" value="D"> Data encryption</label></div>
+<div class="question"><p>11. Which encryption method is symmetric?</p>
+<label><input type="radio" name="q11" value="A"> AES</label><br>
+<label><input type="radio" name="q11" value="B"> RSA</label><br>
+<label><input type="radio" name="q11" value="C"> ECC</label><br>
+<label><input type="radio" name="q11" value="D"> DSA</label></div>
 
-<div class="question">
-<p>11. What is social engineering?</p>
-<label><input type="radio" name="q11" value="A"> Hacking software remotely</label><br>
-<label><input type="radio" name="q11" value="B"> Manipulating people to reveal confidential info</label><br>
-<label><input type="radio" name="q11" value="C"> Writing secure code</label><br>
-<label><input type="radio" name="q11" value="D"> Installing antivirus software</label>
-</div>
+<div class="question"><p>12. What does IDS stand for?</p>
+<label><input type="radio" name="q12" value="A"> Intrusion Detection System</label><br>
+<label><input type="radio" name="q12" value="B"> Internet Defense Service</label><br>
+<label><input type="radio" name="q12" value="C"> Internal Data System</label><br>
+<label><input type="radio" name="q12" value="D"> Information Defense Software</label></div>
 
-<div class="question">
-<p>12. Which encryption method is considered symmetric?</p>
-<label><input type="radio" name="q12" value="A"> RSA</label><br>
-<label><input type="radio" name="q12" value="B"> AES</label><br>
-<label><input type="radio" name="q12" value="C"> ECC</label><br>
-<label><input type="radio" name="q12" value="D"> DSA</label>
-</div>
-  <div class="question">
- <div class="question">
-<p>13. What is least privilege?</p>
-<label><input type="radio" name="q13" value="A"> Maximum access</label><br>
-<label><input type="radio" name="q13" value="B"> Temporary access</label><br>
-<label><input type="radio" name="q13" value="C"> Guest access</label><br>
-<label><input type="radio" name="q13" value="D"> Minimum required access</label>
-</div>
+<div class="question"><p>13. Which attack floods a network with traffic?</p>
+<label><input type="radio" name="q13" value="A"> Phishing</label><br>
+<label><input type="radio" name="q13" value="B"> SQL Injection</label><br>
+<label><input type="radio" name="q13" value="C"> XSS</label><br>
+<label><input type="radio" name="q13" value="D"> DDoS</label></div>
 
-<div class="question">
-<p>14. Which is NOT a type of malware?</p>
-<label><input type="radio" name="q14" value="A"> Firewall</label><br>
-<label><input type="radio" name="q14" value="B"> Virus</label><br>
-<label><input type="radio" name="q14" value="C"> Worm</label><br>
-<label><input type="radio" name="q14" value="D"> Trojan</label>
-</div>
+<div class="question"><p>14. What is the main purpose of a VPN?</p>
+<label><input type="radio" name="q14" value="A"> Secure communication over public networks</label><br>
+<label><input type="radio" name="q14" value="B"> Increase internet speed</label><br>
+<label><input type="radio" name="q14" value="C"> Block malware</label><br>
+<label><input type="radio" name="q14" value="D"> Replace firewall</label></div>
 
-<div class="question">
-<p>15. What does VPN provide?</p>
-<label><input type="radio" name="q15" value="A"> Faster speed</label><br>
-<label><input type="radio" name="q15" value="B"> Free internet</label><br>
-<label><input type="radio" name="q15" value="C"> Secure communication</label><br>
-<label><input type="radio" name="q15" value="D"> Email protection</label>
-</div
+<div class="question"><p>15. Which malware hides itself to avoid detection?</p>
+<label><input type="radio" name="q15" value="A"> Worm</label><br>
+<label><input type="radio" name="q15" value="B"> Virus</label><br>
+<label><input type="radio" name="q15" value="C"> Rootkit</label><br>
+<label><input type="radio" name="q15" value="D"> Trojan</label></div>
 
-<div class="question">
-<p>16. What attack uses many passwords?</p>
-<label><input type="radio" name="q16" value="A"> Spoofing</label><br>
-<label><input type="radio" name="q16" value="B"> Brute force</label><br>
-<label><input type="radio" name="q16" value="C"> Phishing</label><br>
-<label><input type="radio" name="q16" value="D"> Sniffing</label>
-</div>
+<div class="question"><p>16. What does SSL/TLS provide?</p>
+<label><input type="radio" name="q16" value="A"> Network routing</label><br>
+<label><input type="radio" name="q16" value="B"> Encrypted communication</label><br>
+<label><input type="radio" name="q16" value="C"> Malware scanning</label><br>
+<label><input type="radio" name="q16" value="D"> Data backup</label></div>
 
-<div class="question">
-<p>17. Which is an example of social engineering?</p>
-<label><input type="radio" name="q17" value="A"> Phishing email</label><br>
-<label><input type="radio" name="q17" value="B"> Firewall</label><br>
-<label><input type="radio" name="q17" value="C"> Antivirus</label><br>
-<label><input type="radio" name="q17" value="D"> Encryption</label>
-</div>
+<div class="question"><p>17. Which is an example of strong password practice?</p>
+<label><input type="radio" name="q17" value="A"> Using personal name</label><br>
+<label><input type="radio" name="q17" value="B"> Using 123456</label><br>
+<label><input type="radio" name="q17" value="C"> Using letters, numbers, and symbols</label><br>
+<label><input type="radio" name="q17" value="D"> Writing password on paper</label></div>
 
-<div class="question">
-<p>18. What ensures data cannot be changed?</p>
-<label><input type="radio" name="q18" value="A"> Confidentiality</label><br>
-<label><input type="radio" name="q18" value="B"> Availability</label><br>
-<label><input type="radio" name="q18" value="C"> Authentication</label><br>
-<label><input type="radio" name="q18" value="D"> Integrity</label>
-</div>
-  <div class="question"> 
-   <p>19. Which protocol is commonly used for secure email transmission?</p>
-  <label><input type="radio" name="q19" value="A"> SMTP</label><br>
-  <label><input type="radio" name="q19" value="B"> POP3</label><br>
-  <label><input type="radio" name="q19" value="C"> IMAP</label><br>
-  <label><input type="radio" name="q19" value="D"> SMTPS</label>
-</div>
+<div class="question"><p>18. What is a zero-day attack?</p>
+<label><input type="radio" name="q18" value="A"> Old known vulnerability</label><br>
+<label><input type="radio" name="q18" value="B"> Attack during system shutdown</label><br>
+<label><input type="radio" name="q18" value="C"> Attack with antivirus</label><br>
+<label><input type="radio" name="q18" value="D"> Exploits unknown vulnerability</label></div>
 
-<div class="question">
-  <p>20. What is a man-in-the-middle (MITM) attack?</p>
-  <label><input type="radio" name="q20" value="A"> Intercepting communication between two parties</label><br>
-  <label><input type="radio" name="q20" value="B"> Hacking a firewall</label><br>
-  <label><input type="radio" name="q20" value="C"> Stealing passwords via phishing</label><br>
-  <label><input type="radio" name="q20" value="D"> Overloading a server with requests</label>
-</div>
+<div class="question"><p>19. Which protocol is used for secure email?</p>
+<label><input type="radio" name="q19" value="A"> SMTP</label><br>
+<label><input type="radio" name="q19" value="B"> POP3</label><br>
+<label><input type="radio" name="q19" value="C"> SMTPS</label><br>
+<label><input type="radio" name="q19" value="D"> IMAP</label></div>
 
-<div class="question">
-  <p>21. Which is considered strong password practice?</p>
-  <label><input type="radio" name="q21" value="A"> Using "password123" for all accounts</label><br>
-  <label><input type="radio" name="q21" value="B"> Reusing passwords on multiple sites</label><br>
-  <label><input type="radio" name="q21" value="C"> Using a mix of letters, numbers, and symbols</label><br>
-  <label><input type="radio" name="q21" value="D"> Writing passwords on a sticky note</label>
-</div>
+<div class="question"><p>20. What is a MITM attack?</p>
+<label><input type="radio" name="q20" value="A"> Intercepting communication between two parties</label><br>
+<label><input type="radio" name="q20" value="B"> Blocking network traffic</label><br>
+<label><input type="radio" name="q20" value="C"> Encrypting data</label><br>
+<label><input type="radio" name="q20" value="D"> Virus scanning</label></div>  
 
-<div class="question">
-  <p>22. What is the primary function of IDS (Intrusion Detection System)?</p>
-  <label><input type="radio" name="q22" value="A"> Encrypting sensitive data</label><br>
-  <label><input type="radio" name="q22" value="B"> Detecting suspicious activity in a network</label><br>
-  <label><input type="radio" name="q22" value="C"> Blocking malware automatically</label><br>
-  <label><input type="radio" name="q22" value="D"> Scanning for viruses on a PC</label>
-</div>
-
-<div class="question">
-  <p>23. What is cross-site scripting (XSS)?</p>
-  <label><input type="radio" name="q23" value="A"> Injecting malicious scripts into web pages viewed by other users</label><br>
-  <label><input type="radio" name="q23" value="B"> Sending spam emails</label><br>
-  <label><input type="radio" name="q23" value="C"> Scanning network ports</label><br>
-  <label><input type="radio" name="q23" value="D"> Encrypting user data</label>
-</div>
-
-<div class="question">
-  <p>24. Which attack exploits weak authentication on network devices?</p>
-  <label><input type="radio" name="q24" value="A"> SQL Injection</label><br>
-  <label><input type="radio" name="q24" value="B"> Brute-force attack</label><br>
-  <label><input type="radio" name="q24" value="C"> Denial-of-Service</label><br>
-  <label><input type="radio" name="q24" value="D"> Phishing</label>
-</div>
-
-<div class="question">
-  <p>25. What does VPN (Virtual Private Network) primarily do?</p>
-  <label><input type="radio" name="q25" value="A"> Increases bandwidth</label><br>
-  <label><input type="radio" name="q25" value="B"> Provides secure communication over public networks</label><br>
-  <label><input type="radio" name="q25" value="C"> Blocks viruses</label><br>
-  <label><input type="radio" name="q25" value="D"> Monitors network traffic</label>
-</div>
-  <div class="question">
-  <p>26. What is a DNS spoofing attack?</p>
-  <label><input type="radio" name="q26" value="A"> Altering DNS records to redirect traffic</label><br>
-  <label><input type="radio" name="q26" value="B"> Brute-forcing DNS passwords</label><br>
-  <label><input type="radio" name="q26" value="C"> Encrypting DNS traffic</label><br>
-  <label><input type="radio" name="q26" value="D"> Blocking DNS queries</label>
-</div>
-
-<div class="question">
-  <p>27. Which type of malware hides itself to avoid detection?</p>
-  <label><input type="radio" name="q27" value="A"> Rootkit</label><br>
-  <label><input type="radio" name="q27" value="B"> Worm</label><br>
-  <label><input type="radio" name="q27" value="C"> Ransomware</label><br>
-  <label><input type="radio" name="q27" value="D"> Adware</label>
-</div>
-
-<div class="question">
-  <p>28. What is the purpose of a honeypot in Cyber Security?</p>
-  <label><input type="radio" name="q28" value="A"> To trap attackers and study their behavior</label><br>
-  <label><input type="radio" name="q28" value="B"> To speed up network traffic</label><br>
-  <label><input type="radio" name="q28" value="C"> To encrypt sensitive files</label><br>
-  <label><input type="radio" name="q28" value="D"> To block spam emails</label>
-</div>
-
-<div class="question">
-  <p>29. Which attack is used to obtain user credentials by impersonating a legitimate site?</p>
-  <label><input type="radio" name="q29" value="A"> Phishing</label><br>
-  <label><input type="radio" name="q29" value="B"> DDoS</label><br>
-  <label><input type="radio" name="q29" value="C"> SQL Injection</label><br>
-  <label><input type="radio" name="q29" value="D"> XSS</label>
-</div>
-
-<div class="question">
-  <p>30. Which cyber attack targets the supply chain to compromise software?</p>
-  <label><input type="radio" name="q30" value="A"> Watering hole attack</label><br>
-  <label><input type="radio" name="q30" value="B"> Supply chain attack</label><br>
-  <label><input type="radio" name="q30" value="C"> Ransomware</label><br>
-  <label><input type="radio" name="q30" value="D"> MITM attack</label>
-</div>
-
-<div class="question">
-  <p>31. What does the principle of least privilege mean?</p>
-  <label><input type="radio" name="q31" value="A"> Give users only the access they need to perform their tasks</label><br>
-  <label><input type="radio" name="q31" value="B"> Give all users admin access</label><br>
-  <label><input type="radio" name="q31" value="C"> Allow unlimited access to developers</label><br>
-  <label><input type="radio" name="q31" value="D"> Disable all user access</label>
-</div>
-
-<div class="question">
-  <p>32. What is the main purpose of SSL/TLS?</p>
-  <label><input type="radio" name="q32" value="A"> To scan for viruses</label><br>
-  <label><input type="radio" name="q32" value="B"> To encrypt data in transit</label><br>
-  <label><input type="radio" name="q32" value="C"> To backup servers</label><br>
-  <label><input type="radio" name="q32" value="D"> To monitor network traffic</label>
-</div>
-
-<div class="question">
-  <p>33. What is spear phishing?</p>
-  <label><input type="radio" name="q33" value="A"> Targeted phishing at specific individuals or organizations</label><br>
-  <label><input type="radio" name="q33" value="B"> Mass email spam</label><br>
-  <label><input type="radio" name="q33" value="C"> Intercepting email traffic</label><br>
-  <label><input type="radio" name="q33" value="D"> Malware injection via USB</label>
-</div>
-
-<div class="question">
-  <p>34. Which attack involves tricking users to install malicious software disguised as legitimate?</p>
-  <label><input type="radio" name="q34" value="A"> Trojan</label><br>
-  <label><input type="radio" name="q34" value="B"> Worm</label><br>
-  <label><input type="radio" name="q34" value="C"> Keylogger</label><br>
-  <label><input type="radio" name="q34" value="D"> Rootkit</label>
-</div>
- <div class="question">
-  <p>35. What is a watering hole attack?</p>
-  <label><input type="radio" name="q35" value="A"> Infecting websites frequently visited by target users</label><br>
-  <label><input type="radio" name="q35" value="B"> Flooding a server with traffic</label><br>
-  <label><input type="radio" name="q35" value="C"> Stealing passwords via email</label><br>
-  <label><input type="radio" name="q35" value="D"> Encrypting files for ransom</label>
-</div>
-
-<div class="question">
-  <p>36. Which attack uses multiple compromised devices to overwhelm a target?</p>
-  <label><input type="radio" name="q36" value="A"> DDoS</label><br>
-  <label><input type="radio" name="q36" value="B"> MITM</label><br>
-  <label><input type="radio" name="q36" value="C"> SQL Injection</label><br>
-  <label><input type="radio" name="q36" value="D"> Cross-site scripting</label>
-</div>
-
-<div class="question">
-  <p>37. What is privilege escalation?</p>
-  <label><input type="radio" name="q37" value="A"> Gaining higher access rights than allowed</label><br>
-  <label><input type="radio" name="q37" value="B"> Logging in with correct credentials</label><br>
-  <label><input type="radio" name="q37" value="C"> Installing antivirus</label><br>
-  <label><input type="radio" name="q37" value="D"> Encrypting files</label>
-</div>
-
-<div class="question">
-  <p>38. What is the main risk of using outdated software?</p>
-  <label><input type="radio" name="q38" value="A"> Higher vulnerability to attacks</label><br>
-  <label><input type="radio" name="q38" value="B"> Faster performance</label><br>
-  <label><input type="radio" name="q38" value="C"> Better encryption</label><br>
-  <label><input type="radio" name="q38" value="D"> Automatic backups</label>
-</div>
-
-<div class="question">
-  <p>39. Which tool is commonly used for network penetration testing?</p>
-  <label><input type="radio" name="q39" value="A"> Wireshark</label><br>
-  <label><input type="radio" name="q39" value="B"> Nmap</label><br>
-  <label><input type="radio" name="q39" value="C"> Metasploit</label><br>
-  <label><input type="radio" name="q39" value="D"> All of the above</label>
-</div>
-
-<div class="question">
-  <p>40. What is data exfiltration?</p>
-  <label><input type="radio" name="q40" value="A"> Encrypting files for security</label><br>
-  <label><input type="radio" name="q40" value="B"> Unauthorized transfer of sensitive data</label><br>
-  <label><input type="radio" name="q40" value="C"> Backing up files to cloud</label><br>
-  <label><input type="radio" name="q40" value="D"> Updating antivirus software</label>
-</div> 
-
-<button type="button" onclick="submitQuiz()">Submit Quiz</button>
-</form>
-
+<button onclick="submitQuiz()">Submit Quiz</button>
 <p id="result"></p>
 
 <script>
-const answers = {
-  q1: "A", q2: "B", q3: "C", q4: "B", q5: "C", q6: "A",
-  q7: "C", q8: "A", q9: "B", q10: "A", q11: "B", q12: "B",
-  q19: "D", q20: "A", q21: "C", q22: "B",q23: "A", q24: "B",q25: "B",
-  q26: "A", q27: "A", q28: "A", q29: q30: "B",q31: "A", q32: "B",q33: "A", q34: "A",
-  q35: "A", q36:  "A", q37: "A", q38:  "A", q39: "D", q40: "B"
-};
-
 function submitQuiz() {
   let score = 0;
-  for (let q in answers) {
-    const selected = document.querySelector(
-      'input[name="' + q + '"]:checked'
-    );
-    if (selected && selected.value === answers[q]) {
-      score++;
-    }
-  }
+  const answers = {
+    q1:"A",q2:"B",q3:"B",q4:"B",q5:"C",
+    q6:"A",q7:"B",q8:"B",q9:"B",q10:"B",
+    q11:"A",q12:"B",q13:"D",q14:"A",q15:"C",
+    q16:"B",q17:"A",q18:"D",q19:"C",q20:"A",
+  };
 
-  document.getElementById("result").innerHTML =
-    "You scored <b>" + score + " / 40</b>";
+  for (let q in answers) {
+    const selected = document.querySelector(`input[name="${q}"]:checked`);
+    if (selected && selected.value === answers[q]) score++;
+  }
+  document.getElementById("result").innerHTML = "You scored " + score + " / 20";
 }
 </script>
 
 </body>
 </html>
-
