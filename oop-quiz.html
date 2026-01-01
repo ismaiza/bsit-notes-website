@@ -2,108 +2,257 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>OOP Quiz</title>
+<title>>MIS Quiz</title>
 <style>
-body { font-family: Arial; padding: 20px; }
-.question { margin-bottom: 18px; }
+body { font-family: Arial, sans-serif; padding: 20px; }
+h2 { color: #333; }
+.question { margin-bottom: 20px; }
+label { display: block; margin: 5px 0; }
+button { padding: 10px 20px; font-size: 16px; }
+#result { margin-top: 20px; font-weight: bold; font-size: 18px; }
 .correct { color: green; font-weight: bold; }
 .wrong { color: red; font-weight: bold; }
-button { padding: 10px 20px; font-size: 16px; }
 </style>
 </head>
-
 <body>
 
-<h1>Object-Oriented Programming Quiz (40 Questions)</h1>
-
-<form id="quizForm">
-
-<!-- QUESTIONS -->
-<script>
-const questions = [
-["OOP stands for?", "Object Oriented Programming", "Open Object Program", "Optional Object Process", "Only One Program", "a"],
-["Which is NOT an OOP principle?", "Encapsulation", "Inheritance", "Compilation", "Polymorphism", "c"],
-["Which concept binds data and methods?", "Abstraction", "Encapsulation", "Inheritance", "Polymorphism", "b"],
-["Which allows same method name different behavior?", "Encapsulation", "Abstraction", "Polymorphism", "Inheritance", "c"],
-["Parent class is also called?", "Child class", "Base class", "Derived class", "Object class", "b"],
-["Which keyword creates object in Java?", "class", "new", "object", "create", "b"],
-["Which hides implementation details?", "Encapsulation", "Abstraction", "Inheritance", "Overloading", "b"],
-["Which supports code reusability?", "Inheritance", "Abstraction", "Compilation", "Iteration", "a"],
-["Method with same name but different parameters?", "Overriding", "Overloading", "Inheritance", "Encapsulation", "b"],
-["Run-time polymorphism achieved by?", "Overloading", "Overriding", "Encapsulation", "Constructor", "b"],
-
-["Constructor purpose?", "Destroy object", "Initialize object", "Call method", "Free memory", "b"],
-["Destructor does what?", "Create object", "Destroy object", "Initialize data", "Compile class", "b"],
-["Which access modifier is most restrictive?", "public", "private", "protected", "default", "b"],
-["Which allows access within package & subclasses?", "private", "public", "protected", "protected", "d"],
-["Instance variable belongs to?", "Class", "Object", "Method", "Package", "b"],
-["Static variable belongs to?", "Object", "Method", "Class", "Constructor", "c"],
-["Which keyword refers to current object?", "this", "super", "self", "object", "a"],
-["Which calls parent constructor?", "this()", "parent()", "super()", "base()", "c"],
-["Interface contains?", "Only variables", "Only methods", "Abstract methods", "Concrete methods", "c"],
-["Abstract class can have?", "No methods", "Only abstract", "Both abstract & concrete", "Only static", "c"],
-
-["Multiple inheritance supported via?", "Classes", "Objects", "Interfaces", "Methods", "c"],
-["Which cannot be instantiated?", "Class", "Object", "Abstract class", "Constructor", "c"],
-["Which OOP feature improves security?", "Inheritance", "Encapsulation", "Polymorphism", "Abstraction", "b"],
-["Which is early binding?", "Overriding", "Overloading", "Inheritance", "Abstraction", "b"],
-["Which is late binding?", "Overloading", "Compilation", "Overriding", "Constructor", "c"],
-["Object is instance of?", "Method", "Variable", "Class", "Package", "c"],
-["Class is?", "Blueprint", "Object", "Method", "Variable", "a"],
-["Which keyword prevents inheritance?", "static", "final", "private", "const", "b"],
-["Which prevents method overriding?", "static", "final", "abstract", "protected", "b"],
-["Which supports dynamic binding?", "Inheritance", "Polymorphism", "Encapsulation", "Abstraction", "b"],
-
-["Which keyword creates subclass?", "this", "extends", "implements", "inherits", "b"],
-["Which keyword used with interface?", "extends", "implements", "inherits", "uses", "b"],
-["Which language is purely OOP?", "C", "Java", "Smalltalk", "Python", "c"],
-["Which allows same function name?", "Overloading", "Encapsulation", "Inheritance", "Compilation", "a"],
-["Which concept reduces complexity?", "Encapsulation", "Abstraction", "Inheritance", "Polymorphism", "b"],
-["Which stores object data?", "Method", "Variable", "Attribute", "Function", "c"],
-["Which runs automatically when object created?", "Method", "Constructor", "Destructor", "Loop", "b"],
-["Which term means “many forms”?", "Inheritance", "Abstraction", "Encapsulation", "Polymorphism", "d"]
-];
-
-questions.forEach((q, i) => {
-document.write(`
-<div class="question">
-<p>${i+1}. ${q[0]}</p>
-<label><input type="radio" name="q${i}" value="a"> ${q[1]}</label><br>
-<label><input type="radio" name="q${i}" value="b"> ${q[2]}</label><br>
-<label><input type="radio" name="q${i}" value="c"> ${q[3]}</label><br>
-<label><input type="radio" name="q${i}" value="d"> ${q[4]}</label><br>
-<span id="r${i}"></span>
+  <div class="question">
+<p>1. What is Object-Oriented Programming?</p>
+<label><input type="radio" name="q1" value="A"> Programming using only functions</label><br>
+<label><input type="radio" name="q1" value="B"> Programming based on objects and classes</label><br>
+<label><input type="radio" name="q1" value="C"> Programming using databases</label><br>
+<label><input type="radio" name="q1" value="D"> Programming without logic</label>
 </div>
-`);
-});
-</script>
 
-<button type="button" onclick="checkQuiz()">Submit Quiz</button>
-<h2 id="result"></h2>
+<div class="question">
+<p>2. Which of the following is NOT an OOP principle?</p>
+<label><input type="radio" name="q2" value="A"> Encapsulation</label><br>
+<label><input type="radio" name="q2" value="B"> Inheritance</label><br>
+<label><input type="radio" name="q2" value="C"> Compilation</label><br>
+<label><input type="radio" name="q2" value="D"> Polymorphism</label>
+</div>
 
-</form>
-<script>
-function checkQuiz() {
-    let score = 0;
+<div class="question">
+<p>3. What is a class?</p>
+<label><input type="radio" name="q3" value="A"> A real-world object</label><br>
+<label><input type="radio" name="q3" value="B"> A blueprint for creating objects</label><br>
+<label><input type="radio" name="q3" value="C"> A variable</label><br>
+<label><input type="radio" name="q3" value="D"> A loop</label>
+</div>
 
-    questions.forEach((q, i) => {
-        let selected = document.querySelector(input[name="q${i}"]:checked);
-        let r = document.getElementById(r${i});
+<div class="question">
+<p>4. What is an object?</p>
+<label><input type="radio" name="q4" value="A"> A class definition</label><br>
+<label><input type="radio" name="q4" value="B"> An instance of a class</label><br>
+<label><input type="radio" name="q4" value="C"> A method</label><br>
+<label><input type="radio" name="q4" value="D"> A package</label>
+</div>
 
-        if (selected && selected.value === q[4]) {
-            score++;
-            r.innerHTML = "✔ Correct";
-            r.style.color = "green";
-        } else {
-            r.innerHTML = "✖ Wrong";
-            r.style.color = "red";
-        }
-    });
+<div class="question">
+<p>5. Which concept hides data from unauthorized access?</p>
+<label><input type="radio" name="q5" value="A"> Abstraction</label><br>
+<label><input type="radio" name="q5" value="B"> Inheritance</label><br>
+<label><input type="radio" name="q5" value="C"> Encapsulation</label><br>
+<label><input type="radio" name="q5" value="D"> Polymorphism</label>
+</div>
 
-    document.getElementById("result").innerHTML =
-        "Your Score: " + score + "/" + questions.length;
-}
-</script>
+<div class="question">
+<p>6. Inheritance allows:</p>
+<label><input type="radio" name="q6" value="A"> One class to use methods of another</label><br>
+<label><input type="radio" name="q6" value="B"> Data hiding</label><br>
+<label><input type="radio" name="q6" value="C"> Multiple constructors only</label><br>
+<label><input type="radio" name="q6" value="D"> Code deletion</label>
+</div>
 
+<div class="question">
+<p>7. What is polymorphism?</p>
+<label><input type="radio" name="q7" value="A"> One name, many forms</label><br>
+<label><input type="radio" name="q7" value="B"> One class only</label><br>
+<label><input type="radio" name="q7" value="C"> One method only</label><br>
+<label><input type="radio" name="q7" value="D"> One object only</label>
+</div>
 
+<div class="question">
+<p>8. Method overloading is an example of:</p>
+<label><input type="radio" name="q8" value="A"> Inheritance</label><br>
+<label><input type="radio" name="q8" value="B"> Compile-time polymorphism</label><br>
+<label><input type="radio" name="q8" value="C"> Runtime polymorphism</label><br>
+<label><input type="radio" name="q8" value="D"> Encapsulation</label>
+</div>
+
+<div class="question">
+<p>9. Which keyword is used to create an object in most OOP languages?</p>
+<label><input type="radio" name="q9" value="A"> class</label><br>
+<label><input type="radio" name="q9" value="B"> new</label><br>
+<label><input type="radio" name="q9" value="C"> void</label><br>
+<label><input type="radio" name="q9" value="D"> static</label>
+</div>
+
+<div class="question">
+<p>10. What is abstraction?</p>
+<label><input type="radio" name="q10" value="A"> Showing all details</label><br>
+<label><input type="radio" name="q10" value="B"> Hiding unnecessary details</label><br>
+<label><input type="radio" name="q10" value="C"> Inheriting properties</label><br>
+<label><input type="radio" name="q10" value="D"> Creating objects</label>
+</div>  
+
+ <div class="question">
+<p>11. Which access modifier makes members accessible only within the same class?</p>
+<label><input type="radio" name="q11" value="A"> public</label><br>
+<label><input type="radio" name="q11" value="B"> protected</label><br>
+<label><input type="radio" name="q11" value="C"> private</label><br>
+<label><input type="radio" name="q11" value="D"> default</label>
+</div>
+
+<div class="question">
+<p>12. Which OOP concept binds data and methods together?</p>
+<label><input type="radio" name="q12" value="A"> Inheritance</label><br>
+<label><input type="radio" name="q12" value="B"> Polymorphism</label><br>
+<label><input type="radio" name="q12" value="C"> Encapsulation</label><br>
+<label><input type="radio" name="q12" value="D"> Abstraction</label>
+</div>
+
+<div class="question">
+<p>13. Which keyword is used to inherit a class in Java?</p>
+<label><input type="radio" name="q13" value="A"> implement</label><br>
+<label><input type="radio" name="q13" value="B"> extends</label><br>
+<label><input type="radio" name="q13" value="C"> inherits</label><br>
+<label><input type="radio" name="q13" value="D"> super</label>
+</div>
+
+<div class="question">
+<p>14. What is method overriding?</p>
+<label><input type="radio" name="q14" value="A"> Same method name with different parameters</label><br>
+<label><input type="radio" name="q14" value="B"> Same method name and same signature in subclass</label><br>
+<label><input type="radio" name="q14" value="C"> Calling parent method</label><br>
+<label><input type="radio" name="q14" value="D"> Using static methods</label>
+</div>
+
+<div class="question">
+<p>15. Runtime polymorphism is achieved using:</p>
+<label><input type="radio" name="q15" value="A"> Method overloading</label><br>
+<label><input type="radio" name="q15" value="B"> Method overriding</label><br>
+<label><input type="radio" name="q15" value="C"> Constructors</label><br>
+<label><input type="radio" name="q15" value="D"> Variables</label>
+</div>
+
+<div class="question">
+<p>16. Which keyword refers to the current object?</p>
+<label><input type="radio" name="q16" value="A"> super</label><br>
+<label><input type="radio" name="q16" value="B"> this</label><br>
+<label><input type="radio" name="q16" value="C"> object</label><br>
+<label><input type="radio" name="q16" value="D"> current</label>
+</div>
+
+<div class="question">
+<p>17. A constructor is used to:</p>
+<label><input type="radio" name="q17" value="A"> Destroy objects</label><br>
+<label><input type="radio" name="q17" value="B"> Initialize objects</label><br>
+<label><input type="radio" name="q17" value="C"> Call methods</label><br>
+<label><input type="radio" name="q17" value="D"> Create classes</label>
+</div>
+
+<div class="question">
+<p>18. Which feature allows one class to acquire properties of another?</p>
+<label><input type="radio" name="q18" value="A"> Encapsulation</label><br>
+<label><input type="radio" name="q18" value="B"> Inheritance</label><br>
+<label><input type="radio" name="q18" value="C"> Abstraction</label><br>
+<label><input type="radio" name="q18" value="D"> Polymorphism</label>
+</div>
+
+<div class="question">
+<p>19. Which class cannot be inherited?</p>
+<label><input type="radio" name="q19" value="A"> Abstract class</label><br>
+<label><input type="radio" name="q19" value="B"> Base class</label><br>
+<label><input type="radio" name="q19" value="C"> Final class</label><br>
+<label><input type="radio" name="q19" value="D"> Parent class</label>
+</div>
+
+<div class="question">
+<p>20. Which OOP principle focuses on exposing only essential features?</p>
+<label><input type="radio" name="q20" value="A"> Inheritance</label><br>
+<label><input type="radio" name="q20" value="B"> Polymorphism</label><br>
+<label><input type="radio" name="q20" value="C"> Abstraction</label><br>
+<label><input type="radio" name="q20" value="D"> Encapsulation</label>
+</div>
+
+<div class="question">
+<p>21. Which of the following supports runtime polymorphism?</p>
+<label><input type="radio" name="q21" value="A"> Method overloading</label><br>
+<label><input type="radio" name="q21" value="B"> Method overriding</label><br>
+<label><input type="radio" name="q21" value="C"> Constructor overloading</label><br>
+<label><input type="radio" name="q21" value="D"> Static binding</label>
+</div>
+
+<div class="question">
+<p>22. Which keyword prevents a method from being overridden?</p>
+<label><input type="radio" name="q22" value="A"> static</label><br>
+<label><input type="radio" name="q22" value="B"> final</label><br>
+<label><input type="radio" name="q22" value="C"> abstract</label><br>
+<label><input type="radio" name="q22" value="D"> private</label>
+</div>
+
+<div class="question">
+<p>23. Which of the following is NOT true about constructors?</p>
+<label><input type="radio" name="q23" value="A"> They have same name as class</label><br>
+<label><input type="radio" name="q23" value="B"> They can return values</label><br>
+<label><input type="radio" name="q23" value="C"> They initialize objects</label><br>
+<label><input type="radio" name="q23" value="D"> They are called automatically</label>
+</div>
+
+<div class="question">
+<p>24. Which concept allows a subclass to provide a specific implementation?</p>
+<label><input type="radio" name="q24" value="A"> Encapsulation</label><br>
+<label><input type="radio" name="q24" value="B"> Method overriding</label><br>
+<label><input type="radio" name="q24" value="C"> Method overloading</label><br>
+<label><input type="radio" name="q24" value="D"> Abstraction</label>
+</div>
+
+<div class="question">
+<p>25. Which class contains abstract methods?</p>
+<label><input type="radio" name="q25" value="A"> Final class</label><br>
+<label><input type="radio" name="q25" value="B"> Interface</label><br>
+<label><input type="radio" name="q25" value="C"> Abstract class</label><br>
+<label><input type="radio" name="q25" value="D"> Static class</label>
+</div>
+
+<div class="question">
+<p>26. Which of the following best describes encapsulation?</p>
+<label><input type="radio" name="q26" value="A"> Wrapping data and methods together</label><br>
+<label><input type="radio" name="q26" value="B"> Reusing code</label><br>
+<label><input type="radio" name="q26" value="C"> Hiding implementation</label><br>
+<label><input type="radio" name="q26" value="D"> Multiple inheritance</label>
+</div>
+
+<div class="question">
+<p>27. Which binding occurs at compile time?</p>
+<label><input type="radio" name="q27" value="A"> Dynamic binding</label><br>
+<label><input type="radio" name="q27" value="B"> Static binding</label><br>
+<label><input type="radio" name="q27" value="C"> Runtime binding</label><br>
+<label><input type="radio" name="q27" value="D"> Late binding</label>
+</div>
+
+<div class="question">
+<p>28. Which of the following supports multiple inheritance?</p>
+<label><input type="radio" name="q28" value="A"> Java classes</label><br>
+<label><input type="radio" name="q28" value="B"> Java interfaces</label><br>
+<label><input type="radio" name="q28" value="C"> Final classes</label><br>
+<label><input type="radio" name="q28" value="D"> Constructors</label>
+</div>
+
+<div class="question">
+<p>29. Which keyword is used to call the parent class constructor?</p>
+<label><input type="radio" name="q29" value="A"> this</label><br>
+<label><input type="radio" name="q29" value="B"> parent</label><br>
+<label><input type="radio" name="q29" value="C"> super</label><br>
+<label><input type="radio" name="q29" value="D"> base</label>
+</div>
+
+<div class="question">
+<p>30. Which OOP feature improves code reusability?</p>
+<label><input type="radio" name="q30" value="A"> Encapsulation</label><br>
+<label><input type="radio" name="q30" value="B"> Inheritance</label><br>
+<label><input type="radio" name="q30" value="C"> Abstraction</label><br>
+<label><input type="radio" name="q30" value="D"> Polymorphism</label>
+</div>    
 
