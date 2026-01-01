@@ -1,101 +1,339 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-    <title>MIS Quiz</title>
-
-    <style>
-        body { font-family: Arial; padding: 20px; }
-        .question { margin-bottom: 15px; }
-        .correct { color: green; font-weight: bold; }
-        .wrong { color: red; font-weight: bold; }
-    </style>
+<meta charset="UTF-8">
+<title>>MIS Quiz</title>
+<style>
+body { font-family: Arial, sans-serif; padding: 20px; }
+h2 { color: #333; }
+.question { margin-bottom: 20px; }
+label { display: block; margin: 5px 0; }
+button { padding: 10px 20px; font-size: 16px; }
+#result { margin-top: 20px; font-weight: bold; font-size: 18px; }
+.correct { color: green; font-weight: bold; }
+.wrong { color: red; font-weight: bold; }
+</style>
 </head>
 <body>
 
-<h1>Management Information Systems – Hard Quiz (40 Questions)</h1>
-<p>Select the correct answer and click Submit.</p>
+  <h2>Management Information Systems (MIS)</h2>
 
-<form id="quizForm">
+<div class="question">
+<p>1. What is the main purpose of MIS?</p>
+<label><input type="radio" name="q1" value="A"> Data storage only</label><br>
+<label><input type="radio" name="q1" value="B"> Decision making support</label><br>
+<label><input type="radio" name="q1" value="C"> Hardware management</label><br>
+<label><input type="radio" name="q1" value="D"> Network control</label>
+</div>
 
-<!-- QUESTIONS -->
-<script>
-const questions = [
-  ["MIS mainly supports which level of management?", "Top", "Middle", "Operational", "Clerical", "B"],
-  ["TPS is mainly used for?", "Decision making", "Strategic planning", "Daily transactions", "Forecasting", "C"],
-  ["Which system supports semi-structured decisions?", "TPS", "MIS", "DSS", "ESS", "C"],
-  ["ESS is mainly designed for?", "Clerks", "Middle managers", "Executives", "Supervisors", "C"],
-  ["Which is NOT a component of MIS?", "People", "Procedures", "Hardware", "Emotions", "D"],
-  ["MIS reports are usually?", "Real-time", "Highly summarized", "Unstructured", "Random", "B"],
-  ["A database in MIS is best described as?", "Raw data", "Organized data", "Programs", "Networks", "B"],
-  ["Which system focuses on long-term planning?", "TPS", "MIS", "ESS", "OAS", "C"],
-  ["DSS uses which type of data?", "Only internal", "Only external", "Both internal and external", "None", "C"],
-  ["Which MIS output is periodic?", "Exception report", "Ad-hoc report", "Scheduled report", "Query", "C"],
+<div class="question">
+<p>2. MIS mainly supports which level of management?</p>
+<label><input type="radio" name="q2" value="A"> Operational</label><br>
+<label><input type="radio" name="q2" value="B"> Top level</label><br>
+<label><input type="radio" name="q2" value="C"> Middle level</label><br>
+<label><input type="radio" name="q2" value="D"> Technical level</label>
+</div>
 
-  ["ERP integrates?", "One department", "All business processes", "Only finance", "Only HR", "B"],
-  ["Which is an example of TPS?", "Payroll system", "Executive dashboard", "Forecast system", "Simulation", "A"],
-  ["MIS improves?", "Hardware speed", "Decision quality", "Employee emotions", "Network cables", "B"],
-  ["Information must be accurate to be?", "Useful", "Expensive", "Complex", "Encrypted", "A"],
-  ["Which is NOT a quality of good information?", "Timely", "Relevant", "Accurate", "Duplicated", "D"],
-  ["DSS mainly helps in?", "Routine decisions", "Strategic only", "Non-routine decisions", "Clerical work", "C"],
-  ["Which level uses summarized reports?", "Operational", "Middle", "Top", "Clerical", "C"],
-  ["MIS primarily converts?", "Information to data", "Data to information", "Programs to data", "Users to systems", "B"],
-  ["OAS is mainly used for?", "Decision making", "Office productivity", "Strategy", "Forecasting", "B"],
-  ["Which is NOT an MIS type?", "TPS", "DSS", "ESS", "CPU", "D"],
+<div class="question">
+<p>3. Which system supports day-to-day business operations?</p>
+<label><input type="radio" name="q3" value="A"> MIS</label><br>
+<label><input type="radio" name="q3" value="B"> DSS</label><br>
+<label><input type="radio" name="q3" value="C"> TPS</label><br>
+<label><input type="radio" name="q3" value="D"> ESS</label>
+</div>
 
-  ["Which system supports executives?", "MIS", "TPS", "ESS", "OAS", "C"],
-  ["MIS reports are usually?", "Highly detailed", "Highly summarized", "Unstructured", "Informal", "B"],
-  ["Which uses models and simulations?", "MIS", "DSS", "TPS", "OAS", "B"],
-  ["A feedback mechanism helps MIS to?", "Fail", "Improve performance", "Delete data", "Reduce users", "B"],
-  ["Which is an external information source?", "Sales record", "Customer database", "Government report", "Payroll", "C"],
-  ["Data becomes information when it is?", "Stored", "Processed", "Deleted", "Encrypted", "B"],
-  ["Which system records sales transactions?", "DSS", "MIS", "TPS", "ESS", "C"],
-  ["Which MIS characteristic focuses on future?", "Historical", "Predictive", "Operational", "Routine", "B"],
-  ["Which supports top-level decisions?", "TPS", "MIS", "ESS", "OAS", "C"],
-  ["Which is NOT a benefit of MIS?", "Better decisions", "Improved efficiency", "Higher cost always", "Timely reports", "C"],
+<div class="question">
+<p>4. Which of the following is an example of MIS?</p>
+<label><input type="radio" name="q4" value="A"> Payroll system</label><br>
+<label><input type="radio" name="q4" value="B"> Inventory reporting system</label><br>
+<label><input type="radio" name="q4" value="C"> Email system</label><br>
+<label><input type="radio" name="q4" value="D"> Web browser</label>
+</div>
 
-  ["MIS helps organizations to?", "Lose data", "Gain competitive advantage", "Increase errors", "Reduce information", "B"],
-  ["Which is a structured decision?", "Hiring CEO", "Daily inventory reorder", "Market expansion", "Merger", "B"],
-  ["Which system supports structured decisions?", "DSS", "MIS", "TPS", "ESS", "C"],
-  ["Which MIS tool uses charts and graphs?", "Dashboard", "Compiler", "Router", "Firewall", "A"],
-  ["Which focuses on exception reporting?", "TPS", "MIS", "OAS", "ESS", "B"],
-  ["MIS is a combination of?", "People, data, procedures", "Only computers", "Only software", "Only networks", "A"],
-  ["Which is the brain of MIS?", "Hardware", "Software", "People", "Database", "C"],
-  ["Which MIS element stores data?", "People", "Procedures", "Database", "Reports", "C"]
-];
+<div class="question">
+<p>5. What does DSS stand for?</p>
+<label><input type="radio" name="q5" value="A"> Data Support System</label><br>
+<label><input type="radio" name="q5" value="B"> Decision Support System</label><br>
+<label><input type="radio" name="q5" value="C"> Database Support Software</label><br>
+<label><input type="radio" name="q5" value="D"> Digital System Service</label>
+</div>
 
-let html = "";
-questions.forEach((q, i) => {
-  html += `<p>${i+1}. ${q[0]}</p>
-  <input type="radio" name="q${i}" value="A"> A. ${q[1]}<br>
-  <input type="radio" name="q${i}" value="B"> B. ${q[2]}<br>
-  <input type="radio" name="q${i}" value="C"> C. ${q[3]}<br>
-  <input type="radio" name="q${i}" value="D"> D. ${q[4]}<br><br>`;
-});
-document.write(html);
-<script>
-function checkQuiz() {
-    let score = 0;
+<div class="question">
+<p>6. Which system helps top executives?</p>
+<label><input type="radio" name="q6" value="A"> TPS</label><br>
+<label><input type="radio" name="q6" value="B"> MIS</label><br>
+<label><input type="radio" name="q6" value="C"> DSS</label><br>
+<label><input type="radio" name="q6" value="D"> ESS</label>
+</div>
 
-    questions.forEach((q, i) => {
-        let selected = document.querySelector(input[name="q${i}"]:checked);
-        let r = document.getElementById(r${i});
+<div class="question">
+<p>7. MIS uses information that is mostly:</p>
+<label><input type="radio" name="q7" value="A"> Unstructured</label><br>
+<label><input type="radio" name="q7" value="B"> Semi-structured</label><br>
+<label><input type="radio" name="q7" value="C"> Structured</label><br>
+<label><input type="radio" name="q7" value="D"> Random</label>
+</div>
 
-        if (selected && selected.value === q[4]) {
-            score++;
-            r.innerHTML = "✔ Correct";
-            r.style.color = "green";
-        } else {
-            r.innerHTML = "✖ Wrong";
-            r.style.color = "red";
-        }
-    });
+<div class="question">
+<p>8. Which component is NOT part of MIS?</p>
+<label><input type="radio" name="q8" value="A"> Hardware</label><br>
+<label><input type="radio" name="q8" value="B"> Software</label><br>
+<label><input type="radio" name="q8" value="C"> Data</label><br>
+<label><input type="radio" name="q8" value="D"> Compiler</label>
+</div>
 
-    document.getElementById("result").innerHTML =
-        "Your Score: " + score + "/" + questions.length;
-}
-</script>
+<div class="question">
+<p>9. Which report is generated regularly?</p>
+<label><input type="radio" name="q9" value="A"> Ad-hoc report</label><br>
+<label><input type="radio" name="q9" value="B"> Exception report</label><br>
+<label><input type="radio" name="q9" value="C"> Scheduled report</label><br>
+<label><input type="radio" name="q9" value="D"> Dynamic report</label>
+</div>
 
+<div class="question">
+<p>10. MIS mainly converts data into:</p>
+<label><input type="radio" name="q10" value="A"> Knowledge</label><br>
+<label><input type="radio" name="q10" value="B"> Information</label><br>
+<label><input type="radio" name="q10" value="C"> Decisions</label><br>
+<label><input type="radio" name="q10" value="D"> Strategy</label>
+</div>
 
+<div class="question">
+<p>11. Which system supports long-term planning and decision making?</p>
+<label><input type="radio" name="q11" value="A"> Transaction Processing System</label><br>
+<label><input type="radio" name="q11" value="B"> Management Information System</label><br>
+<label><input type="radio" name="q11" value="C"> Decision Support System</label><br>
+<label><input type="radio" name="q11" value="D"> Office Automation System</label>
+</div>
 
+<div class="question">
+<p>12. MIS mainly provides information to:</p>
+<label><input type="radio" name="q12" value="A"> Top-level management</label><br>
+<label><input type="radio" name="q12" value="B"> Middle-level management</label><br>
+<label><input type="radio" name="q12" value="C"> Operational staff</label><br>
+<label><input type="radio" name="q12" value="D"> Customers</label>
+</div>
 
+<div class="question">
+<p>13. Which of the following is NOT an input to MIS?</p>
+<label><input type="radio" name="q13" value="A"> Transaction data</label><br>
+<label><input type="radio" name="q13" value="B"> Management reports</label><br>
+<label><input type="radio" name="q13" value="C"> External data</label><br>
+<label><input type="radio" name="q13" value="D"> Operational data</label>
+</div>
+
+<div class="question">
+<p>14. DSS differs from MIS because DSS:</p>
+<label><input type="radio" name="q14" value="A"> Is fully automated</label><br>
+<label><input type="radio" name="q14" value="B"> Supports semi-structured decisions</label><br>
+<label><input type="radio" name="q14" value="C"> Handles routine tasks</label><br>
+<label><input type="radio" name="q14" value="D"> Stores transaction data</label>
+</div>
+
+<div class="question">
+<p>15. Which report is generated at regular intervals?</p>
+<label><input type="radio" name="q15" value="A"> Ad-hoc report</label><br>
+<label><input type="radio" name="q15" value="B"> Exception report</label><br>
+<label><input type="radio" name="q15" value="C"> Scheduled report</label><br>
+<label><input type="radio" name="q15" value="D"> Summary report</label>
+</div>
+
+<div class="question">
+<p>16. The primary objective of MIS is to:</p>
+<label><input type="radio" name="q16" value="A"> Reduce hardware cost</label><br>
+<label><input type="radio" name="q16" value="B"> Improve decision making</label><br>
+<label><input type="radio" name="q16" value="C"> Increase transaction speed</label><br>
+<label><input type="radio" name="q16" value="D"> Replace managers</label>
+</div>
+
+<div class="question">
+<p>17. Which level of management uses tactical decisions?</p>
+<label><input type="radio" name="q17" value="A"> Top level</label><br>
+<label><input type="radio" name="q17" value="B"> Middle level</label><br>
+<label><input type="radio" name="q17" value="C"> Operational level</label><br>
+<label><input type="radio" name="q17" value="D"> Clerical level</label>
+</div>
+
+<div class="question">
+<p>18. MIS reports are generally:</p>
+<label><input type="radio" name="q18" value="A"> Real-time</label><br>
+<label><input type="radio" name="q18" value="B"> Highly flexible</label><br>
+<label><input type="radio" name="q18" value="C"> Structured and predefined</label><br>
+<label><input type="radio" name="q18" value="D"> Informal</label>
+</div>
+
+<div class="question">
+<p>19. Which system records daily business transactions?</p>
+<label><input type="radio" name="q19" value="A"> DSS</label><br>
+<label><input type="radio" name="q19" value="B"> MIS</label><br>
+<label><input type="radio" name="q19" value="C"> TPS</label><br>
+<label><input type="radio" name="q19" value="D"> ESS</label>
+</div>
+
+<div class="question">
+<p>20. Which of the following is a characteristic of MIS?</p>
+<label><input type="radio" name="q20" value="A"> Short-term focus</label><br>
+<label><input type="radio" name="q20" value="B"> Unstructured data</label><br>
+<label><input type="radio" name="q20" value="C"> Supports routine decisions</label><br>
+<label><input type="radio" name="q20" value="D"> Used only by customers</label>
+</div>
+
+<div class="question">
+<p>21. Which system provides information for long-term strategic decisions?</p>
+<label><input type="radio" name="q21" value="A"> Transaction Processing System</label><br>
+<label><input type="radio" name="q21" value="B"> Office Automation System</label><br>
+<label><input type="radio" name="q21" value="C"> Executive Support System</label><br>
+<label><input type="radio" name="q21" value="D"> Data Entry System</label>
+</div>
+
+<div class="question">
+<p>22. What is the main role of Management Information System?</p>
+<label><input type="radio" name="q22" value="A"> Data storage only</label><br>
+<label><input type="radio" name="q22" value="B"> Data transmission</label><br>
+<label><input type="radio" name="q22" value="C"> Support managerial decision-making</label><br>
+<label><input type="radio" name="q22" value="D"> Hardware control</label>
+</div>
+
+<div class="question">
+<p>23. Which level of management mainly uses MIS reports?</p>
+<label><input type="radio" name="q23" value="A"> Operational level</label><br>
+<label><input type="radio" name="q23" value="B"> Clerical level</label><br>
+<label><input type="radio" name="q23" value="C"> Middle management</label><br>
+<label><input type="radio" name="q23" value="D"> Technical staff</label>
+</div>
+
+<div class="question">
+<p>24. What does DSS stand for in MIS?</p>
+<label><input type="radio" name="q24" value="A"> Data Support System</label><br>
+<label><input type="radio" name="q24" value="B"> Decision Support System</label><br>
+<label><input type="radio" name="q24" value="C"> Digital Support Software</label><br>
+<label><input type="radio" name="q24" value="D"> Data Storage System</label>
+</div>
+
+<div class="question">
+<p>25. Which MIS component includes procedures and rules?</p>
+<label><input type="radio" name="q25" value="A"> Hardware</label><br>
+<label><input type="radio" name="q25" value="B"> Software</label><br>
+<label><input type="radio" name="q25" value="C"> Procedures</label><br>
+<label><input type="radio" name="q25" value="D"> Database</label>
+</div>
+
+<div class="question">
+<p>26. MIS primarily converts data into:</p>
+<label><input type="radio" name="q26" value="A"> Signals</label><br>
+<label><input type="radio" name="q26" value="B"> Information</label><br>
+<label><input type="radio" name="q26" value="C"> Knowledge</label><br>
+<label><input type="radio" name="q26" value="D"> Reports only</label>
+</div>
+
+<div class="question">
+<p>27. Which report is generated at regular intervals?</p>
+<label><input type="radio" name="q27" value="A"> Ad-hoc report</label><br>
+<label><input type="radio" name="q27" value="B"> Periodic report</label><br>
+<label><input type="radio" name="q27" value="C"> Exception report</label><br>
+<label><input type="radio" name="q27" value="D"> Special report</label>
+</div>
+
+<div class="question">
+<p>28. Which system focuses on routine daily transactions?</p>
+<label><input type="radio" name="q28" value="A"> DSS</label><br>
+<label><input type="radio" name="q28" value="B"> MIS</label><br>
+<label><input type="radio" name="q28" value="C"> ESS</label><br>
+<label><input type="radio" name="q28" value="D"> TPS</label>
+</div>
+
+<div class="question">
+<p>29. Which of the following is an example of MIS output?</p>
+<label><input type="radio" name="q29" value="A"> Raw data</label><br>
+<label><input type="radio" name="q29" value="B"> Source documents</label><br>
+<label><input type="radio" name="q29" value="C"> Summary report</label><br>
+<label><input type="radio" name="q29" value="D"> Database schema</label>
+</div>
+
+<div class="question">
+<p>30. Which factor is MOST important for MIS success?</p>
+<label><input type="radio" name="q30" value="A"> Expensive hardware</label><br>
+<label><input type="radio" name="q30" value="B"> Top management support</label><br>
+<label><input type="radio" name="q30" value="C"> Large database</label><br>
+<label><input type="radio" name="q30" value="D"> Internet speed</label>
+</div>
+
+<div class="question">
+<p>31. Which MIS characteristic ensures accuracy and reliability of information?</p>
+<label><input type="radio" name="q31" value="A"> Timeliness</label><br>
+<label><input type="radio" name="q31" value="B"> Flexibility</label><br>
+<label><input type="radio" name="q31" value="C"> Relevance</label><br>
+<label><input type="radio" name="q31" value="D"> Accuracy</label>
+</div>
+
+<div class="question">
+<p>32. Which system helps managers analyze complex problems using models?</p>
+<label><input type="radio" name="q32" value="A"> TPS</label><br>
+<label><input type="radio" name="q32" value="B"> MIS</label><br>
+<label><input type="radio" name="q32" value="C"> DSS</label><br>
+<label><input type="radio" name="q32" value="D"> OAS</label>
+</div>
+
+<div class="question">
+<p>33. What type of decision is supported by MIS?</p>
+<label><input type="radio" name="q33" value="A"> Structured decisions</label><br>
+<label><input type="radio" name="q33" value="B"> Unstructured decisions</label><br>
+<label><input type="radio" name="q33" value="C"> Semi-structured decisions</label><br>
+<label><input type="radio" name="q33" value="D"> Strategic only</label>
+</div>
+
+<div class="question">
+<p>34. Which MIS report highlights deviations from normal performance?</p>
+<label><input type="radio" name="q34" value="A"> Summary report</label><br>
+<label><input type="radio" name="q34" value="B"> Periodic report</label><br>
+<label><input type="radio" name="q34" value="C"> Exception report</label><br>
+<label><input type="radio" name="q34" value="D"> Ad-hoc report</label>
+</div>
+
+<div class="question">
+<p>35. MIS mainly supports which management function?</p>
+<label><input type="radio" name="q35" value="A"> Staffing</label><br>
+<label><input type="radio" name="q35" value="B"> Decision making</label><br>
+<label><input type="radio" name="q35" value="C"> Auditing</label><br>
+<label><input type="radio" name="q35" value="D"> Programming</label>
+</div>
+
+<div class="question">
+<p>36. Which MIS element processes data into information?</p>
+<label><input type="radio" name="q36" value="A"> Hardware</label><br>
+<label><input type="radio" name="q36" value="B"> Software</label><br>
+<label><input type="radio" name="q36" value="C"> People</label><br>
+<label><input type="radio" name="q36" value="D"> Network</label>
+</div>
+
+<div class="question">
+<p>37. Which level of management uses summarized MIS reports?</p>
+<label><input type="radio" name="q37" value="A"> Operational</label><br>
+<label><input type="radio" name="q37" value="B"> Supervisory</label><br>
+<label><input type="radio" name="q37" value="C"> Top-level</label><br>
+<label><input type="radio" name="q37" value="D"> Clerical</label>
+</div>
+
+<div class="question">
+<p>38. Which of the following is NOT a type of MIS report?</p>
+<label><input type="radio" name="q38" value="A"> Periodic</label><br>
+<label><input type="radio" name="q38" value="B"> Exception</label><br>
+<label><input type="radio" name="q38" value="C"> Ad-hoc</label><br>
+<label><input type="radio" name="q38" value="D"> Compilation</label>
+</div>
+
+<div class="question">
+<p>39. MIS effectiveness depends MOST on:</p>
+<label><input type="radio" name="q39" value="A"> Data quality</label><br>
+<label><input type="radio" name="q39" value="B"> Internet speed</label><br>
+<label><input type="radio" name="q39" value="C"> Office size</label><br>
+<label><input type="radio" name="q39" value="D"> Computer brand</label>
+</div>
+
+<div class="question">
+<p>40. Which MIS feature allows users to modify reports easily?</p>
+<label><input type="radio" name="q40" value="A"> Accuracy</label><br>
+<label><input type="radio" name="q40" value="B"> Timeliness</label><br>
+<label><input type="radio" name="q40" value="C"> Flexibility</label><br>
+<label><input type="radio" name="q40" value="D"> Consistency</label>
+</div>  
