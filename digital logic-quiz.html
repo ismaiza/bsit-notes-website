@@ -1,1 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Digital Logic Quiz</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f5f5f5; }
+    h1 { color: #333; }
+    .question { margin-bottom: 15px; }
+    .options { margin-left: 20px; }
+    button { padding: 10px 20px; margin-top: 20px; cursor: pointer; }
+    #result { margin-top: 20px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Digital Logic Quiz (1-10)</h1>
 
+<form id="quizForm">
+    <div class="question">
+        <p>1. What is the output of a NOT gate when input is 1?</p>
+        <div class="options">
+            <input type="radio" name="q1" value="A"> A) 1<br>
+            <input type="radio" name="q1" value="B"> B) 0<br>
+            <input type="radio" name="q1" value="C"> C) Depends<br>
+            <input type="radio" name="q1" value="D"> D) None<br>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>2. What does a NAND gate output when both inputs are 1?</p>
+        <div class="options">
+            <input type="radio" name="q2" value="A"> A) 1<br>
+            <input type="radio" name="q2" value="B"> B) 1 for some cases<br>
+            <input type="radio" name="q2" value="C"> C) 0<br>
+            <input type="radio" name="q2" value="D"> D) None<br>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>3. The Boolean expression for OR gate is?</p>
+        <div class="options">
+            <input type="radio" name="q3" value="A"> A) AB<br>
+            <input type="radio" name="q3" value="B"> B) A + B<br>
+            <input type="radio" name="q3" value="C"> C) A'B'<br>
+            <input type="radio" name="q3" value="D"> D) None<br>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>4. Which gate is universal?</p>
+        <div class="options">
+            <input type="radio" name="q4" value="A"> A) AND<br>
+            <input type="radio" name="q4" value="B"> B) NAND<br>
+            <input type="radio" name="q4" value="C"> C) OR<br>
+            <input type="radio" name="q4" value="D"> D) XOR<br>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>5. What is the output of XOR gate when inputs are 1 and 0?</p>
+        <div class="options">
+            <input type="radio" name="q5" value="A"> A) 0<br>
+            <input type="radio" name="q5" value="B"> B) Depends<br>
+            <input type="radio" name="q5" value="C"> C) 1<br>
+            <input type="radio" name="q5" value="D"> D) None<br>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>6. A flip-flop is used for?</p>
+        <div class="options">
+            <input type="radio" name="q6" value="A"> A) Storing data<br>
+            <input type="radio" name="q6" value="B"> B) Multiplying<br>
+            <input type="radio" name="q6" value="C"> C) Adding<br>
+            <input type="radio" name="q6" value="D"> D) Shifting<br>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>7. Logic gate used in half adder for sum is?</p>
+        <div class="options">
+            <input type="radio" name="q7" value="A"> A) XOR<br>
+            <input type="radio" name="q7" value="B"> B) AND<br>
+            <input type="radio" name="q7" value="C"> C) OR<br>
+            <input type="radio" name="q7" value="D"> D) NAND<br>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>8. Which is a combinational circuit?</p>
+        <div class="options">
+            <input type="radio" name="q8" value="A"> A) Flip-Flop<br>
+            <input type="radio" name="q8" value="B"> B) Adder<br>
+            <input type="radio" name="q8" value="C"> C) Counter<br>
+            <input type="radio" name="q8" value="D"> D) Register<br>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>9. What is the output of AND gate if one input is 0?</p>
+        <div class="options">
+            <input type="radio" name="q9" value="A"> A) 1<br>
+            <input type="radio" name="q9" value="B"> B) 0<br>
+            <input type="radio" name="q9" value="C"> C) Depends<br>
+            <input type="radio" name="q9" value="D"> D) None<br>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>10. The circuit with output same as input is called?</p>
+        <div class="options">
+            <input type="radio" name="q10" value="A"> A) Inverter<br>
+            <input type="radio" name="q10" value="B"> B) Buffer<br>
+            <input type="radio" name="q10" value="C"> C) XOR gate<br>
+            <input type="radio" name="q10" value="D"> D) AND gate<br>
+        </div>
+    </div>
+
+  <div class="question">
+    <p>11. What is the output of OR gate if both inputs are 0?</p>
+    <div class="options">
+        <input type="radio" name="q11" value="A"> A) 1<br>
+        <input type="radio" name="q11" value="B"> B) Depends<br>
+        <input type="radio" name="q11" value="C"> C) 0<br>
+        <input type="radio" name="q11" value="D"> D) None<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>12. What is the Boolean expression for AND gate?</p>
+    <div class="options">
+        <input type="radio" name="q12" value="A"> A) A + B<br>
+        <input type="radio" name="q12" value="B"> B) A' + B'<br>
+        <input type="radio" name="q12" value="C"> C) AB<br>
+        <input type="radio" name="q12" value="D"> D) A XOR B<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>13. The output of NOR gate is the same as?</p>
+    <div class="options">
+        <input type="radio" name="q13" value="A"> A) AND gate<br>
+        <input type="radio" name="q13" value="B"> B) OR gate<br>
+        <input type="radio" name="q13" value="C"> C) NOT OR gate<br>
+        <input type="radio" name="q13" value="D"> D) XOR gate<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>14. A decoder is a type of?</p>
+    <div class="options">
+        <input type="radio" name="q14" value="A"> A) Sequential circuit<br>
+        <input type="radio" name="q14" value="B"> B) Combinational circuit<br>
+        <input type="radio" name="q14" value="C"> C) Memory<br>
+        <input type="radio" name="q14" value="D"> D) Flip-flop<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>15. A multiplexer selects how many inputs?</p>
+    <div class="options">
+        <input type="radio" name="q15" value="A"> A) 1<br>
+        <input type="radio" name="q15" value="B"> B) Depends<br>
+        <input type="radio" name="q15" value="C"> C) Multiple inputs<br>
+        <input type="radio" name="q15" value="D"> D) None<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>16. The output of XOR gate is 1 when?</p>
+    <div class="options">
+        <input type="radio" name="q16" value="A"> A) Both inputs are 1<br>
+        <input type="radio" name="q16" value="B"> B) Both inputs are 0<br>
+        <input type="radio" name="q16" value="C"> C) Inputs are different<br>
+        <input type="radio" name="q16" value="D"> D) Always 0<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>17. The sum output of full adder is obtained using?</p>
+    <div class="options">
+        <input type="radio" name="q17" value="A"> A) AND gate<br>
+        <input type="radio" name="q17" value="B"> B) XOR gate<br>
+        <input type="radio" name="q17" value="C"> C) OR gate<br>
+        <input type="radio" name="q17" value="D"> D) NAND gate<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>18. A JK flip-flop changes output when?</p>
+    <div class="options">
+        <input type="radio" name="q18" value="A"> A) Clock is triggered<br>
+        <input type="radio" name="q18" value="B"> B) Inputs are zero<br>
+        <input type="radio" name="q18" value="C"> C) Always<br>
+        <input type="radio" name="q18" value="D"> D) Never<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>19. What is the main function of a latch?</p>
+    <div class="options">
+        <input type="radio" name="q19" value="A"> A) Perform logic<br>
+        <input type="radio" name="q19" value="B"> B) Store data temporarily<br>
+        <input type="radio" name="q19" value="C"> C) Transfer data<br>
+        <input type="radio" name="q19" value="D"> D) Invert input<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>20. The output of XNOR gate is 1 when?</p>
+    <div class="options">
+        <input type="radio" name="q20" value="A"> A) Inputs are different<br>
+        <input type="radio" name="q20" value="B"> B) Inputs are the same<br>
+        <input type="radio" name="q20" value="C"> C) Always 0<br>
+        <input type="radio" name="q20" value="D"> D) Always 1<br>
+    </div>
+</div>
+  
+<div class="question">
+    <p>21. The main purpose of a truth table is?</p>
+    <div class="options">
+        <input type="radio" name="q21" value="A"> A) Store data<br>
+        <input type="radio" name="q21" value="B"> B) Show all possible outputs<br>
+        <input type="radio" name="q21" value="C"> C) Perform arithmetic<br>
+        <input type="radio" name="q21" value="D"> D) Control memory<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>22. Which logic gate is used in the sum output of half adder?</p>
+    <div class="options">
+        <input type="radio" name="q22" value="A"> A) AND<br>
+        <input type="radio" name="q22" value="B"> B) OR<br>
+        <input type="radio" name="q22" value="C"> C) XOR<br>
+        <input type="radio" name="q22" value="D"> D) NAND<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>23. How many inputs does a 2-to-4 decoder have?</p>
+    <div class="options">
+        <input type="radio" name="q23" value="A"> A) 4<br>
+        <input type="radio" name="q23" value="B"> B) 1<br>
+        <input type="radio" name="q23" value="C"> C) 2<br>
+        <input type="radio" name="q23" value="D"> D) 8<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>24. The carry output of a full adder is obtained using?</p>
+    <div class="options">
+        <input type="radio" name="q24" value="A"> A) OR and AND gates<br>
+        <input type="radio" name="q24" value="B"> B) Only XOR gate<br>
+        <input type="radio" name="q24" value="C"> C) Only OR gate<br>
+        <input type="radio" name="q24" value="D"> D) Only AND gate<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>25. A flip-flop that toggles output on every clock pulse is?</p>
+    <div class="options">
+        <input type="radio" name="q25" value="A"> A) SR flip-flop<br>
+        <input type="radio" name="q25" value="B"> B) JK flip-flop<br>
+        <input type="radio" name="q25" value="C"> C) T flip-flop<br>
+        <input type="radio" name="q25" value="D"> D) D flip-flop<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>26. A combinational circuit has?</p>
+    <div class="options">
+        <input type="radio" name="q26" value="A"> A) Memory elements<br>
+        <input type="radio" name="q26" value="B"> B) No memory elements<br>
+        <input type="radio" name="q26" value="C"> C) Only flip-flops<br>
+        <input type="radio" name="q26" value="D"> D) Registers<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>27. Which of these is a sequential circuit?</p>
+    <div class="options">
+        <input type="radio" name="q27" value="A"> A) Adder<br>
+        <input type="radio" name="q27" value="B"> B) Counter<br>
+        <input type="radio" name="q27" value="C"> C) Multiplexer<br>
+        <input type="radio" name="q27" value="D"> D) Decoder<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>28. What is the main function of a multiplexer?</p>
+    <div class="options">
+        <input type="radio" name="q28" value="A"> A) Perform addition<br>
+        <input type="radio" name="q28" value="B"> B) Store data<br>
+        <input type="radio" name="q28" value="C"> C) Select one input to output<br>
+        <input type="radio" name="q28" value="D"> D) Invert inputs<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>29. The output of AND gate with all inputs 1 is?</p>
+    <div class="options">
+        <input type="radio" name="q29" value="A"> A) 0<br>
+        <input type="radio" name="q29" value="B"> B) 1<br>
+        <input type="radio" name="q29" value="C"> C) Depends<br>
+        <input type="radio" name="q29" value="D"> D) None<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>30. Which gate is used in digital circuits to implement NOT function?</p>
+    <div class="options">
+        <input type="radio" name="q30" value="A"> A) AND<br>
+        <input type="radio" name="q30" value="B"> B) OR<br>
+        <input type="radio" name="q30" value="C"> C) NOT<br>
+        <input type="radio" name="q30" value="D"> D) XOR<br>
+    </div>
+</div>
+  
+<div class="question">
+    <p>31. What is the output of a NAND gate when both inputs are 0?</p>
+    <div class="options">
+        <input type="radio" name="q31" value="A"> A) 0<br>
+        <input type="radio" name="q31" value="B"> B) 1<br>
+        <input type="radio" name="q31" value="C"> C) Depends<br>
+        <input type="radio" name="q31" value="D"> D) None<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>32. Which gate is also called an inverter?</p>
+    <div class="options">
+        <input type="radio" name="q32" value="A"> A) AND<br>
+        <input type="radio" name="q32" value="B"> B) OR<br>
+        <input type="radio" name="q32" value="C"> C) NOT<br>
+        <input type="radio" name="q32" value="D"> D) XOR<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>33. How many outputs does a 3-to-8 decoder have?</p>
+    <div class="options">
+        <input type="radio" name="q33" value="A"> A) 3<br>
+        <input type="radio" name="q33" value="B"> B) 6<br>
+        <input type="radio" name="q33" value="C"> C) 8<br>
+        <input type="radio" name="q33" value="D"> D) 1<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>34. What type of flip-flop toggles on clock input?</p>
+    <div class="options">
+        <input type="radio" name="q34" value="A"> A) D flip-flop<br>
+        <input type="radio" name="q34" value="B"> B) T flip-flop<br>
+        <input type="radio" name="q34" value="C"> C) JK flip-flop<br>
+        <input type="radio" name="q34" value="D"> D) SR flip-flop<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>35. What is the sum output of a half adder when inputs are 1 and 1?</p>
+    <div class="options">
+        <input type="radio" name="q35" value="A"> A) 0<br>
+        <input type="radio" name="q35" value="B"> B) 1<br>
+        <input type="radio" name="q35" value="C"> C) Depends<br>
+        <input type="radio" name="q35" value="D"> D) None<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>36. Which of the following is a sequential logic circuit?</p>
+    <div class="options">
+        <input type="radio" name="q36" value="A"> A) Adder<br>
+        <input type="radio" name="q36" value="B"> B) Counter<br>
+        <input type="radio" name="q36" value="C"> C) Multiplexer<br>
+        <input type="radio" name="q36" value="D"> D) Encoder<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>37. What is the function of a buffer in digital circuits?</p>
+    <div class="options">
+        <input type="radio" name="q37" value="A"> A) Invert signal<br>
+        <input type="radio" name="q37" value="B"> B) Strengthen signal<br>
+        <input type="radio" name="q37" value="C"> C) Perform addition<br>
+        <input type="radio" name="q37" value="D"> D) Store data<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>38. The carry output of half adder is obtained using which gate?</p>
+    <div class="options">
+        <input type="radio" name="q38" value="A"> A) XOR<br>
+        <input type="radio" name="q38" value="B"> B) AND<br>
+        <input type="radio" name="q38" value="C"> C) OR<br>
+        <input type="radio" name="q38" value="D"> D) NAND<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>39. Which logic gate output is high only when all inputs are high?</p>
+    <div class="options">
+        <input type="radio" name="q39" value="A"> A) OR<br>
+        <input type="radio" name="q39" value="B"> B) AND<br>
+        <input type="radio" name="q39" value="C"> C) NAND<br>
+        <input type="radio" name="q39" value="D"> D) XOR<br>
+    </div>
+</div>
+
+<div class="question">
+    <p>40. Which gate is called a universal gate because any logic can be implemented with it?</p>
+    <div class="options">
+        <input type="radio" name="q40" value="A"> A) AND<br>
+        <input type="radio" name="q40" value="B"> B) NAND<br>
+        <input type="radio" name="q40" value="C"> C) OR<br>
+        <input type="radio" name="q40" value="D"> D) XOR<br>
+    </div>
+</div>
+
+    <button type="button" onclick="checkAnswers()">Submit</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+    const answers = {
+        q1: "B", q2: "C", q3: "B", q4: "B", q5: "C",
+        q6: "A", q7: "A", q8: "B", q9: "B", q10: "B"
+        q11: "C", q12: "C", q13: "C", q14: "B", q15: "C",
+        q16: "C", q17: "B", q18: "A", q19: "B", q20: "B"
+        q21: "B", q22: "C", q23: "C", q24: "A", q25: "C",
+        q26: "B", q27: "B", q28: "C", q29: "B", q30: "C"
+        q31: "B", q32: "C", q33: "C", q34: "B", q35: "A",
+        q36: "B", q37: "B", q38: "B", q39: "B", q40: "B"
+  };
+
+    function checkAnswers() {
+        let score = 0;
+        for (let i = 1; i <= 10; i++) {
+            const q = document.querySelector('input[name="q'+i+'"]:checked');
+            if (q && q.value === answers['q'+i]) {
+                score++;
+            }
+        }
+        document.getElementById('result').innerText = "Your score: " + score + " / 10";
+    }
+</script>
+
+</body>
+</html>
