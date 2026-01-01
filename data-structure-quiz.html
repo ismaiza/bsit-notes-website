@@ -252,26 +252,29 @@ button { padding: 10px 20px; font-size: 16px; }
 <label><input type="radio" name="q40" value="A"> Array</label><br>
 <label><input type="radio" name="q40" value="B"> Tree</label><br>
 <label><input type="radio" name="q40" value="C"> Graph</label><br>
-<label><input type="radio" name="q40" value="D"> Heap</label></div>  
+<label><input type="radio" name="q40" value="D"> Heap</label></div>
 
 
-<button type="button" onclick="checkAnswers()">Submit</button>
-<div id="result"></div>
+ <button onclick="submitQuiz()">Submit Quiz</button>
+<p id="result"></p>
 
 <script>
 function submitQuiz() {
   let score = 0;
   const answers = {
-q1:"A", q2:"B", q3:"B", q4:"C", q5:"B",
-q6:"B", q7:"B", q8:"A", q9:"B", q10:"B",
-q11:"B", q12:"C", q13:"B", q14:"D", q15:"B",
-q16:"B", q17:"C", q18:"C", q19:"B", q20:"A",
-q21:"B", q22:"D", q23:"C", q24:"C", q25:"B",
-q26:"A", q27:"C", q28:"B", q29:"A", q30:"B",
-q31:"C", q32:"C", q33:"C", q34:"B", q35:"B",
-q36:"B", q37:"B", q38:"B", q39:"D", q40:"A"
+    q1:"A", q2:"B", q3:"B", q4:"C", q5:"B",
+   q6:"B", q7:"B", q8:"A", q9:"B", q10:"B",
+   q11:"B", q12:"C", q13:"B", q14:"D", q15:"B",
+   q16:"B", q17:"C", q18:"C", q19:"B", q20:"A",
+   q21:"B", q22:"D", q23:"C", q24:"C", q25:"B",
+   q26:"A", q27:"C", q28:"B", q29:"A", q30:"B",
+   q31:"C", q32:"C", q33:"C", q34:"B", q35:"B",
+   q36:"B", q37:"B", q38:"B", q39:"D", q40:"A"
+
+    
 };
- for (let q in answers) {
+
+  for (let q in answers) {
     const selected = document.querySelector(`input[name="${q}"]:checked`);
     if (selected && selected.value === answers[q]) score++;
   }
@@ -281,3 +284,7 @@ q36:"B", q37:"B", q38:"B", q39:"D", q40:"A"
 
 </body>
 </html>
+ 
+</div>   
+
+
