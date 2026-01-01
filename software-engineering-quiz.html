@@ -379,34 +379,34 @@ button { padding: 10px 20px; font-size: 16px; }
 </div> 
   </script>
 
-<button type="button" onclick="checkQuiz()">Submit Quiz</button>
-<h2 id="result"></h2>
-
-</form>
+ <script>
+ function submitQuiz() {
+  let score = 0;
+  const answers = { 
+        q1: "C", q2: "C", q3: "B", q4: "B", q5: "C",   
+       q6: "B", q7:  "A", q8:  "D", q9:  "B", q10: "C",
+      q11: "B", q12: "A", q13: "C", q14: "D", q15: "B", 
+      q16: "A", q17: "C", q18: "B", q19: "D", q20: "A",
+      q21: "C", q22: "B", q23: "A", q24: "D", q25: "C",
+      q26: "B", q27: "A", q28: "C", q29: "D", q30: "B", 
+      q31: "B", q32: "B", q33: "B", q34: "B", q35: "B",  
+      q36: "C", q37: "B", q38: "B", q39: "B", q40: "C", 
+   
+};
+  
 </script>
-function checkQuiz() {
-    let score = 0;
-
-    questions.forEach((q, i) => {
-        let selected = document.querySelector(input[name="q${i}"]:checked);
-        let r = document.getElementById(r${i});
-
-        if (selected && selected.value === q[4]) {
-            score++;
-            r.innerHTML = "✔ Correct";
-            r.style.color = "green";
-        } else {
-            r.innerHTML = "✖ Wrong";
-            r.style.color = "red";
-        }
-    });
-
-    document.getElementById("result").innerHTML =
-        "Your Score: " + score + "/" + questions.length;
+  };
+     
+    for (let q in answers) {
+    const selected = document.querySelector(`input[name="${q}"]:checked`);
+    if (selected && selected.value === answers[q]) score++;
+  }
+  document.getElementById("result").innerHTML = "You scored " + score + " / 40";
 }
 </script>
 
-
-
-
+</body>
+</html>
+ 
+</div>  
 
